@@ -1,3 +1,18 @@
-ul{
-
+ul.nav {
+  position: fixed;
+  right:5em;
+  top: 3em;
+  li {
+    width: 5em;
+    height: 2em;
+    list-style: none;
+    background: yellow;
+    margin: 0.5em;
+    padding: 1em;
+    line-height: 1.7;
+    border-radius: 0.3em;
+    text-align: center;
+    // display: inline-block;
+    cursor: pointer;
+  }
 }
