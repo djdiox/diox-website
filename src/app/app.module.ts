@@ -7,6 +7,9 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { HomeComponent } from './pages/home/home.component';
 import { PicturesComponent } from './pages/pictures/pictures.component';
 import { AboutComponent } from './pages/about/about.component';
+import { SetsComponent } from './pages/sets/sets.component';
+import { WorkComponent } from './pages/work/work.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +18,9 @@ import { AboutComponent } from './pages/about/about.component';
     HomeComponent,
     PicturesComponent,
     AboutComponent,
+    SetsComponent,
+    WorkComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
