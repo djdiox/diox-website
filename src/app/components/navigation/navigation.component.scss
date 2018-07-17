@@ -1,18 +1,21 @@
 ul.nav {
   position: fixed;
-  right:5em;
+  right:-5em;
   top: 3em;
   li {
-    width: 5em;
-    height: 2em;
+    height: 3em;
+    /* width: 20vh; */
     list-style: none;
     background: yellow;
-    margin: 0.5em;
+    margin: 0;
+    line-height: 3em;
     padding: 1em;
-    line-height: 1.7;
-    border-radius: 0.3em;
     text-align: center;
-    // display: inline-block;
+    border-radius: 0.7em;
     cursor: pointer;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
   }
 }
