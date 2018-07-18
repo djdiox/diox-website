@@ -10,6 +10,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { SetsComponent } from './pages/sets/sets.component';
 import { WorkComponent } from './pages/work/work.component';
 import { FooterComponent } from './components/footer/footer.component';
+import {BlogComponent} from './pages/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FooterComponent } from './components/footer/footer.component';
     SetsComponent,
     WorkComponent,
     FooterComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,
