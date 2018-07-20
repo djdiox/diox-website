@@ -1,6 +1,10 @@
-# DioxWebsite
+# Diox Website
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+
+## Firebase
+
+As database is Firebase from Google used. The credentials for it are stored in the prod.env
 
 ## Development server
 
