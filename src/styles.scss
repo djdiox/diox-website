@@ -6,4 +6,8 @@
 html {
   background: $color-bg;
   font-family: RalewayRegular, SansSerif, sans-serif;
+  a:any-link,
+  a:-webkit-any-link {
+    color: $blue;
+  }
 }
