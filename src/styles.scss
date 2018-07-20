@@ -10,4 +10,8 @@ html {
   a:-webkit-any-link {
     color: $blue;
   }
+  p {
+    text-align: justify;
+    width: 80%
+  }
 }

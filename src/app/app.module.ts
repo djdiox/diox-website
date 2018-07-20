@@ -1,22 +1,22 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
 import {environment} from '../environments/environment';
 
-import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {AngularFireStorageModule} from 'angularfire2/storage';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 
 import {AppComponent} from './app.component';
-import { NavigationComponent } from './components/navigation/navigation.component';
-import { HomeComponent } from './pages/home/home.component';
-import { PicturesComponent } from './pages/pictures/pictures.component';
-import { AboutComponent } from './pages/about/about.component';
-import { SetsComponent } from './pages/sets/sets.component';
-import { WorkComponent } from './pages/work/work.component';
-import { FooterComponent } from './components/footer/footer.component';
+import {NavigationComponent} from './components/navigation/navigation.component';
+import {HomeComponent} from './pages/home/home.component';
+import {PicturesComponent} from './pages/pictures/pictures.component';
+import {AboutComponent} from './pages/about/about.component';
+import {SetsComponent} from './pages/sets/sets.component';
+import {WorkComponent} from './pages/work/work.component';
+import {FooterComponent} from './components/footer/footer.component';
 import {BlogComponent} from './pages/blog/blog.component';
 
 @NgModule({

@@ -4,7 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Firebase
 
-As database is Firebase from Google used. The credentials for it are stored in the prod.env
+As database is Firebase from Google used. The credentials for it are stored in the environment.prod.env
+More Informations follows soon, the code will be updated, in order to make the blog work
 
 ## Development server
 
