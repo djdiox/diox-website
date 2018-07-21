@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
 import {environment} from '../environments/environment';
 
@@ -18,6 +19,7 @@ import {SetsComponent} from './pages/sets/sets.component';
 import {WorkComponent} from './pages/work/work.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {BlogComponent} from './pages/blog/blog.component';
+import {appRoutes} from './routes';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,10 @@ import {BlogComponent} from './pages/blog/blog.component';
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(
+      appRoutes,
+      {enableTracing: false} // <-- debugging purposes only
+    ),
     ScrollToModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features

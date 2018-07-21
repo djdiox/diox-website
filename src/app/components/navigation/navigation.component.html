@@ -1,8 +1,8 @@
 <!--TODO Surround with routerLink etc.-->
 <ul class="nav" role="navigation">
-  <li [ngx-scroll-to]="'#home'">Home</li>
-  <li [ngx-scroll-to]="'#about'">About</li>
-  <li [ngx-scroll-to]="'#pictures'">Pictures</li>
-  <li [ngx-scroll-to]="'#work'">Work</li>
-  <li [ngx-scroll-to]="'#sets'">DJing</li>
+  <li routerLink="/home" routerLinkActive="active" [ngx-scroll-to]="'#home'">Home</li>
+  <li routerLink="/about" routerLinkActive="active" [ngx-scroll-to]="'#about'">About</li>
+  <li routerLink="/pictures" routerLinkActive="active" [ngx-scroll-to]="'#pictures'">Pictures</li>
+  <li routerLink="/work" routerLinkActive="active" [ngx-scroll-to]="'#work'">Work</li>
+  <li routerLink="/sets" routerLinkActive="active" [ngx-scroll-to]="'#sets'">DJing</li>
 </ul>

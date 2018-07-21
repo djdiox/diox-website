@@ -18,4 +18,8 @@ export class ScrollService {
   };
 
 
+  scrollTo(target: string) {
+    this.config.target = target;
+    this._scrollService.scrollTo(this.config);
+  }
 }

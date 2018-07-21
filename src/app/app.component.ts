@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {ScrollService} from './services/scroll.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  constructor(private activatedRoute: ActivatedRoute, private scrollService: ScrollService) {
+    activatedRoute.url.subscribe((route) => {
+      this.scrollService.scrollTo(route);
+    });
+  }
 }
