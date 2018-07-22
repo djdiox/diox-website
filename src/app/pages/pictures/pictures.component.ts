@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {GalleryItem, ImageItem} from '@ngx-gallery/core';
 
 @Component({
   selector: 'app-pictures',
@@ -7,17 +8,17 @@ import {Component, OnInit} from '@angular/core';
 })
 export class PicturesComponent implements OnInit {
 
-  public images = [
-    {
-      image: '/assets/images/embedded/photo_1.jpg', // path to image
-      title: 'Arkbar Koh Samui 2018' // caption for image
-    }
-  ];
+  images: GalleryItem[];
 
   constructor() {
   }
 
   ngOnInit() {
+    this.images = [
+      new ImageItem({src: '/assets/images/embedded/photo_1.jpg', thumb: '/assets/images/embedded/photo_1.jpg'}),
+      new ImageItem({src: '/assets/images/embedded/photo_1.jpg', thumb: '/assets/images/embedded/photo_1.jpg'})
+      // ... more items
+    ];
   }
 
 }

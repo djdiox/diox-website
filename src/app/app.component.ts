@@ -1,8 +1,8 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {NavigationEnd, NavigationError, NavigationStart, Router} from '@angular/router';
 import {ScrollService} from './services/scroll.service';
-import {AngularFireAuth} from "angularfire2/auth";
-import {auth} from "firebase";
+import {AngularFireAuth} from 'angularfire2/auth';
+import {auth} from 'firebase';
 
 @Component({
   selector: 'app-root',
@@ -10,16 +10,15 @@ import {auth} from "firebase";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'app';
-  private lastKey: string;
+  private lastKey: number;
 
   @HostListener('window:keyup', ['$event'])
-  keyEvent(event: KeyboardEvent) {
+  protected keyEvent(event: KeyboardEvent) {
     console.log(event);
     if (this.afAuth.auth.currentUser !== null) {
       return;
     }
-    lastKey = event.keyCode;
+    this.lastKey = event.keyCode;
     if (event.key === 'L') {
       this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
     }
@@ -27,6 +26,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.router.events.subscribe((route) => {
+      console.log(route);
       if (event instanceof NavigationStart) {
         // Show loading indicator
       }
@@ -44,7 +44,6 @@ export class AppComponent implements OnInit {
   }
 
   constructor(private router: Router,
-              private scrollService: ScrollService,
               public afAuth: AngularFireAuth) {
 
   }

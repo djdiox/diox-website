@@ -2,42 +2,6 @@
 # yarn lockfile v1
 
 
-"@4geit/ngx-marketplace-products-service@^1.x":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@4geit/ngx-marketplace-products-service/-/ngx-marketplace-products-service-1.2.0.tgz#fff9d1dd2ae6e4733a0853e4645de993ed43c1ac"
-  dependencies:
-    "@angular/common" "^4.x"
-    "@angular/core" "^4.x"
-    pug-loader "^2.x"
-
-"@4geit/ngx-material-module@^1.x":
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/@4geit/ngx-material-module/-/ngx-material-module-1.2.6.tgz#dde0951708e24378fea0ba8361f06f7fd4640ed8"
-  dependencies:
-    "@angular/cdk" "2.0.0-beta.8"
-    "@angular/common" "^4.x"
-    "@angular/core" "^4.x"
-    "@angular/flex-layout" "2.0.0-beta.8"
-    "@angular/forms" "^4.x"
-    "@angular/material" "2.0.0-beta.8"
-    "@swimlane/ngx-datatable" "^9.x"
-    font-awesome "^4.x"
-    hammerjs "^2.x"
-    material-design-icons "^3.x"
-    roboto-fontface "^0.x"
-
-"@4geit/ngx-slideshow-component@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@4geit/ngx-slideshow-component/-/ngx-slideshow-component-1.4.0.tgz#c689148a7af481af43419071c4b553fe00a4a916"
-  dependencies:
-    "@4geit/ngx-marketplace-products-service" "^1.x"
-    "@4geit/ngx-material-module" "^1.x"
-    "@angular/common" "^4.x"
-    "@angular/core" "^4.x"
-    "@angular/router" "^4.x"
-    pug-loader "^2.x"
-    rxjs "^5.x"
-
 "@angular-devkit/architect@0.6.8":
   version "0.6.8"
   resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.6.8.tgz#977acc605aba45d21b95ca704cc99492e14299dd"
@@ -133,9 +97,9 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/cdk@2.0.0-beta.8":
-  version "2.0.0-beta.8"
-  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-2.0.0-beta.8.tgz#71961c851dfbeb19e085e898bf5e4461408f8b57"
+"@angular/cdk@^6.4.0":
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-6.4.0.tgz#4339b72d96acdf1335b7b2ba1a94c07898df595e"
   dependencies:
     tslib "^1.7.1"
 
@@ -155,12 +119,6 @@
     silent-error "^1.0.0"
     symbol-observable "^1.2.0"
     yargs-parser "^10.0.0"
-
-"@angular/common@^4.x":
-  version "4.4.7"
-  resolved "https://registry.yarnpkg.com/@angular/common/-/common-4.4.7.tgz#c2fd3e68a05f661c3d2a040fdad00af4119bb852"
-  dependencies:
-    tslib "^1.7.1"
 
 "@angular/common@^6.0.9":
   version "6.0.9"
@@ -183,27 +141,11 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/core@^4.x":
-  version "4.4.7"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-4.4.7.tgz#18bdc17bec7bdccb6424402fc90550e15a6d221b"
-  dependencies:
-    tslib "^1.7.1"
-
 "@angular/core@^6.0.9":
   version "6.0.9"
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-6.0.9.tgz#a68cc0f5ddffa535df65f3e798ba2fcd6f6eec1b"
   dependencies:
     tslib "^1.9.0"
-
-"@angular/flex-layout@2.0.0-beta.8":
-  version "2.0.0-beta.8"
-  resolved "https://registry.yarnpkg.com/@angular/flex-layout/-/flex-layout-2.0.0-beta.8.tgz#b9cf57865a93ca158fe56d850952423f248d103b"
-
-"@angular/forms@^4.x":
-  version "4.4.7"
-  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-4.4.7.tgz#f9503ad8f4bd77a7ba93714afea46c4944887758"
-  dependencies:
-    tslib "^1.7.1"
 
 "@angular/forms@^6.0.9":
   version "6.0.9"
@@ -221,12 +163,6 @@
   version "6.0.9"
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-6.0.9.tgz#46663338185d321dc5cabeed72bec695775a104d"
 
-"@angular/material@2.0.0-beta.8":
-  version "2.0.0-beta.8"
-  resolved "https://registry.yarnpkg.com/@angular/material/-/material-2.0.0-beta.8.tgz#a92852abc9261aea26c2401f576645470be2cf38"
-  dependencies:
-    tslib "^1.7.1"
-
 "@angular/platform-browser-dynamic@^6.0.9":
   version "6.0.9"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-6.0.9.tgz#237fff728a518cc8fb89094638ff32c40d310374"
@@ -238,12 +174,6 @@
   resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-6.0.9.tgz#3f6738046eca03fffdd4558ab3ca75673b6f11d1"
   dependencies:
     tslib "^1.9.0"
-
-"@angular/router@^4.x":
-  version "4.4.7"
-  resolved "https://registry.yarnpkg.com/@angular/router/-/router-4.4.7.tgz#b642ae00f5f93f5e864f3d2b3e735509cd814c05"
-  dependencies:
-    tslib "^1.7.1"
 
 "@angular/router@^6.0.9":
   version "6.0.9"
@@ -369,6 +299,12 @@
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
 
+"@ngx-gallery/core@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@ngx-gallery/core/-/core-3.0.2.tgz#de3fd4df0c90a0554bde347d7f7a00634beeb14c"
+  dependencies:
+    tslib "^1.9.0"
+
 "@nicky-lenaers/ngx-scroll-to@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@nicky-lenaers/ngx-scroll-to/-/ngx-scroll-to-1.0.0.tgz#2afdc03e5b3218bbb5e19ec69fb1e7f7c8eb83dc"
@@ -393,10 +329,6 @@
     rxjs "^6.0.0"
     semver "^5.3.0"
     semver-intersect "^1.1.2"
-
-"@swimlane/ngx-datatable@^9.x":
-  version "9.3.1"
-  resolved "https://registry.yarnpkg.com/@swimlane/ngx-datatable/-/ngx-datatable-9.3.1.tgz#a9b1307327121ddf874e75ba6bd6a6c69c9265a1"
 
 "@types/jasmine@*", "@types/jasmine@~2.8.6":
   version "2.8.8"
@@ -2561,10 +2493,6 @@ follow-redirects@^1.0.0:
   dependencies:
     debug "^3.1.0"
 
-font-awesome@^4.x:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
-
 for-in@^0.1.3:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-0.1.8.tgz#d8773908e31256109952b1fdb9b3fa867d2775e1"
@@ -2844,10 +2772,6 @@ grpc@1.11.3:
     nan "^2.0.0"
     node-pre-gyp "^0.10.0"
     protobufjs "^5.0.0"
-
-hammerjs@^2.x:
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/hammerjs/-/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
 
 handle-thing@^1.2.5:
   version "1.2.5"
@@ -3989,10 +3913,6 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-material-design-icons@^3.x:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/material-design-icons/-/material-design-icons-3.0.1.tgz#9a71c48747218ebca51e51a66da682038cdcb7bf"
-
 math-random@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/math-random/-/math-random-1.0.1.tgz#8b3aac588b8a66e4975e3cdea67f7bb329601fac"
@@ -4992,18 +4912,6 @@ public-encrypt@^4.0.0:
     parse-asn1 "^5.0.0"
     randombytes "^2.0.1"
 
-pug-loader@^2.x:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/pug-loader/-/pug-loader-2.4.0.tgz#18eebdda045d9c31c2856f1cc3ceb8d3df7ca49a"
-  dependencies:
-    loader-utils "^1.1.0"
-    pug-walk "^1.0.0"
-    resolve "^1.1.7"
-
-pug-walk@^1.0.0:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/pug-walk/-/pug-walk-1.1.7.tgz#c00d5c5128bac5806bec15d2b7e7cdabe42531f3"
-
 pump@^2.0.0, pump@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/pump/-/pump-2.0.1.tgz#12399add6e4cf7526d973cbc8b5ce2e2908b3909"
@@ -5419,21 +5327,11 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
-roboto-fontface@^0.x:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/roboto-fontface/-/roboto-fontface-0.9.0.tgz#4829eeffc0502f09b88c7f3980fa3b304eda4c49"
-
 run-queue@^1.0.0, run-queue@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/run-queue/-/run-queue-1.0.3.tgz#e848396f057d223f24386924618e25694161ec47"
   dependencies:
     aproba "^1.1.1"
-
-rxjs@^5.x:
-  version "5.5.11"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.11.tgz#f733027ca43e3bec6b994473be4ab98ad43ced87"
-  dependencies:
-    symbol-observable "1.0.1"
 
 rxjs@^6.0.0:
   version "6.2.1"
@@ -6106,10 +6004,6 @@ supports-color@^5.1.0, supports-color@^5.3.0, supports-color@^5.4.0:
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-5.4.0.tgz#1c6b337402c2137605efe19f10fec390f6faab54"
   dependencies:
     has-flag "^3.0.0"
-
-symbol-observable@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.1.tgz#8340fc4702c3122df5d22288f88283f513d3fdd4"
 
 symbol-observable@^1.2.0:
   version "1.2.0"

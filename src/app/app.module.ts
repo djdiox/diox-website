@@ -1,6 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import {RouterModule} from '@angular/router';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {environment} from '../environments/environment';
 
@@ -9,7 +10,7 @@ import {AngularFireModule} from 'angularfire2';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {AngularFireStorageModule} from 'angularfire2/storage';
 import {AngularFireAuthModule} from 'angularfire2/auth';
-import {NgxSlideshowComponent} from '@4geit/ngx-slideshow-component';
+import {GalleryModule} from '@ngx-gallery/core';
 
 
 import {AppComponent} from './app.component';
@@ -33,16 +34,17 @@ import {appRoutes} from './routes';
     SetsComponent,
     WorkComponent,
     FooterComponent,
-    BlogComponent,
-    NgxSlideshowComponent
+    BlogComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(
       appRoutes,
       {enableTracing: false} // <-- debugging purposes only
     ),
     ScrollToModule.forRoot(),
+    GalleryModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
