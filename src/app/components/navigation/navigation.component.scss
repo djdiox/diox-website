@@ -7,8 +7,12 @@ i.hamburger {
   position: fixed;
   right: 3.5em;
   top: 3em;
-  -webkit-transition: fill 1s; /* Safari */
-  transition: fill 1s;
+  svg {
+    path {
+      -webkit-transition: fill 1s; /* Safari */
+      transition: fill 1s;
+    }
+  }
   &.active {
     svg {
       path {
@@ -26,6 +30,7 @@ ul.nav {
   transition: opacity 1s;
   &.hidden {
     opacity: 0;
+    pointer-events: none;
   }
   li {
     height: 3em;
