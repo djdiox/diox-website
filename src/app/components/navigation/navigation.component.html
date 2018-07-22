@@ -1,5 +1,6 @@
-<!--TODO Surround with routerLink etc.-->
-<ul class="nav" role="navigation">
+<i class="hamburger icon" [ngClass]="{'active': !showNav}" [inlineSVG]="'/assets/images/icons/hamburger.svg'"
+   (click)="showNav = !showNav"></i>
+<ul class="nav" role="navigation" [ngClass]="{'hidden': !showNav}">
   <li routerLink="/home" routerLinkActive="active" [ngx-scroll-to]="'#home'">Home</li>
   <li routerLink="/about" routerLinkActive="active" [ngx-scroll-to]="'#about'">About</li>
   <li routerLink="/pictures" routerLinkActive="active" [ngx-scroll-to]="'#pictures'">Pictures</li>

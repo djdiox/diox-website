@@ -8,15 +8,12 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  public imageSources = [
-    'assets/images/embedded/photo_1.jpg'
-  ];
+  public showNav = true;
 
   constructor() {
   }
 
   ngOnInit() {
-    this.imageSources = [];
   }
 
 }

@@ -11,6 +11,7 @@ import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {AngularFireStorageModule} from 'angularfire2/storage';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {GalleryModule} from '@ngx-gallery/core';
+import {InlineSVGModule} from 'ng-inline-svg';
 
 
 import {AppComponent} from './app.component';
@@ -23,6 +24,7 @@ import {WorkComponent} from './pages/work/work.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {BlogComponent} from './pages/blog/blog.component';
 import {appRoutes} from './routes';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import {appRoutes} from './routes';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(
       appRoutes,
@@ -45,6 +48,7 @@ import {appRoutes} from './routes';
     ),
     ScrollToModule.forRoot(),
     GalleryModule.forRoot(),
+    InlineSVGModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
