@@ -1,18 +1,51 @@
-import { Component } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {Component, HostListener, OnInit} from '@angular/core';
+import {NavigationEnd, NavigationError, NavigationStart, Router} from '@angular/router';
 import {ScrollService} from './services/scroll.service';
+import {AngularFireAuth} from "angularfire2/auth";
+import {auth} from "firebase";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'app';
+  private lastKey: string;
 
-  constructor(private activatedRoute: ActivatedRoute, private scrollService: ScrollService) {
-    activatedRoute.url.subscribe((route) => {
-      this.scrollService.scrollTo(route);
+  @HostListener('window:keyup', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    console.log(event);
+    if (this.afAuth.auth.currentUser !== null) {
+      return;
+    }
+    lastKey = event.keyCode;
+    if (event.key === 'L') {
+      this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+    }
+  }
+
+  ngOnInit() {
+    this.router.events.subscribe((route) => {
+      if (event instanceof NavigationStart) {
+        // Show loading indicator
+      }
+
+      if (event instanceof NavigationEnd) {
+        // Hide loading indicator
+      }
+
+      if (event instanceof NavigationError) {
+        // Hide loading indicator
+        // Present error to user
+        console.log(event.error);
+      }
     });
+  }
+
+  constructor(private router: Router,
+              private scrollService: ScrollService,
+              public afAuth: AngularFireAuth) {
+
   }
 }

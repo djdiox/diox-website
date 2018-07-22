@@ -9,6 +9,8 @@ import {AngularFireModule} from 'angularfire2';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {AngularFireStorageModule} from 'angularfire2/storage';
 import {AngularFireAuthModule} from 'angularfire2/auth';
+import {NgxSlideshowComponent} from '@4geit/ngx-slideshow-component';
+
 
 import {AppComponent} from './app.component';
 import {NavigationComponent} from './components/navigation/navigation.component';
@@ -32,6 +34,7 @@ import {appRoutes} from './routes';
     WorkComponent,
     FooterComponent,
     BlogComponent,
+    NgxSlideshowComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
@@ -8,9 +8,15 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor() { }
+  public imageSources = [
+    'assets/images/embedded/photo_1.jpg'
+  ];
+
+  constructor() {
+  }
 
   ngOnInit() {
+    this.imageSources = [];
   }
 
 }

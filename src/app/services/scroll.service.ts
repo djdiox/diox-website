@@ -19,7 +19,13 @@ export class ScrollService {
 
 
   scrollTo(target: string) {
-    this.config.target = target;
+    this.config = {
+      container: 'custom-container',
+      target: target,
+      duration: 650,
+      easing: 'easeOutElastic',
+      offset: 20
+    };
     this._scrollService.scrollTo(this.config);
   }
 }

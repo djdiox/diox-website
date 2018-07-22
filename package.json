@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "@4geit/ngx-slideshow-component": "^1.4.0",
     "@angular/animations": "^6.0.9",
     "@angular/common": "^6.0.9",
     "@angular/compiler": "^6.0.9",
