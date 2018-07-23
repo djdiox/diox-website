@@ -1,0 +1,26 @@
+@import "../../../styles/text";
+@import "../../../styles/palette";
+
+.tab-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40%;
+  .tab {
+    width: 10em;
+    height: 2em;
+    line-height: 2em;
+    cursor: pointer;
+    background-color: $blue;
+    text-align: center;
+    transition: background 0.5s;
+    opacity: 0.8;
+    &.active {
+      background-color: $color-secondary;
+      opacity: 1;
+    }
+  }
+  .tab:not(:last-child) {
+    margin-right: 0.2em;
+  }
+}

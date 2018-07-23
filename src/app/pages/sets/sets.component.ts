@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SetsComponent implements OnInit {
 
+  public selected = 'biography';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public tabChanged($event) {
+    this.selected = $event;
   }
 
 }

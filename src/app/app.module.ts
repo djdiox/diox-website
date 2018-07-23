@@ -25,6 +25,7 @@ import {FooterComponent} from './components/footer/footer.component';
 import {BlogComponent} from './pages/blog/blog.component';
 import {appRoutes} from './routes';
 import {HttpClientModule} from '@angular/common/http';
+import {TabBarComponent} from './components/tab-bar/tab-bar.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {HttpClientModule} from '@angular/common/http';
     SetsComponent,
     WorkComponent,
     FooterComponent,
-    BlogComponent
+    BlogComponent,
+    TabBarComponent
   ],
   imports: [
     BrowserModule,

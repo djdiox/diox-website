@@ -1,0 +1,8 @@
+<div class="tab-bar">
+  <div class="tab"
+       *ngFor="let tab of tabs"
+       [ngClass]="{'active': tab === current}"
+       (click)="select(tab)">
+    {{tab}}
+  </div>
+</div>
