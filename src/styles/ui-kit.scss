@@ -1,0 +1,17 @@
+@import './palette';
+
+%active-state {
+  background-color: $color-secondary;
+  border: 1px solid $bright;
+  color: $bright;
+  outline: none;
+  opacity: 1;
+}
+
+%default-button {
+  cursor: pointer;
+  color: $dark;
+  border: 1px solid $dark;
+  background-color: $blue;
+  text-align: center;
+}

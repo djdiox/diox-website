@@ -1,5 +1,7 @@
 
 //Global imports for the Application
 // Importorder = King
-@import "palette.scss";
-@import "fonts.scss";
+@import "palette";
+// @import "fonts"; Can not import fonts twice
+@import "text";
+@import "ui-kit";
