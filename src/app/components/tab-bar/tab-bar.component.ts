@@ -15,9 +15,9 @@ export class TabBarComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (!current) {
+    /*if (!this.current) {
       this.current = this.tabs[0];
-    }
+     }*/
   }
 
   public select(current: string) {
