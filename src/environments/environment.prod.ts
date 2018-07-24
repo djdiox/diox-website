@@ -1,7 +1,7 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyBcYD_2BYYlwmlMZ295MWcqtDEqqhACsdc',
+    apiKey: '',
     authDomain: 'diox-website.firebaseapp.com',
     databaseURL: 'https://diox-website.firebaseio.com',
     projectId: 'diox-website',
