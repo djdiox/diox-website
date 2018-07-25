@@ -1,11 +1,17 @@
 # Diox Website
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+Hosting of the code powered by [GitLab](https://gitlab.com/djdiox) and for pages [GitHub](https://github.com/djdiox/diox-website)
+
+
+## Productive Environment
+Currently the page ist hosted on [GitHub](https://djdiox.github.io/diox-website). 
+It will be soon available on a Web Server with an domain.
 
 ## Firebase
 
 As database is Firebase from Google used. The credentials for it are stored in the environment.prod.env
-More Informations follows soon, the code will be updated, in order to make the blog work
+More Informations follows soon, the code will be updated, in order to make the blog work.
 
 ## Development server
 
