@@ -1,30 +1,38 @@
 # Diox Website
 
+Currently the page ist hosted on [GitHub](https://djdiox.github.io/diox-website). 
+It will be soon available on a Web Server with an domain.
+
+## Hosting
+
 Hosting of the code powered by [GitLab](https://gitlab.com/djdiox/diox-website) and for pages on [GitHub](https://github.com/djdiox/diox-website)
 
 ## Build 
 
-Execute `yarn build` for the normal build into dist folder.
-Performing `yarn build:docs` will create a new version 
+Execute `yarn build` for a normal build into dist folder.
+
+Performing `yarn build:docs` will create a new version for GitHub Pages in the `docs` folder.
 
 ## Development
 
 As a developer you need following tools are necessary to develop this project:
 
-- [Node.JS v8.11.1](https://nodejs.org]
-- *preferred* Node.JS installed via nvm for more details see [nvm for unix/osx](https://github.com/creationix/nvm) or [nvm for windows](https://github.com/coreybutler/nvm-windows)
+- [Node.JS v8.11.1](https://nodejs.org)
+- *preferred* installing Node.JS via nvm for more details see [nvm for unix/osx](https://github.com/creationix/nvm) or [nvm for windows](https://github.com/coreybutler/nvm-windows)
 - [Yarn v1.7.0](https://yarnpkg.com/lang/en/)
 - [Angular CLI v6.1.0](https://github.com/angular/angular-cli)
 - Git
 
+1. Install all required dependencies with `yarn install`
+2. Copy `src/environments/environment.example.ts` to `environment.ts`
+3. Fill out needed informations in environment
+4. Running `yarn start` wil start up development server on [http://localhost:4200](http://localhost:4200)
+*Hint:* If you want to access the project on a mobile device in your network run `ng server --host=0.0.0.0`
+
 ## CI / CD
 
-Continous Integration will be available over gitlab (coming soon)
+Continous Integration will be available over gitlab (coming soon). Infos will be available in `gitlab-ci.yml`
 
-## Productive Environment
-
-Currently the page ist hosted on [GitHub](https://djdiox.github.io/diox-website). 
-It will be soon available on a Web Server with an domain.
 
 ## Firebase
 
