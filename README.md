@@ -21,7 +21,7 @@ As a developer you need following tools are necessary to develop this project:
 - *preferred* installing Node.JS via nvm for more details see [nvm for unix/osx](https://github.com/creationix/nvm) or [nvm for windows](https://github.com/coreybutler/nvm-windows)
 - [Yarn v1.7.0](https://yarnpkg.com/lang/en/)
 - [Angular CLI v6.1.0](https://github.com/angular/angular-cli)
-- (Git)[https://git-scm.com/]
+- [Git](https://git-scm.com/)
 
 1. Install all required dependencies with `yarn install`
 2. Copy `src/environments/environment.example.ts` to `environment.ts`
