@@ -17,17 +17,18 @@ Performing `yarn build:docs` will create a new version for GitHub Pages in the `
 
 As a developer you need following tools are necessary to develop this project:
 
-- [Node.JS v8.11.1](https://nodejs.org)
+- [Node.JS LTS v8.11.1](https://nodejs.org)
 - *preferred* installing Node.JS via nvm for more details see [nvm for unix/osx](https://github.com/creationix/nvm) or [nvm for windows](https://github.com/coreybutler/nvm-windows)
 - [Yarn v1.7.0](https://yarnpkg.com/lang/en/)
 - [Angular CLI v6.1.0](https://github.com/angular/angular-cli)
-- Git
+- (Git)[https://git-scm.com/]
 
 1. Install all required dependencies with `yarn install`
 2. Copy `src/environments/environment.example.ts` to `environment.ts`
-3. Fill out needed informations in environment
+3. Fill out needed informations in the environment.ts file
 4. Running `yarn start` wil start up development server on [http://localhost:4200](http://localhost:4200)
-*Hint:* If you want to access the project on a mobile device in your network run `ng server --host=0.0.0.0`
+
+*Hint:* If you want to access the project on a mobile device in your network run `ng serve --host=0.0.0.0`
 
 ## CI / CD
 
@@ -78,4 +79,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # About the developer
 
 Stuttgart-Based developer running a dj/producer project. Love music, coding & peace
-(c) 2018Markus Wagner
+
+(c) 2018 Markus Wagner
