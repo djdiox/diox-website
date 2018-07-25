@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navigation></app-navigation>\n<div class=\"app\">\n  <div id=\"home\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-home></app-home>\n    </div>\n  </div>\n  <div id=\"about\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-about></app-about>\n    </div>\n  </div>\n  <div id=\"pictures\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-pictures></app-pictures>\n    </div>\n  </div>\n  <div id=\"work\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-work></app-work>\n    </div>\n  </div>\n  <div id=\"sets\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-sets></app-sets>\n    </div>\n  </div>\n</div>\n<app-footer></app-footer>\n"
+module.exports = "<app-navigation></app-navigation>\n<div class=\"app\">\n  <div id=\"home\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-home></app-home>\n    </div>\n  </div>\n  <div id=\"about\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-about></app-about>\n    </div>\n  </div>\n  <div id=\"pictures\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-pictures></app-pictures>\n    </div>\n  </div>\n  <div id=\"work\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-work></app-work>\n    </div>\n  </div>\n  <div id=\"sets\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-sets></app-sets>\n    </div>\n  </div>\n  <app-footer></app-footer>\n</div>\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<app-navigation></app-navigation>\n<div class=\"app\">\n  <div
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\n.module-wrapper {\n  height: 100vh;\n  background: #181830;\n  color: white;\n  padding: 2em; }\n.module-wrapper .container {\n    height: 100%;\n    border-radius: 0.3em;\n    padding: 2em;\n    background: #000; }\n"
+module.exports = "/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\n.module-wrapper {\n  height: 100vh;\n  width: 100%;\n  background: #181830;\n  color: white;\n  padding: 2em; }\n.module-wrapper .container {\n    height: 100%;\n    border-radius: 0.3em;\n    padding: 2em;\n    background: #000; }\n"
 
 /***/ }),
 
@@ -212,7 +212,7 @@ var AppModule = /** @class */ (function () {
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_22__["HttpClientModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(_routes__WEBPACK_IMPORTED_MODULE_21__["appRoutes"], { enableTracing: false } // <-- debugging purposes only
+                _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(_routes__WEBPACK_IMPORTED_MODULE_21__["appRoutes"], { enableTracing: false, useHash: true } // <-- debugging purposes only
                 ),
                 _nicky_lenaers_ngx_scroll_to__WEBPACK_IMPORTED_MODULE_5__["ScrollToModule"].forRoot(),
                 _ngx_gallery_core__WEBPACK_IMPORTED_MODULE_10__["GalleryModule"].forRoot(),
@@ -240,7 +240,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  footer works!\n</p>\n"
+module.exports = "<!--<i class=\"toggle-icon\" [inlineSVG]=\"'/assets/images/icons/hamburger.svg'\"></i>-->\n<div class=\"social-container\">\n  <div class=\"social-list\" id=\"socialList\" [ngClass]=\"{'social-list-active': socialVisible}\">\n    <a></a>\n    <div id=\"mixcloud\" class=\"social-icon\" [inlineSVG]=\"'assets/images/icons/mixcloud.svg'\"\n         (click)=\"openSocial('https://www.mixcloud.com/diox_dj/')\">\n    </div>\n    <div id=\"soundcloud\" class=\"social-icon\" [inlineSVG]=\"'assets/images/icons/soundcloud.svg'\"\n         (click)=\"openSocial('https://soundcloud.com/nerdreflex')\">\n    </div>\n    <div id=\"facebook\" class=\"social-icon\" [inlineSVG]=\"'assets/images/icons/facebook.svg'\"\n         (click)=\"openSocial('https://www.facebook.com/diox0/')\">\n    </div>\n    <div id=\"twitter\" class=\"social-icon\" [inlineSVG]=\"'assets/images/icons/twitter.svg'\"\n         (click)=\"openSocial('https://twitter.com/markuswagner93')\">\n    </div>\n    <div id=\"instagram\" class=\"social-icon\" [inlineSVG]=\"'assets/images/icons/instagram.svg'\"\n         (click)=\"openSocial('https://www.instagram.com/dj.diox/')\">\n    </div>\n    <div id=\"github\" class=\"social-icon\" [inlineSVG]=\"'assets/images/icons/github.svg'\"\n         (click)=\"openSocial('https://github.com/djdiox')\">\n    </div>\n  </div>\n  <div id=\"socialToggle \" class=\"social-toggle \" [ngClass]=\"{active: socialVisible} \" (click)=\"toggleSocials($event)\"\n       [inlineSVG]=\" 'assets/images/icons/earth.svg' \">\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -251,7 +251,7 @@ module.exports = "<p>\n  footer works!\n</p>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\np {\n  text-align: justify;\n  width: 80%; }\n/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\n.social-container {\n  position: fixed;\n  left: 2em;\n  bottom: 0;\n  margin-right: 10px;\n  margin-bottom: 10px; }\n.social-container .social-list {\n    -webkit-transform-origin: 0;\n            transform-origin: 0;\n    -webkit-transform: translateY(500px);\n            transform: translateY(500px);\n    opacity: 0;\n    transition: all 0.2s ease-in; }\n.social-container .social-list-active {\n    position: inherit;\n    width: auto;\n    opacity: 1;\n    -webkit-transform: translate(-3px, -338px);\n            transform: translate(-3px, -338px);\n    transition: all 0.2s linear; }\n.social-container .social-toggle {\n    width: 50px;\n    height: 50px;\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center center; }\n.social-container .social-icon {\n    width: 50px;\n    height: 50px;\n    margin-top: 5px;\n    opacity: 0.8;\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center center;\n    text-align: center;\n    border-radius: 12px;\n    background-color: aquamarine;\n    line-height: 3.7;\n    box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.75); }\n.social-container .social-icon svg {\n      vertical-align: center;\n      margin: auto;\n      width: 40px;\n      height: 40px; }\n.social-container .social-icon:hover {\n    background: black;\n    box-shadow: 4px 4px 5px 0px white; }\n.social-container .social-icon:hover path {\n      fill: white !important; }\n.social-container svg:hover {\n    fill: white; }\n"
 
 /***/ }),
 
@@ -278,8 +278,27 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var FooterComponent = /** @class */ (function () {
     function FooterComponent() {
+        this.socialVisible = false;
     }
     FooterComponent.prototype.ngOnInit = function () {
+    };
+    FooterComponent.prototype.toggleSocials = function (event) {
+        var _this = this;
+        event.stopPropagation();
+        this.socialVisible = !this.socialVisible;
+        var clickListener = function () {
+            _this.socialVisible = false;
+        };
+        if (this.socialVisible) {
+            document.body.addEventListener('click', clickListener, false);
+        }
+        else {
+            document.body.removeEventListener('click', clickListener, false);
+        }
+    };
+    FooterComponent.prototype.openSocial = function (url) {
+        this.socialVisible = false;
+        window.open(url);
     };
     FooterComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -379,7 +398,7 @@ module.exports = "<div class=\"tab-bar\">\n  <div class=\"tab\"\n       *ngFor=\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\np {\n  text-align: justify;\n  width: 80%; }\n/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\n.tab-bar .tab.active {\n  background-color: #fe7c08;\n  border: 1px solid #fff;\n  color: #fff;\n  outline: none;\n  opacity: 1; }\n.tab-bar .tab {\n  cursor: pointer;\n  color: #000;\n  border: 1px solid #000;\n  background-color: #288ad6;\n  text-align: center; }\n.tab-bar {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  width: 40%; }\n.tab-bar .tab {\n    width: 10em;\n    height: 2em;\n    line-height: 2em;\n    transition: background-color 0.5s;\n    opacity: 0.7; }\n.tab-bar .tab:not(:last-child) {\n    margin-right: 0.2em; }\n"
+module.exports = "/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\np {\n  text-align: justify;\n  width: 80%; }\n/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\n.tab-bar .tab.active {\n  background-color: #fe7c08;\n  border: 1px solid #fff;\n  color: #fff;\n  outline: none;\n  opacity: 1; }\n.tab-bar .tab {\n  cursor: pointer;\n  color: #000;\n  border: 1px solid #000;\n  background-color: #288ad6;\n  text-align: center; }\n.tab-bar {\n  display: flex;\n  flex-direction: row;\n  width: 40%; }\n.tab-bar .tab {\n    width: 10em;\n    height: 2em;\n    line-height: 2em;\n    transition: background-color 0.5s;\n    opacity: 0.7; }\n.tab-bar .tab:not(:last-child) {\n    margin-right: 0.2em; }\n"
 
 /***/ }),
 
@@ -453,7 +472,7 @@ var TabBarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>About me</h1>\n<h2>It's all about creativity</h2>\n<p>I love making music since i was a little child, and also everything i have been surrounded by tech since that.\n  Art or being creative helped a lot to gain insights of business processes or the developing a own sound.<br><br>\n  Even this web page would not exist, if I would not have imagine how it could look like!\n</p>\n"
+module.exports = "<h1>About me</h1>\n<h2>It's all about creativity</h2>\n<p>I love making music since i was a little child, and also everything i have been surrounded by tech since that.<br>\n  Art or being creative helped a lot to gain insights of business processes or the developing a own sound.<br>\n  Even this web page would not exist, if I would not have imagine how it could look like!<br><br>\n  <b>I am currently looking forward to find new exciting experiences in my work and dj life!</b>\n</p>\n\n<h2>Current Software/Technology in Use</h2>\n<!--TODO add Icons for Software -->\n<p>Angular, Typescript, Firebase, Node.JS, Docker, Ubuntu, Webstorm, VSCode, MacOS, Windows, Photoshop</p>\n<h2>Contact / Admin</h2>\n<p>\n  Contact via:<br/> Name: Markus Wagner<br/> Mail: <a href=\"mailto:djdiox@gmail.com\">djdiox@gmail.com</a><br/> Home:\n  Stuttgart<br/>\n  Complete CV available on request via E-Mail.\n</p>\n"
 
 /***/ }),
 
@@ -579,7 +598,7 @@ var BlogComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Welcome to my Page!</h1>\n<p>\n    Follow along!\n</p>\n<p>\n  Here will be my published profile and everything which is linked to it!<br>\n  Music, Dev & Gaming.. And many more.<br>\n  <br>\n  This page is currently in Beta and will be published over <img src=\"../../../assets/images/icons/Octocat.png\"\n                                                                 width=\"30\" height=\"30\">\n  <a target=\"_blank\" href=\"http://www.github.com/djdiox\">Github</a>.\n</p>\n"
+module.exports = "<h1>Welcome to my Page!</h1>\n<p>\n    Follow along!\n</p>\n<p>\n  Here will be my published profile and everything which is linked to it!<br>\n  Music, Dev & Gaming.. And many more.<br>\n  <br>\n  This page is currently in Beta and will be published over <img src=\"assets/images/icons/Octocat.png\"\n                                                                 width=\"30\" height=\"30\">\n  <a target=\"_blank\" href=\"http://www.github.com/djdiox\">Github</a>.\n</p>\n"
 
 /***/ }),
 
@@ -896,9 +915,6 @@ var appRoutes = [
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false,
     firebase: {
@@ -910,13 +926,6 @@ var environment = {
         messagingSenderId: '143634320556'
     }
 };
-/*
- * In development mode, to ignore zone related error stack frames such as
- * `zone.run`, `zoneDelegate.invokeTask` for easier debugging, you can
- * import the following file, but please comment it out in production mode
- * because it will have performance impact when throw error
- */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
 
 
 /***/ }),
