@@ -46,7 +46,7 @@ import {TabBarComponent} from './components/tab-bar/tab-bar.component';
     BrowserAnimationsModule,
     RouterModule.forRoot(
       appRoutes,
-      {enableTracing: false} // <-- debugging purposes only
+      {enableTracing: false, useHash: true} // <-- debugging purposes only
     ),
     ScrollToModule.forRoot(),
     GalleryModule.forRoot(),

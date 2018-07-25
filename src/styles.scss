@@ -4,6 +4,9 @@
 @import '~@ngx-gallery/core/styles/gallery';
 
 html {
+  body {
+    margin: 0;
+  }
   background: $color-bg;
   font-family: RalewayRegular, SansSerif, sans-serif;
   a:any-link,
