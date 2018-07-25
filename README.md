@@ -23,7 +23,10 @@ Login Function currently works if you press anywhere on the webpage `l`.
 
 # Angular CLI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8. And updated to 6.1.0
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8. And updated to 6.1.0.
+Running `ng -v` in the Project root after having installed Angular CLI will print out both the installed global and local package version.
+
+Running `ng update` in the Project root will show any available Updates for angular
 
 ## Development server
 
