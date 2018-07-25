@@ -6,6 +6,7 @@
 - Imported Pages in the App and made them available
 - Enabled SASS
 - Added navbar
+
 ## Version 0.0.2
 - Added Routes
 - Tweak nav-bar
