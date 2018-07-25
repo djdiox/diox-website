@@ -1,10 +1,13 @@
 # Diox Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
-Hosting of the code powered by [GitLab](https://gitlab.com/djdiox) and for pages [GitHub](https://github.com/djdiox/diox-website)
+Hosting of the code powered by [GitLab](https://gitlab.com/djdiox/diox-website) and for pages on [GitHub](https://github.com/djdiox/diox-website)
 
+## CI / CD
+
+Continous Integration will be available over gitlab (coming soon)
 
 ## Productive Environment
+
 Currently the page ist hosted on [GitHub](https://djdiox.github.io/diox-website). 
 It will be soon available on a Web Server with an domain.
 
@@ -12,6 +15,15 @@ It will be soon available on a Web Server with an domain.
 
 As database is Firebase from Google used. The credentials for it are stored in the environment.prod.env
 More Informations follows soon, the code will be updated, in order to make the blog work.
+
+## Authentication
+
+Will be available through firebase.
+Login Function currently works if you press anywhere on the webpage `l`.
+
+# Angular CLI
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8. And updated to 6.1.0
 
 ## Development server
 
@@ -36,3 +48,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# About the developer
+
+Stuttgart-Based developer running a dj/producer project. Love music, coding & peace
+(c) 2018Markus Wagner
