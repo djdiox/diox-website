@@ -32,6 +32,10 @@ As a developer you need following tools are necessary to develop this project:
 
 *Hint:* If you want to access the project on a mobile device in your network run `ng serve --host=0.0.0.0`
 
+## Changelog
+
+A Changelog is provided in the project root under the filename `CHANGELOG.md`
+
 ## CI / CD
 
 Continous Integration will be available over gitlab (coming soon). Infos will be available in `gitlab-ci.yml`
