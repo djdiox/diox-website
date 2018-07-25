@@ -2,6 +2,21 @@
 
 Hosting of the code powered by [GitLab](https://gitlab.com/djdiox/diox-website) and for pages on [GitHub](https://github.com/djdiox/diox-website)
 
+## Build 
+
+Execute `yarn build` for the normal build into dist folder.
+Performing `yarn build:docs` will create a new version 
+
+## Development
+
+As a developer you need following tools are necessary to develop this project:
+
+- [Node.JS v8.11.1](https://nodejs.org]
+- *preferred* Node.JS installed via nvm for more details see [nvm for unix/osx](https://github.com/creationix/nvm) or [nvm for windows](https://github.com/coreybutler/nvm-windows)
+- [Yarn v1.7.0](https://yarnpkg.com/lang/en/)
+- [Angular CLI v6.1.0](https://github.com/angular/angular-cli)
+- Git
+
 ## CI / CD
 
 Continous Integration will be available over gitlab (coming soon)
