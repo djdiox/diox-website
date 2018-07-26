@@ -1,6 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {NavigationEnd, NavigationError, NavigationStart, Router} from '@angular/router';
-import {ScrollService} from './services/scroll.service';
 import {AngularFireAuth} from 'angularfire2/auth';
 import {auth} from 'firebase';
 

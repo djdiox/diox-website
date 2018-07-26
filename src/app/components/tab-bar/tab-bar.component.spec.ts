@@ -16,6 +16,7 @@ describe('TabBarComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(TabBarComponent);
     component = fixture.componentInstance;
+    component.tabs = ['test1', 'test2'];
     fixture.detectChanges();
   });
 

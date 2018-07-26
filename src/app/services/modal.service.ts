@@ -39,7 +39,7 @@ export class ModalService {
   private _lastShownModal: ModalOptions;
 
   constructor() {
-    this._currentModalOptions = new Subject<ModalOptions>(null);
+    this._currentModalOptions = new Subject<ModalOptions>();
   }
 
   public get CurrentModalOptions(): Observable<ModalOptions> {
@@ -54,7 +54,7 @@ export class ModalService {
 
   public hideCurrentModal(result = false) {
     this._lastShownModal.visible = false;
-    this._lastShownModals.result = result;
+    this._lastShownModal.result = result;
     this._currentModalOptions.next(this._lastShownModal);
   }
 }
