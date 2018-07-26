@@ -15,8 +15,8 @@ export class PicturesComponent implements OnInit {
 
   ngOnInit() {
     this.images = [
-      new ImageItem({src: '/assets/images/embedded/photo_1.jpg', thumb: '/assets/images/embedded/photo_1.jpg'}),
-      new ImageItem({src: '/assets/images/embedded/photo_1.jpg', thumb: '/assets/images/embedded/photo_1.jpg'})
+      new ImageItem({src: 'assets/images/embedded/photo_1.jpg', thumb: 'assets/images/embedded/photo_1.jpg'}),
+      new ImageItem({src: 'assets/images/embedded/photo_1.jpg', thumb: 'assets/images/embedded/photo_1.jpg'})
       // ... more items
     ];
   }

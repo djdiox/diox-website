@@ -2,14 +2,13 @@
 
 .module-wrapper {
   height: 100vh;
-  width: 100%;
   background: $color-kickoff-blue;
   color: white;
   padding: 2em;
   .container {
-    height: 100%;
+    height: 89%;
     border-radius: 0.3em;
-    padding: 2em;
+    padding: 4em;
     background: $dark;
   }
 }
