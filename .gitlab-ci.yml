@@ -7,11 +7,14 @@ cache:
 deploy_stage:
   stage: deploy
   environment: Stage
+  artifacts:
+    paths:
+      - docs/
   only:
     - master
   script:
     - curl -o- -L https://yarnpkg.com/install.sh | bash
     - yarn
-    - ./node_modules/@angular/cli/bin/ng test --single-run=true --watch=false --source-map=false
+    - ./node_modules/@angular/cli/bin/ng test --watch=false --source-map=false
     - ./node_modules/@angular/cli/bin/ng e2e --watch=false
     - yarn build:docs
