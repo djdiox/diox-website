@@ -1,0 +1,14 @@
+<div class="modal">
+  <h2 class="modal-title">{{CurrentModalOptions.title}}</h2>
+  <p class="modal-content">
+    {{CurrentModalOptions.content}}
+  </p>
+  <div class="button-bar" *ngIf="CurrentModalOptions.interactive">
+    <button (click)="closeModal(true)">
+      {{CurrentModalOptions.buttonYesText}}
+    </button>
+    <button (click)="closeModal(false)">
+      {{CurrentModalOptions.buttonYesText}}
+    </button>
+  </div>
+</div>

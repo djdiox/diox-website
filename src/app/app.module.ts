@@ -26,6 +26,7 @@ import {BlogComponent} from './pages/blog/blog.component';
 import {appRoutes} from './routes';
 import {HttpClientModule} from '@angular/common/http';
 import {TabBarComponent} from './components/tab-bar/tab-bar.component';
+import {ModalComponent} from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {TabBarComponent} from './components/tab-bar/tab-bar.component';
     WorkComponent,
     FooterComponent,
     BlogComponent,
-    TabBarComponent
+    TabBarComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
