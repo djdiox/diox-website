@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navigation></app-navigation>\r\n<app-footer></app-footer>\r\n<div class=\"app\">\r\n  <div id=\"home\" class=\"module-wrapper\">\r\n    <div class=\"container\">\r\n      <app-home></app-home>\r\n    </div>\r\n  </div>\r\n  <div id=\"about\" class=\"module-wrapper\">\r\n    <div class=\"container\">\r\n      <app-about></app-about>\r\n    </div>\r\n  </div>\r\n  <div id=\"pictures\" class=\"module-wrapper\">\r\n    <div class=\"container\">\r\n      <app-pictures></app-pictures>\r\n    </div>\r\n  </div>\r\n  <div id=\"work\" class=\"module-wrapper\">\r\n    <div class=\"container\">\r\n      <app-work></app-work>\r\n    </div>\r\n  </div>\r\n  <div id=\"sets\" class=\"module-wrapper\">\r\n    <div class=\"container\">\r\n      <app-sets></app-sets>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<app-navigation></app-navigation>\n<app-footer></app-footer>\n<div class=\"app\">\n  <div id=\"home\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-home></app-home>\n    </div>\n  </div>\n  <div id=\"about\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-about></app-about>\n    </div>\n  </div>\n  <div id=\"pictures\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-pictures></app-pictures>\n    </div>\n  </div>\n  <div id=\"work\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-work></app-work>\n    </div>\n  </div>\n  <div id=\"sets\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-sets></app-sets>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<app-navigation></app-navigation>\r\n<app-footer></app-footer>
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/**\r\n * Global color palette\r\n * =================================\r\n * - Generic colors\r\n * - Color scheme\r\n * - Common colors\r\n * - Links\r\n * - Text selection\r\n * - <hr>\r\n * - Any others..\r\n */\n.module-wrapper {\n  height: 100vh;\n  background: #181830;\n  color: white;\n  padding: 2em; }\n.module-wrapper .container {\n    height: 89%;\n    border-radius: 0.3em;\n    padding: 4em;\n    background: #000; }\n"
+module.exports = "/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\n.module-wrapper {\n  height: 100vh;\n  background: #181830;\n  color: white;\n  padding: 2em; }\n.module-wrapper .container {\n    height: 89%;\n    border-radius: 0.3em;\n    padding: 4em;\n    background: #000; }\n"
 
 /***/ }),
 
@@ -161,12 +161,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./routes */ "./src/app/routes.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _components_tab_bar_tab_bar_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/tab-bar/tab-bar.component */ "./src/app/components/tab-bar/tab-bar.component.ts");
+/* harmony import */ var _components_modal_modal_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/modal/modal.component */ "./src/app/components/modal/modal.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -206,13 +208,19 @@ var AppModule = /** @class */ (function () {
                 _pages_work_work_component__WEBPACK_IMPORTED_MODULE_18__["WorkComponent"],
                 _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_19__["FooterComponent"],
                 _pages_blog_blog_component__WEBPACK_IMPORTED_MODULE_20__["BlogComponent"],
-                _components_tab_bar_tab_bar_component__WEBPACK_IMPORTED_MODULE_23__["TabBarComponent"]
+                _components_tab_bar_tab_bar_component__WEBPACK_IMPORTED_MODULE_23__["TabBarComponent"],
+                _components_modal_modal_component__WEBPACK_IMPORTED_MODULE_24__["ModalComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_22__["HttpClientModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(_routes__WEBPACK_IMPORTED_MODULE_21__["appRoutes"], { enableTracing: false, useHash: true } // <-- debugging purposes only
+                _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(_routes__WEBPACK_IMPORTED_MODULE_21__["appRoutes"], {
+                    enableTracing: false,
+                    useHash: true,
+                    scrollPositionRestoration: 'enabled',
+                    anchorScrolling: 'enabled',
+                } // <-- debugging purposes only
                 ),
                 _nicky_lenaers_ngx_scroll_to__WEBPACK_IMPORTED_MODULE_5__["ScrollToModule"].forRoot(),
                 _ngx_gallery_core__WEBPACK_IMPORTED_MODULE_10__["GalleryModule"].forRoot(),
@@ -240,7 +248,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--<i class=\"toggle-icon\" [inlineSVG]=\"'/assets/images/icons/hamburger.svg'\"></i>-->\r\n<div class=\"social-container\">\r\n  <div class=\"social-list\" id=\"socialList\" [ngClass]=\"{'social-list-active': socialVisible}\">\r\n    <a></a>\r\n    <div id=\"mixcloud\" class=\"social-icon\" [inlineSVG]=\"'assets/images/icons/mixcloud.svg'\"\r\n         (click)=\"openSocial('https://www.mixcloud.com/diox_dj/')\">\r\n    </div>\r\n    <div id=\"soundcloud\" class=\"social-icon\" [inlineSVG]=\"'assets/images/icons/soundcloud.svg'\"\r\n         (click)=\"openSocial('https://soundcloud.com/nerdreflex')\">\r\n    </div>\r\n    <div id=\"facebook\" class=\"social-icon\" [inlineSVG]=\"'assets/images/icons/facebook.svg'\"\r\n         (click)=\"openSocial('https://www.facebook.com/diox0/')\">\r\n    </div>\r\n    <div id=\"twitter\" class=\"social-icon\" [inlineSVG]=\"'assets/images/icons/twitter.svg'\"\r\n         (click)=\"openSocial('https://twitter.com/markuswagner93')\">\r\n    </div>\r\n    <div id=\"instagram\" class=\"social-icon\" [inlineSVG]=\"'assets/images/icons/instagram.svg'\"\r\n         (click)=\"openSocial('https://www.instagram.com/dj.diox/')\">\r\n    </div>\r\n    <div id=\"github\" class=\"social-icon\" [inlineSVG]=\"'assets/images/icons/github.svg'\"\r\n         (click)=\"openSocial('https://github.com/djdiox')\">\r\n    </div>\r\n  </div>\r\n  <div id=\"socialToggle \" class=\"social-toggle \" [ngClass]=\"{active: socialVisible} \" (click)=\"toggleSocials($event)\"\r\n       [inlineSVG]=\" 'assets/images/icons/earth.svg' \">\r\n  </div>\r\n\r\n</div>\r\n"
+module.exports = "<!--<i class=\"toggle-icon\" [inlineSVG]=\"'/assets/images/icons/hamburger.svg'\"></i>-->\n<div class=\"social-container\">\n  <div class=\"social-list\" id=\"socialList\" [ngClass]=\"{'social-list-active': socialVisible}\">\n    <a></a>\n    <div id=\"mixcloud\" class=\"social-icon\" [inlineSVG]=\"'assets/images/icons/mixcloud.svg'\"\n         (click)=\"openSocial('https://www.mixcloud.com/diox_dj/')\">\n    </div>\n    <div id=\"soundcloud\" class=\"social-icon\" [inlineSVG]=\"'assets/images/icons/soundcloud.svg'\"\n         (click)=\"openSocial('https://soundcloud.com/nerdreflex')\">\n    </div>\n    <div id=\"facebook\" class=\"social-icon\" [inlineSVG]=\"'assets/images/icons/facebook.svg'\"\n         (click)=\"openSocial('https://www.facebook.com/diox0/')\">\n    </div>\n    <div id=\"twitter\" class=\"social-icon\" [inlineSVG]=\"'assets/images/icons/twitter.svg'\"\n         (click)=\"openSocial('https://twitter.com/markuswagner93')\">\n    </div>\n    <div id=\"instagram\" class=\"social-icon\" [inlineSVG]=\"'assets/images/icons/instagram.svg'\"\n         (click)=\"openSocial('https://www.instagram.com/dj.diox/')\">\n    </div>\n    <div id=\"github\" class=\"social-icon\" [inlineSVG]=\"'assets/images/icons/github.svg'\"\n         (click)=\"openSocial('https://github.com/djdiox')\">\n    </div>\n  </div>\n  <div id=\"socialToggle \" class=\"social-toggle \" [ngClass]=\"{active: socialVisible} \" (click)=\"toggleSocials($event)\"\n       [inlineSVG]=\" 'assets/images/icons/earth.svg' \">\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -251,7 +259,7 @@ module.exports = "<!--<i class=\"toggle-icon\" [inlineSVG]=\"'/assets/images/ico
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/**\r\n * Global color palette\r\n * =================================\r\n * - Generic colors\r\n * - Color scheme\r\n * - Common colors\r\n * - Links\r\n * - Text selection\r\n * - <hr>\r\n * - Any others..\r\n */\np {\n  text-align: justify;\n  width: 80%; }\n/**\r\n * Global color palette\r\n * =================================\r\n * - Generic colors\r\n * - Color scheme\r\n * - Common colors\r\n * - Links\r\n * - Text selection\r\n * - <hr>\r\n * - Any others..\r\n */\n.social-container {\n  position: fixed;\n  left: 2em;\n  bottom: 0;\n  z-index: 1000;\n  margin-right: 10px;\n  margin-bottom: 10px; }\n.social-container .social-list {\n    -webkit-transform-origin: 0;\n            transform-origin: 0;\n    -webkit-transform: translateY(500px);\n            transform: translateY(500px);\n    opacity: 0;\n    transition: all 0.2s ease-in; }\n.social-container .social-list-active {\n    position: inherit;\n    width: auto;\n    opacity: 1;\n    -webkit-transform: translate(-3px, -338px);\n            transform: translate(-3px, -338px);\n    transition: all 0.2s linear; }\n.social-container .social-toggle {\n    width: 50px;\n    height: 50px;\n    background-size: contain;\n    background: no-repeat center center; }\n.social-container .social-icon {\n    width: 50px;\n    height: 50px;\n    margin-top: 5px;\n    opacity: 0.8;\n    background-size: contain;\n    text-align: center;\n    border-radius: 12px;\n    background: #288ad6 no-repeat center center;\n    line-height: 4.4;\n    box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.75); }\n.social-container .social-icon svg {\n      vertical-align: center;\n      margin: auto;\n      width: 40px;\n      height: 40px; }\n.social-container .social-icon:hover {\n    background: #fe7c08;\n    box-shadow: 4px 4px 5px 0 white; }\n.social-container .social-icon:hover svg path {\n      fill: #fff !important; }\n.social-container svg:hover {\n    fill: white; }\n"
+module.exports = "/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\np {\n  text-align: justify;\n  width: 80%; }\n/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\n.social-container {\n  position: fixed;\n  left: 2em;\n  bottom: 0;\n  z-index: 1000;\n  margin-right: 10px;\n  margin-bottom: 10px; }\n.social-container .social-list {\n    -webkit-transform-origin: 0;\n            transform-origin: 0;\n    -webkit-transform: translateY(500px);\n            transform: translateY(500px);\n    opacity: 0;\n    transition: all 0.2s ease-in; }\n.social-container .social-list-active {\n    position: inherit;\n    width: auto;\n    opacity: 1;\n    -webkit-transform: translate(-3px, -338px);\n            transform: translate(-3px, -338px);\n    transition: all 0.2s linear; }\n.social-container .social-toggle {\n    width: 50px;\n    height: 50px;\n    background-size: contain;\n    background: no-repeat center center; }\n.social-container .social-icon {\n    width: 50px;\n    height: 50px;\n    margin-top: 5px;\n    opacity: 0.8;\n    background-size: contain;\n    text-align: center;\n    border-radius: 12px;\n    background: #288ad6 no-repeat center center;\n    line-height: 4.4;\n    box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.75); }\n.social-container .social-icon svg {\n      vertical-align: center;\n      margin: auto;\n      width: 40px;\n      height: 40px; }\n.social-container .social-icon:hover {\n    background: #fe7c08;\n    box-shadow: 4px 4px 5px 0 white; }\n.social-container .social-icon:hover svg path {\n      fill: #fff !important; }\n.social-container svg:hover {\n    fill: white; }\n"
 
 /***/ }),
 
@@ -315,6 +323,85 @@ var FooterComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/modal/modal.component.html":
+/*!*******************************************************!*\
+  !*** ./src/app/components/modal/modal.component.html ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal\">\n  <h2 class=\"modal-title\">{{CurrentModalOptions?.title}}</h2>\n  <p class=\"modal-content\">\n    {{CurrentModalOptions?.content}}\n  </p>\n  <div class=\"button-bar\" *ngIf=\"CurrentModalOptions?.interactive\">\n    <button (click)=\"closeModal(true)\">\n      {{CurrentModalOptions?.buttonYesText}}\n    </button>\n    <button (click)=\"closeModal(false)\">\n      {{CurrentModalOptions?.buttonYesText}}\n    </button>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/modal/modal.component.scss":
+/*!*******************************************************!*\
+  !*** ./src/app/components/modal/modal.component.scss ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/modal/modal.component.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/components/modal/modal.component.ts ***!
+  \*****************************************************/
+/*! exports provided: ModalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ModalComponent", function() { return ModalComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_modal_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/modal.service */ "./src/app/services/modal.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ModalComponent = /** @class */ (function () {
+    function ModalComponent(modalService) {
+        var _this = this;
+        this.modalService = modalService;
+        this.closing = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"](true);
+        this.modalService
+            .CurrentModalOptions
+            .subscribe(function (options) { return _this.CurrentModalOptions = options; });
+    }
+    ModalComponent.prototype.ngOnInit = function () {
+    };
+    ModalComponent.prototype.closeModal = function (result) {
+        this.CurrentModalOptions.result = result;
+        this.modalService.hideCurrentModal();
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", Object)
+    ], ModalComponent.prototype, "closing", void 0);
+    ModalComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-modal',
+            template: __webpack_require__(/*! ./modal.component.html */ "./src/app/components/modal/modal.component.html"),
+            styles: [__webpack_require__(/*! ./modal.component.scss */ "./src/app/components/modal/modal.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_services_modal_service__WEBPACK_IMPORTED_MODULE_1__["ModalService"]])
+    ], ModalComponent);
+    return ModalComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/navigation/navigation.component.html":
 /*!*****************************************************************!*\
   !*** ./src/app/components/navigation/navigation.component.html ***!
@@ -322,7 +409,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<i class=\"hamburger icon\" [ngClass]=\"{'active': !showNav}\" [inlineSVG]=\"'/assets/images/icons/hamburger.svg'\"\r\n   (click)=\"showNav = !showNav\"></i>\r\n<ul class=\"nav\" role=\"navigation\" [ngClass]=\"{'hidden': !showNav}\">\r\n  <li routerLink=\"/home\" routerLinkActive=\"active\" [ngx-scroll-to]=\"'#home'\">home</li>\r\n  <li routerLink=\"/about\" routerLinkActive=\"active\" [ngx-scroll-to]=\"'#about'\">about</li>\r\n  <li routerLink=\"/pictures\" routerLinkActive=\"active\" [ngx-scroll-to]=\"'#pictures'\">pictures</li>\r\n  <li routerLink=\"/work\" routerLinkActive=\"active\" [ngx-scroll-to]=\"'#work'\">work</li>\r\n  <li routerLink=\"/sets\" routerLinkActive=\"active\" [ngx-scroll-to]=\"'#sets'\">djing</li>\r\n</ul>\r\n"
+module.exports = "<i class=\"hamburger icon\" [ngClass]=\"{'active': !showNav}\" [inlineSVG]=\"'/assets/images/icons/hamburger.svg'\"\n   (click)=\"showNav = !showNav\"></i>\n<ul class=\"nav\" role=\"navigation\" [ngClass]=\"{'hidden': !showNav}\">\n  <li routerLink=\"/home\" routerLinkActive=\"active\" [ngx-scroll-to]=\"'#home'\">home</li>\n  <li routerLink=\"/about\" routerLinkActive=\"active\" [ngx-scroll-to]=\"'#about'\">about</li>\n  <li routerLink=\"/pictures\" routerLinkActive=\"active\" [ngx-scroll-to]=\"'#pictures'\">pictures</li>\n  <li routerLink=\"/work\" routerLinkActive=\"active\" [ngx-scroll-to]=\"'#work'\">work</li>\n  <li routerLink=\"/sets\" routerLinkActive=\"active\" [ngx-scroll-to]=\"'#sets'\">djing</li>\n</ul>\n"
 
 /***/ }),
 
@@ -333,7 +420,7 @@ module.exports = "<i class=\"hamburger icon\" [ngClass]=\"{'active': !showNav}\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/**\r\n * Global color palette\r\n * =================================\r\n * - Generic colors\r\n * - Color scheme\r\n * - Common colors\r\n * - Links\r\n * - Text selection\r\n * - <hr>\r\n * - Any others..\r\n */\np {\n  text-align: justify;\n  width: 80%; }\n/**\r\n * Global color palette\r\n * =================================\r\n * - Generic colors\r\n * - Color scheme\r\n * - Common colors\r\n * - Links\r\n * - Text selection\r\n * - <hr>\r\n * - Any others..\r\n */\nul.nav li.active {\n  background-color: #fe7c08;\n  border: 1px solid #fff;\n  color: #fff;\n  outline: none;\n  opacity: 1; }\nul.nav li {\n  cursor: pointer;\n  color: #000;\n  border: 1px solid #000;\n  background-color: #288ad6;\n  text-align: center; }\ni.hamburger {\n  z-index: 100;\n  width: 50px;\n  height: 50px;\n  position: fixed;\n  right: 3.5em;\n  top: 3em; }\ni.hamburger svg path {\n    /* Safari */\n    transition: fill 1s; }\ni.hamburger.active svg path {\n    fill: #288ad6; }\nul.nav {\n  position: fixed;\n  z-index: 100;\n  right: -2.5em;\n  top: 12%;\n  width: 92px;\n  height: 30em;\n  display: flex;\n  flex-wrap: wrap;\n  /* Safari */\n  transition: opacity 1s; }\nul.nav.hidden {\n    opacity: 0;\n    pointer-events: none; }\nul.nav li {\n    height: 1.5em;\n    width: 80%;\n    list-style: none;\n    line-height: 1.5em;\n    padding: 1em;\n    -webkit-transform-origin: 0 0;\n    transform-origin: 0 0;\n    -webkit-transform: rotate(90deg);\n    transform: rotate(90deg);\n    transition: background-color, opacity, color 1.5s;\n    opacity: 0.7; }\nul.nav li.active {\n      opacity: 1; }\n"
+module.exports = "/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\np {\n  text-align: justify;\n  width: 80%; }\n/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\nul.nav li.active {\n  background-color: #fe7c08;\n  border: 1px solid #fff;\n  color: #fff;\n  outline: none;\n  opacity: 1; }\nul.nav li {\n  cursor: pointer;\n  color: #000;\n  border: 1px solid #000;\n  background-color: #288ad6;\n  text-align: center; }\ni.hamburger {\n  z-index: 100;\n  width: 50px;\n  height: 50px;\n  position: fixed;\n  right: 3.5em;\n  top: 3em; }\ni.hamburger svg path {\n    /* Safari */\n    transition: fill 1s; }\ni.hamburger.active svg path {\n    fill: #288ad6; }\nul.nav {\n  position: fixed;\n  z-index: 100;\n  right: -2.5em;\n  top: 12%;\n  width: 92px;\n  height: 30em;\n  display: flex;\n  flex-wrap: wrap;\n  /* Safari */\n  transition: opacity 1s; }\nul.nav.hidden {\n    opacity: 0;\n    pointer-events: none; }\nul.nav li {\n    height: 1.5em;\n    width: 80%;\n    list-style: none;\n    line-height: 1.5em;\n    padding: 1em;\n    -webkit-transform-origin: 0 0;\n    transform-origin: 0 0;\n    -webkit-transform: rotate(90deg);\n    transform: rotate(90deg);\n    transition: background-color, opacity, color 1.5s;\n    opacity: 0.7; }\nul.nav li.active {\n      opacity: 1; }\n"
 
 /***/ }),
 
@@ -387,7 +474,7 @@ var NavigationComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"tab-bar\">\r\n  <div class=\"tab\"\r\n       *ngFor=\"let tab of tabs\"\r\n       [ngClass]=\"{'active': tab === current}\"\r\n       (click)=\"select(tab)\">\r\n    {{tab}}\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"tab-bar\">\n  <div class=\"tab\"\n       *ngFor=\"let tab of tabs\"\n       [ngClass]=\"{'active': tab === current}\"\n       (click)=\"select(tab)\">\n    {{tab}}\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -398,7 +485,7 @@ module.exports = "<div class=\"tab-bar\">\r\n  <div class=\"tab\"\r\n       *ngF
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/**\r\n * Global color palette\r\n * =================================\r\n * - Generic colors\r\n * - Color scheme\r\n * - Common colors\r\n * - Links\r\n * - Text selection\r\n * - <hr>\r\n * - Any others..\r\n */\np {\n  text-align: justify;\n  width: 80%; }\n/**\r\n * Global color palette\r\n * =================================\r\n * - Generic colors\r\n * - Color scheme\r\n * - Common colors\r\n * - Links\r\n * - Text selection\r\n * - <hr>\r\n * - Any others..\r\n */\n.tab-bar .tab.active {\n  background-color: #fe7c08;\n  border: 1px solid #fff;\n  color: #fff;\n  outline: none;\n  opacity: 1; }\n.tab-bar .tab {\n  cursor: pointer;\n  color: #000;\n  border: 1px solid #000;\n  background-color: #288ad6;\n  text-align: center; }\n.tab-bar {\n  display: flex;\n  flex-direction: row;\n  width: 40%; }\n.tab-bar .tab {\n    width: 10em;\n    height: 2em;\n    line-height: 2em;\n    transition: background-color 0.5s;\n    opacity: 0.7; }\n.tab-bar .tab:not(:last-child) {\n    margin-right: 0.2em; }\n"
+module.exports = "/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\np {\n  text-align: justify;\n  width: 80%; }\n/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\n.tab-bar .tab.active {\n  background-color: #fe7c08;\n  border: 1px solid #fff;\n  color: #fff;\n  outline: none;\n  opacity: 1; }\n.tab-bar .tab {\n  cursor: pointer;\n  color: #000;\n  border: 1px solid #000;\n  background-color: #288ad6;\n  text-align: center; }\n.tab-bar {\n  display: flex;\n  flex-direction: row;\n  width: 40%; }\n.tab-bar .tab {\n    width: 10em;\n    height: 2em;\n    line-height: 2em;\n    transition: background-color 0.5s;\n    opacity: 0.7; }\n.tab-bar .tab:not(:last-child) {\n    margin-right: 0.2em; }\n"
 
 /***/ }),
 
@@ -472,7 +559,7 @@ var TabBarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>About me</h1>\r\n<h2>It's all about creativity</h2>\r\n<p>I love making music since i was a little child, and also everything i have been surrounded by tech since that.<br>\r\n  Art or being creative helped a lot to gain insights of business processes or the developing a own sound.<br>\r\n  Even this web page would not exist, if I would not have imagine how it could look like!<br><br>\r\n  <b>I am currently looking forward to find new exciting experiences in my work and dj life!</b>\r\n</p>\r\n\r\n<h2>Contact / Admin</h2>\r\n<p>\r\n  Contact via:<br/> Name: Markus Wagner<br/> Mail: <a href=\"mailto:djdiox@gmail.com\">djdiox@gmail.com</a><br/> Home:\r\n  Stuttgart<br/>\r\n  Complete CV available on request via E-Mail.\r\n</p>\r\n"
+module.exports = "<h1>About me</h1>\n<h2>It's all about creativity</h2>\n<p>I love making music since i was a little child, and also everything i have been surrounded by tech since that.<br>\n  Art or being creative helped a lot to gain insights of business processes or the developing a own sound.<br>\n  Even this web page would not exist, if I would not have imagine how it could look like!<br><br>\n  <b>I am currently looking forward to find new exciting experiences in my work and dj life!</b>\n</p>\n\n<h2>Contact / Admin</h2>\n<p>\n  Contact via:<br/> Name: Markus Wagner<br/> Mail: <a href=\"mailto:djdiox@gmail.com\">djdiox@gmail.com</a><br/> Home:\n  Stuttgart<br/>\n  Complete CV available on request via E-Mail.\n</p>\n"
 
 /***/ }),
 
@@ -483,7 +570,7 @@ module.exports = "<h1>About me</h1>\r\n<h2>It's all about creativity</h2>\r\n<p>
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "p {\n  text-align: justify;\n  width: 80%; }\n"
+module.exports = "p {\n  text-align: justify;\n  width: 80%; }\n\n.software-icon {\n  height: 3em;\n  width: 4em;\n  display: block; }\n\nsvg {\n  height: 3em;\n  width: 4em; }\n"
 
 /***/ }),
 
@@ -510,6 +597,28 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var AboutComponent = /** @class */ (function () {
     function AboutComponent() {
+        this.softwareIcons = [
+            {
+                path: 'assets/images/icons/angular.svg',
+                name: 'Angular'
+            },
+            {
+                path: 'assets/images/icons/firebase.svg',
+                name: 'Firbase'
+            },
+            {
+                path: 'assets/images/icons/docker.svg',
+                name: 'Docker'
+            },
+            {
+                path: 'assets/images/icons/ubuntu.svg',
+                name: 'Ubuntu'
+            },
+            {
+                path: 'assets/images/icons/photoshop.svg',
+                name: 'Photoshop'
+            },
+        ];
     }
     AboutComponent.prototype.ngOnInit = function () {
     };
@@ -535,7 +644,7 @@ var AboutComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  blog works!\r\n</p>\r\n"
+module.exports = "<p>\n  blog works!\n</p>\n"
 
 /***/ }),
 
@@ -598,7 +707,7 @@ var BlogComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Welcome to my Page!</h1>\r\n<p>\r\n    Follow along!\r\n</p>\r\n<p>\r\n  Here will be my published profile and everything which is linked to it!<br>\r\n  Music, Dev & Gaming.. And many more.<br>\r\n  <br>\r\n  This page is currently in Beta and will be published over\r\n  <a target=\"_blank\" href=\"http://www.github.com/djdiox\"><img src=\"assets/images/icons/Octocat.png\"\r\n                                                             width=\"30\" height=\"30\" />Github</a>.\r\n</p>\r\n"
+module.exports = "<h1>Welcome to my Page!</h1>\n<p>\n    Follow along!\n</p>\n<p>\n  Here will be my published profile and everything which is linked to it!<br>\n  Music, Dev & Gaming.. And many more.<br>\n  <br>\n  This page is currently in Beta and will be published over\n  <a target=\"_blank\" href=\"http://www.github.com/djdiox\"><img src=\"assets/images/icons/Octocat.png\"\n                                                             width=\"30\" height=\"30\" />Github</a>.\n</p>\n"
 
 /***/ }),
 
@@ -661,7 +770,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<gallery [items]=\"images\"></gallery>\r\n"
+module.exports = "<gallery [items]=\"images\"></gallery>\n"
 
 /***/ }),
 
@@ -731,7 +840,7 @@ var PicturesComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-tab-bar [current]=\"selected\" (selected)=\"tabChanged($event)\" [tabs]=\"['sets', 'biography']\"></app-tab-bar>\r\n<div *ngIf=\"selected === 'biography'\">\r\n  <h1>DJing and Producing</h1>\r\n  <h2>Genres</h2>\r\n  <p>\r\n    Electronic music has always be my beloved treasure.<br>\r\n    But i love every genre over rock and Hip Hop to Goa and Trap<br>\r\n  </p>\r\n  <h2>Musical Experience</h2>\r\n  <p>\r\n    Since I was a child i wanted to play a Instrument, which I started when I was 12.\r\n    I played flute, clarinet & saxophone. But there was still something missing.\r\n    I started 2 years later to love electronic music, and my fascination for it did not stop since then!\r\n    You can hear the development of it in the DJ / Sets / Music Section. I hope you like it!!\r\n  </p>\r\n</div>\r\n<div *ngIf=\"selected === 'sets'\">\r\n  <iframe width=\"100%\" height=\"180\"\r\n          src=\"https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fdiox_dj%2F&hide_cover=1&light=1\"\r\n          frameborder=\"0\"></iframe>\r\n  <iframe width=\"100%\" height=\"450\" scrolling=\"no\" frameborder=\"no\"\r\n          src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/6380736&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true\"></iframe>\r\n</div>\r\n"
+module.exports = "<app-tab-bar [current]=\"selected\" (selected)=\"tabChanged($event)\" [tabs]=\"['sets', 'biography']\"></app-tab-bar>\n<div *ngIf=\"selected === 'biography'\">\n  <h1>DJing and Producing</h1>\n  <h2>Genres</h2>\n  <p>\n    Electronic music has always be my beloved treasure.<br>\n    But i love every genre over rock and Hip Hop to Goa and Trap<br>\n  </p>\n  <h2>Musical Experience</h2>\n  <p>\n    Since I was a child i wanted to play a Instrument, which I started when I was 12.\n    I played flute, clarinet & saxophone. But there was still something missing.\n    I started 2 years later to love electronic music, and my fascination for it did not stop since then!\n    You can hear the development of it in the DJ / Sets / Music Section. I hope you like it!!\n  </p>\n</div>\n<div *ngIf=\"selected === 'sets'\">\n  <iframe width=\"100%\" height=\"180\"\n          src=\"https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fdiox_dj%2F&hide_cover=1&light=1\"\n          frameborder=\"0\"></iframe>\n  <iframe width=\"100%\" height=\"450\" scrolling=\"no\" frameborder=\"no\"\n          src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/6380736&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true\"></iframe>\n</div>\n"
 
 /***/ }),
 
@@ -798,7 +907,7 @@ var SetsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Development</h1>\r\n<h2>process design is key</h2>\r\n<p>\r\n  Working as a developer and creating a unique experience for everyone has ever been my goal to archive.<br>\r\n  The details and a perfect workflow is what makes every page or app unique.<br><br>\r\n  Backend, Frontend and everything else related to making a software is in my scope when it comes to development.<br>\r\n</p>\r\n\r\n<h2>Current Software/Technology in Use</h2>\r\n<!--TODO add Icons for Software -->\r\n<p>Angular, Typescript, Firebase, Node.JS, Docker, Ubuntu, Webstorm, VSCode, MacOS, Windows, Photoshop</p>\r\n"
+module.exports = "<h1>Development</h1>\n<h2>process design is key</h2>\n<p>\n  Working as a developer and creating a unique experience for everyone has ever been my goal to archive.<br>\n  The details and a perfect workflow is what makes every page or app unique.<br><br>\n  Backend, Frontend and everything else related to making a software is in my scope when it comes to development.<br>\n</p>\n\n<h2>Current Software/Technology in Use</h2>\n<!--TODO add Icons for Software -->\n<p>Angular, Typescript, Firebase, Node.JS, Docker, Ubuntu, Webstorm, VSCode, MacOS, Windows, Photoshop</p>\n"
 
 /***/ }),
 
@@ -905,6 +1014,88 @@ var appRoutes = [
 
 /***/ }),
 
+/***/ "./src/app/services/modal.service.ts":
+/*!*******************************************!*\
+  !*** ./src/app/services/modal.service.ts ***!
+  \*******************************************/
+/*! exports provided: ModalOptions, ModalService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ModalOptions", function() { return ModalOptions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ModalService", function() { return ModalService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/index */ "./node_modules/rxjs/index.js");
+/* harmony import */ var rxjs_index__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(rxjs_index__WEBPACK_IMPORTED_MODULE_1__);
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * The Modal Options that will create a new simple modal
+ */
+var ModalOptions = /** @class */ (function () {
+    /**
+     * Creates the instance of the class
+     * Default Visible: false
+     * @param name the name to find the modal again
+     * @param header the header of the current modal
+     * @param content the content (text) of the modal
+     */
+    function ModalOptions(name, title, content, visible) {
+        if (visible === void 0) { visible = false; }
+        this.result = false;
+        this.name = name;
+        this.title = title;
+        this.content = content;
+        this.visible = visible;
+    }
+    return ModalOptions;
+}());
+
+var ModalService = /** @class */ (function () {
+    function ModalService() {
+        this._currentModalOptions = new rxjs_index__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
+    }
+    Object.defineProperty(ModalService.prototype, "CurrentModalOptions", {
+        get: function () {
+            return this._currentModalOptions.asObservable();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ModalService.prototype.showDefaultModal = function (name, title, content) {
+        var modalOptions = new ModalOptions(name, title, content, true);
+        this._lastShownModal = modalOptions;
+        this._currentModalOptions.next(modalOptions);
+    };
+    ModalService.prototype.hideCurrentModal = function (result) {
+        if (result === void 0) { result = false; }
+        this._lastShownModal.visible = false;
+        this._lastShownModal.result = result;
+        this._currentModalOptions.next(this._lastShownModal);
+    };
+    ModalService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [])
+    ], ModalService);
+    return ModalService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/environments/environment.ts":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -963,7 +1154,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\_dev\diox-website\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/markuswagner/Documents/Dev/diox-website/src/main.ts */"./src/main.ts");
 
 
 /***/ })
