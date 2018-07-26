@@ -25,3 +25,15 @@
 - More Bugfixes
 - Started Modal Component
 - Added GitLab CI/CD Integration for the Project
+
+## Version 0.0.5
+- Added Possibility to change view for mobile, on hide nav
+
+# Coming up
+- Chatbot
+- Blog
+- Material Design integration
+- Mobile first
+- Backend instead of firebase
+- Live Updates from Twitter, Facebook & Instagram
+- Comment Section

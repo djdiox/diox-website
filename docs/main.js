@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navigation></app-navigation>\n<app-footer></app-footer>\n<div class=\"app\">\n  <div id=\"home\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-home></app-home>\n    </div>\n  </div>\n  <div id=\"about\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-about></app-about>\n    </div>\n  </div>\n  <div id=\"pictures\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-pictures></app-pictures>\n    </div>\n  </div>\n  <div id=\"work\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-work></app-work>\n    </div>\n  </div>\n  <div id=\"sets\" class=\"module-wrapper\">\n    <div class=\"container\">\n      <app-sets></app-sets>\n    </div>\n  </div>\n</div>\n"
+    module.exports = '<app-navigation (navToggle)="navToggled($event)"></app-navigation>\n<app-footer></app-footer>\n<div class="app" [ngClass]="{\'no-navigation\': !showNav}">\n  <div id="home" class="module-wrapper">\n    <div class="container">\n      <app-home></app-home>\n    </div>\n  </div>\n  <div id="about" class="module-wrapper">\n    <div class="container">\n      <app-about></app-about>\n    </div>\n  </div>\n  <div id="pictures" class="module-wrapper">\n    <div class="container">\n      <app-pictures></app-pictures>\n    </div>\n  </div>\n  <div id="work" class="module-wrapper">\n    <div class="container">\n      <app-work></app-work>\n    </div>\n  </div>\n  <div id="sets" class="module-wrapper">\n    <div class="container">\n      <app-sets></app-sets>\n    </div>\n  </div>\n</div>\n'
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<app-navigation></app-navigation>\n<app-footer></app-footer>\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\n.module-wrapper {\n  height: 100vh;\n  background: #181830;\n  color: white;\n  padding: 2em; }\n.module-wrapper .container {\n    height: 89%;\n    border-radius: 0.3em;\n    padding: 4em;\n    background: #000; }\n"
+    module.exports = '/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\n.module-wrapper {\n  height: 100vh;\n  background: #181830;\n  color: white;\n  padding: 2em;\n  transition: all ease 1s; }\n.module-wrapper .container {\n    height: 78%;\n    border-radius: 0.3em;\n    padding: 3.7em;\n    background: #000; }\n.no-navigation .module-wrapper .container {\n  padding: 3.7em 1.0em; }\n'
 
 /***/ }),
 
@@ -77,6 +77,7 @@ var AppComponent = /** @class */ (function () {
     function AppComponent(router, afAuth) {
         this.router = router;
         this.afAuth = afAuth;
+      this.showNav = true;
     }
     AppComponent.prototype.keyEvent = function (event) {
         console.log(event);
@@ -90,7 +91,6 @@ var AppComponent = /** @class */ (function () {
     };
     AppComponent.prototype.ngOnInit = function () {
         this.router.events.subscribe(function (route) {
-            console.log(route);
             if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationStart"]) {
                 // Show loading indicator
             }
@@ -104,6 +104,9 @@ var AppComponent = /** @class */ (function () {
             }
         });
     };
+  AppComponent.prototype.navToggled = function (showNav) {
+    this.showNav = showNav;
+  };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('window:keyup', ['$event']),
         __metadata("design:type", Function),
@@ -259,7 +262,7 @@ module.exports = "<!--<i class=\"toggle-icon\" [inlineSVG]=\"'/assets/images/ico
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\np {\n  text-align: justify;\n  width: 80%; }\n/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\n.social-container {\n  position: fixed;\n  left: 2em;\n  bottom: 0;\n  z-index: 1000;\n  margin-right: 10px;\n  margin-bottom: 10px; }\n.social-container .social-list {\n    -webkit-transform-origin: 0;\n            transform-origin: 0;\n    -webkit-transform: translateY(500px);\n            transform: translateY(500px);\n    opacity: 0;\n    transition: all 0.2s ease-in; }\n.social-container .social-list-active {\n    position: inherit;\n    width: auto;\n    opacity: 1;\n    -webkit-transform: translate(-3px, -338px);\n            transform: translate(-3px, -338px);\n    transition: all 0.2s linear; }\n.social-container .social-toggle {\n    width: 50px;\n    height: 50px;\n    background-size: contain;\n    background: no-repeat center center; }\n.social-container .social-icon {\n    width: 50px;\n    height: 50px;\n    margin-top: 5px;\n    opacity: 0.8;\n    background-size: contain;\n    text-align: center;\n    border-radius: 12px;\n    background: #288ad6 no-repeat center center;\n    line-height: 4.4;\n    box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.75); }\n.social-container .social-icon svg {\n      vertical-align: center;\n      margin: auto;\n      width: 40px;\n      height: 40px; }\n.social-container .social-icon:hover {\n    background: #fe7c08;\n    box-shadow: 4px 4px 5px 0 white; }\n.social-container .social-icon:hover svg path {\n      fill: #fff !important; }\n.social-container svg:hover {\n    fill: white; }\n"
+    module.exports = '/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\np {\n  text-align: justify;\n  width: 80%; }\n.no-navigation p {\n  width: 98%; }\n/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\n.social-container {\n  position: fixed;\n  left: 2em;\n  bottom: 0;\n  z-index: 1000;\n  margin-right: 10px;\n  margin-bottom: 10px; }\n.social-container .social-list {\n    -webkit-transform-origin: 0;\n            transform-origin: 0;\n    -webkit-transform: translateY(500px);\n            transform: translateY(500px);\n    opacity: 0;\n    transition: all 0.2s ease-in; }\n.social-container .social-list-active {\n    position: inherit;\n    width: auto;\n    opacity: 1;\n    -webkit-transform: translate(-3px, -338px);\n            transform: translate(-3px, -338px);\n    transition: all 0.2s linear; }\n.social-container .social-toggle {\n    width: 50px;\n    height: 50px;\n    background-size: contain;\n    background: no-repeat center center; }\n.social-container .social-icon {\n    width: 50px;\n    height: 50px;\n    margin-top: 5px;\n    opacity: 0.8;\n    background-size: contain;\n    text-align: center;\n    border-radius: 12px;\n    background: #288ad6 no-repeat center center;\n    line-height: 4.4;\n    box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.75); }\n.social-container .social-icon svg {\n      vertical-align: center;\n      margin: auto;\n      width: 40px;\n      height: 40px; }\n.social-container .social-icon:hover {\n    background: #fe7c08;\n    box-shadow: 4px 4px 5px 0 white; }\n.social-container .social-icon:hover svg path {\n      fill: #fff !important; }\n.social-container svg:hover {\n    fill: white; }\n'
 
 /***/ }),
 
@@ -409,7 +412,7 @@ var ModalComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<i class=\"hamburger icon\" [ngClass]=\"{'active': !showNav}\" [inlineSVG]=\"'/assets/images/icons/hamburger.svg'\"\n   (click)=\"showNav = !showNav\"></i>\n<ul class=\"nav\" role=\"navigation\" [ngClass]=\"{'hidden': !showNav}\">\n  <li routerLink=\"/home\" routerLinkActive=\"active\" [ngx-scroll-to]=\"'#home'\">home</li>\n  <li routerLink=\"/about\" routerLinkActive=\"active\" [ngx-scroll-to]=\"'#about'\">about</li>\n  <li routerLink=\"/pictures\" routerLinkActive=\"active\" [ngx-scroll-to]=\"'#pictures'\">pictures</li>\n  <li routerLink=\"/work\" routerLinkActive=\"active\" [ngx-scroll-to]=\"'#work'\">work</li>\n  <li routerLink=\"/sets\" routerLinkActive=\"active\" [ngx-scroll-to]=\"'#sets'\">djing</li>\n</ul>\n"
+    module.exports = '<i class="hamburger icon" [ngClass]="{\'active\': !showNav}" [inlineSVG]="\'/assets/images/icons/hamburger.svg\'"\n   (click)="toggleNav()"></i>\n<ul class="nav" role="navigation" [ngClass]="{\'hidden\': !showNav}">\n  <li routerLink="/home" routerLinkActive="active" [ngx-scroll-to]="\'#home\'">home</li>\n  <li routerLink="/about" routerLinkActive="active" [ngx-scroll-to]="\'#about\'">about</li>\n  <li routerLink="/pictures" routerLinkActive="active" [ngx-scroll-to]="\'#pictures\'">pictures</li>\n  <li routerLink="/work" routerLinkActive="active" [ngx-scroll-to]="\'#work\'">work</li>\n  <li routerLink="/sets" routerLinkActive="active" [ngx-scroll-to]="\'#sets\'">djing</li>\n</ul>\n'
 
 /***/ }),
 
@@ -420,7 +423,7 @@ module.exports = "<i class=\"hamburger icon\" [ngClass]=\"{'active': !showNav}\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\np {\n  text-align: justify;\n  width: 80%; }\n/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\nul.nav li.active {\n  background-color: #fe7c08;\n  border: 1px solid #fff;\n  color: #fff;\n  outline: none;\n  opacity: 1; }\nul.nav li {\n  cursor: pointer;\n  color: #000;\n  border: 1px solid #000;\n  background-color: #288ad6;\n  text-align: center; }\ni.hamburger {\n  z-index: 100;\n  width: 50px;\n  height: 50px;\n  position: fixed;\n  right: 3.5em;\n  top: 3em; }\ni.hamburger svg path {\n    /* Safari */\n    transition: fill 1s; }\ni.hamburger.active svg path {\n    fill: #288ad6; }\nul.nav {\n  position: fixed;\n  z-index: 100;\n  right: -2.5em;\n  top: 12%;\n  width: 92px;\n  height: 30em;\n  display: flex;\n  flex-wrap: wrap;\n  /* Safari */\n  transition: opacity 1s; }\nul.nav.hidden {\n    opacity: 0;\n    pointer-events: none; }\nul.nav li {\n    height: 1.5em;\n    width: 80%;\n    list-style: none;\n    line-height: 1.5em;\n    padding: 1em;\n    -webkit-transform-origin: 0 0;\n    transform-origin: 0 0;\n    -webkit-transform: rotate(90deg);\n    transform: rotate(90deg);\n    transition: background-color, opacity, color 1.5s;\n    opacity: 0.7; }\nul.nav li.active {\n      opacity: 1; }\n"
+    module.exports = '/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\np {\n  text-align: justify;\n  width: 80%; }\n.no-navigation p {\n  width: 98%; }\n/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\nul.nav li.active {\n  background-color: #fe7c08;\n  border: 1px solid #fff;\n  color: #fff;\n  outline: none;\n  opacity: 1; }\nul.nav li {\n  cursor: pointer;\n  color: #000;\n  border: 1px solid #000;\n  background-color: #288ad6;\n  text-align: center; }\ni.hamburger {\n  z-index: 100;\n  width: 50px;\n  height: 50px;\n  position: fixed;\n  right: 3.5em;\n  top: 3em; }\ni.hamburger svg path {\n    /* Safari */\n    transition: fill 1s; }\ni.hamburger.active svg path {\n    fill: #288ad6; }\nul.nav {\n  position: fixed;\n  z-index: 100;\n  right: -2.5em;\n  top: 12%;\n  width: 92px;\n  height: 30em;\n  display: flex;\n  flex-wrap: wrap;\n  /* Safari */\n  transition: opacity 1s; }\nul.nav.hidden {\n    opacity: 0;\n    pointer-events: none; }\nul.nav li {\n    height: 1.5em;\n    width: 80%;\n    list-style: none;\n    line-height: 1.5em;\n    padding: 1em;\n    -webkit-transform-origin: 0 0;\n    transform-origin: 0 0;\n    -webkit-transform: rotate(90deg);\n    transform: rotate(90deg);\n    transition: background-color, opacity, color 1.5s;\n    opacity: 0.7; }\nul.nav li.active {\n      opacity: 1; }\n'
 
 /***/ }),
 
@@ -447,10 +450,19 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var NavigationComponent = /** @class */ (function () {
     function NavigationComponent() {
+      this.navToggle = new _angular_core__WEBPACK_IMPORTED_MODULE_0__['EventEmitter']();
         this.showNav = true;
     }
     NavigationComponent.prototype.ngOnInit = function () {
     };
+  NavigationComponent.prototype.toggleNav = function () {
+    this.showNav = !this.showNav;
+    this.navToggle.emit(this.showNav);
+  };
+  __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__['Output'])(),
+    __metadata('design:type', Object)
+  ], NavigationComponent.prototype, 'navToggle', void 0);
     NavigationComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-navigation',
@@ -485,7 +497,7 @@ module.exports = "<div class=\"tab-bar\">\n  <div class=\"tab\"\n       *ngFor=\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\np {\n  text-align: justify;\n  width: 80%; }\n/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\n.tab-bar .tab.active {\n  background-color: #fe7c08;\n  border: 1px solid #fff;\n  color: #fff;\n  outline: none;\n  opacity: 1; }\n.tab-bar .tab {\n  cursor: pointer;\n  color: #000;\n  border: 1px solid #000;\n  background-color: #288ad6;\n  text-align: center; }\n.tab-bar {\n  display: flex;\n  flex-direction: row;\n  width: 40%; }\n.tab-bar .tab {\n    width: 10em;\n    height: 2em;\n    line-height: 2em;\n    transition: background-color 0.5s;\n    opacity: 0.7; }\n.tab-bar .tab:not(:last-child) {\n    margin-right: 0.2em; }\n"
+    module.exports = '/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\np {\n  text-align: justify;\n  width: 80%; }\n.no-navigation p {\n  width: 98%; }\n/**\n * Global color palette\n * =================================\n * - Generic colors\n * - Color scheme\n * - Common colors\n * - Links\n * - Text selection\n * - <hr>\n * - Any others..\n */\n.tab-bar .tab.active {\n  background-color: #fe7c08;\n  border: 1px solid #fff;\n  color: #fff;\n  outline: none;\n  opacity: 1; }\n.tab-bar .tab {\n  cursor: pointer;\n  color: #000;\n  border: 1px solid #000;\n  background-color: #288ad6;\n  text-align: center; }\n.tab-bar {\n  display: flex;\n  flex-direction: row;\n  width: 40%; }\n.tab-bar .tab {\n    width: 10em;\n    margin: 0;\n    /* height: 2em; */\n    padding: 0 0.5em;\n    line-height: 2em;\n    transition: background-color 0.5s;\n    opacity: 0.7; }\n.tab-bar .tab:not(:last-child) {\n    margin-right: 0.2em; }\n'
 
 /***/ }),
 
@@ -570,7 +582,7 @@ module.exports = "<h1>About me</h1>\n<h2>It's all about creativity</h2>\n<p>I lo
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "p {\n  text-align: justify;\n  width: 80%; }\n\n.software-icon {\n  height: 3em;\n  width: 4em;\n  display: block; }\n\nsvg {\n  height: 3em;\n  width: 4em; }\n"
+    module.exports = '.software-icon {\n  height: 3em;\n  width: 4em;\n  display: block; }\n\nsvg {\n  height: 3em;\n  width: 4em; }\n'
 
 /***/ }),
 
@@ -851,7 +863,7 @@ module.exports = "<app-tab-bar [current]=\"selected\" (selected)=\"tabChanged($e
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "p {\n  text-align: justify;\n  width: 80%; }\n"
+    module.exports = ''
 
 /***/ }),
 
@@ -907,7 +919,7 @@ var SetsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Development</h1>\n<h2>process design is key</h2>\n<p>\n  Working as a developer and creating a unique experience for everyone has ever been my goal to archive.<br>\n  The details and a perfect workflow is what makes every page or app unique.<br><br>\n  Backend, Frontend and everything else related to making a software is in my scope when it comes to development.<br>\n</p>\n\n<h2>Current Software/Technology in Use</h2>\n<!--TODO add Icons for Software -->\n<p>Angular, Typescript, Firebase, Node.JS, Docker, Ubuntu, Webstorm, VSCode, MacOS, Windows, Photoshop</p>\n"
+    module.exports = '<h1>Development</h1>\n<h2>process design is key</h2>\n<p>\n  Working as a developer and creating a unique experience for everyone has ever been my goal to archive.<br>\n  The details and a perfect workflow is what makes every page or app unique.<br><br>\n  Backend, Frontend and everything else related to making a software is in my scope when it comes to development.<br>\n</p>\n\n<h2>Current Technology in Use</h2>\n<!--TODO add Icons for Software -->\n<p>Angular, Typescript, Firebase, Node.JS, Docker, Ubuntu, Webstorm, VSCode, MacOS, Windows, Photoshop</p>\n'
 
 /***/ }),
 
@@ -918,7 +930,7 @@ module.exports = "<h1>Development</h1>\n<h2>process design is key</h2>\n<p>\n  W
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "p {\n  text-align: justify;\n  width: 80%; }\n"
+    module.exports = ''
 
 /***/ }),
 
