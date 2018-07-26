@@ -10,6 +10,7 @@ import {auth} from 'firebase';
 })
 export class AppComponent implements OnInit {
   private lastKey: number;
+  public showNav = true;
 
   @HostListener('window:keyup', ['$event'])
   protected keyEvent(event: KeyboardEvent) {
@@ -25,7 +26,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.router.events.subscribe((route) => {
-      console.log(route);
       if (event instanceof NavigationStart) {
         // Show loading indicator
       }
@@ -40,6 +40,10 @@ export class AppComponent implements OnInit {
         console.log(event.error);
       }
     });
+  }
+
+  navToggled(showNav) {
+    this.showNav = showNav;
   }
 
   constructor(private router: Router,

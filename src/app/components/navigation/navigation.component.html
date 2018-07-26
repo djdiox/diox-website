@@ -1,5 +1,5 @@
 <i class="hamburger icon" [ngClass]="{'active': !showNav}" [inlineSVG]="'/assets/images/icons/hamburger.svg'"
-   (click)="showNav = !showNav"></i>
+   (click)="toggleNav()"></i>
 <ul class="nav" role="navigation" [ngClass]="{'hidden': !showNav}">
   <li routerLink="/home" routerLinkActive="active" [ngx-scroll-to]="'#home'">home</li>
   <li routerLink="/about" routerLinkActive="active" [ngx-scroll-to]="'#about'">about</li>

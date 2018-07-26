@@ -5,10 +5,20 @@
   background: $color-kickoff-blue;
   color: white;
   padding: 2em;
+  transition: all ease 1s;
   .container {
-    height: 89%;
+    height: 78%;
     border-radius: 0.3em;
-    padding: 4em;
+    padding: 3.7em;
     background: $dark;
+
+  }
+}
+
+.no-navigation {
+  .module-wrapper {
+    .container {
+      padding: 3.7em 1.0em;
+    }
   }
 }

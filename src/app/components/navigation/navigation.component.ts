@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
@@ -8,6 +8,8 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
+  @Output() navToggle = new EventEmitter<boolean>();
+
   public showNav = true;
 
   constructor() {
@@ -16,4 +18,8 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {
   }
 
+  public toggleNav() {
+    this.showNav = !this.showNav;
+    this.navToggle.emit(this.showNav);
+  }
 }
