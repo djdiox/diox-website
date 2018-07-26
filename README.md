@@ -38,8 +38,14 @@ A Changelog is provided in the project root under the filename `CHANGELOG.md`
 
 ## CI / CD
 
-Continous Integration will be available over gitlab (coming soon). Infos will be available in `gitlab-ci.yml`
+Continous Integration will be available over [GitLab Jobs](https://gitlab.com/djdiox/diox-website/-/jobs). 
+Currently the automatic build is configured via `gitlab-ci.yml`.
 
+First we use a pre configured karma docker image. Then install yarn, and the dependencies of the Project.
+If that is done sucessfully, the unit & e2e will run. 
+
+Finally it builds all necessary files into `docs/` folder and delivers it as artifcats.
+GitLab will store the artifacts for 14 days.
 
 ## Firebase
 

@@ -20,3 +20,8 @@
 - Edited Readme.md
 - Fixed Build
 - Updated to Angular-CLI 6.1.0
+
+## Version 0.0.4
+- More Bugfixes
+- Started Modal Component
+- Added GitLab CI/CD Integration for the Project
