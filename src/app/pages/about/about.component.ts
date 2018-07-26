@@ -7,6 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  public softwareIcons = [
+    {
+      path: 'assets/images/icons/angular.svg',
+      name: 'Angular'
+    },
+    {
+      path: 'assets/images/icons/firebase.svg',
+      name: 'Firbase'
+    },
+    {
+      path: 'assets/images/icons/docker.svg',
+      name: 'Docker'
+    },
+    {
+      path: 'assets/images/icons/ubuntu.svg',
+      name: 'Ubuntu'
+    },
+    {
+      path: 'assets/images/icons/photoshop.svg',
+      name: 'Photoshop'
+    },
+  ];
   constructor() { }
 
   ngOnInit() {
