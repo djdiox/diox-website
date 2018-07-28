@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:docs": "ng build --base-href=/diox-website/ --output-path=docs/",
+    "build:docs": "ng build --prod --base-href=/diox-website/ --output-path=docs/",
     "test": "ng test --source-map=false",
     "lint": "ng lint",
     "e2e": "ng e2e"
