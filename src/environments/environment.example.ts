@@ -1,5 +1,6 @@
 export const environment = {
   production: false,
+  dialogFlowToken: '',
   firebase: {
     apiKey: '',
     authDomain: 'diox-website.firebaseapp.com',

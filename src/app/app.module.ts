@@ -27,6 +27,8 @@ import {appRoutes} from './routes';
 import {HttpClientModule} from '@angular/common/http';
 import {TabBarComponent} from './components/tab-bar/tab-bar.component';
 import {ModalComponent} from './components/modal/modal.component';
+import {ChatComponent} from './components/chat/chat.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,12 +42,14 @@ import {ModalComponent} from './components/modal/modal.component';
     FooterComponent,
     BlogComponent,
     TabBarComponent,
-    ModalComponent
+    ModalComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
     RouterModule.forRoot(
       appRoutes,
       {
