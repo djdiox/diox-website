@@ -46,6 +46,7 @@ import {CvExperienceComponent} from './pages/interactive-cv/cv-experience/cv-exp
 import {CvTechnologyComponent} from './pages/interactive-cv/cv-technology/cv-technology.component';
 import {CvProgrammingComponent} from './pages/interactive-cv/cv-programming/cv-programming.component';
 import {CvGoalsComponent} from './pages/interactive-cv/cv-goals/cv-goals.component';
+import {CvEndComponent} from './pages/interactive-cv/cv-end/cv-end.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import {CvGoalsComponent} from './pages/interactive-cv/cv-goals/cv-goals.compone
     CvExperienceComponent,
     CvTechnologyComponent,
     CvProgrammingComponent,
-    CvGoalsComponent
+    CvGoalsComponent,
+    CvEndComponent
   ],
   imports: [
     BrowserModule,
