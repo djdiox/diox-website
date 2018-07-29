@@ -52,7 +52,7 @@ export class InteractiveCvComponent implements OnInit {
           startDate: '2012-09',
           endDate: '2015-07',
           headline: 'k+k information services GmbH',
-          content: 'Quality management'
+          content: 'Quality management software'
         },
         {
           position: 'left',
@@ -73,7 +73,7 @@ export class InteractiveCvComponent implements OnInit {
           startDate: '2016-05',
           endDate: `${new Date().getFullYear()}-${('0' + (new Date().getMonth() + 1)).slice(-2)} (today)`,
           headline: 'netvico GmbH',
-          content: 'Digital Signage & Management Software'
+          content: 'Digital signage & management software'
         },
       ]
     }
@@ -121,11 +121,15 @@ export class InteractiveCvComponent implements OnInit {
     ) {
       return;
     }
-    this.setState({
-      breadcrumbs: _.take(this.state.data.views, index + 1),
+    const nextState = {
+      breadcrumbs: this.state.breadcrumbs,
       view: view,
       index: index,
       progress: (index) / (this.state.data.views.length - 1) * 100
-    });
+    };
+    if (this.state.breadcrumbs.indexOf(view) === -1) {
+      nextState.breadcrumbs = [...this.state.breadcrumbs, view];
+    }
+    this.setState(nextState);
   }
 }

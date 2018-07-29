@@ -1,4 +1,5 @@
 <h1>Interactive CV!</h1>
+
 <mat-chip-list>
   <mat-chip
     *ngFor="let breadcrumb of state.breadcrumbs;let idx = index"
@@ -8,6 +9,8 @@
     {{breadcrumb}}
   </mat-chip>
 </mat-chip-list>
+<button mat-button (click)="previousPage()">back</button>
+<button mat-button (click)="nextPage()">next</button>
 <div class="component start" *ngIf="state.view === 'start'">
   <h2>More than just a pdf.</h2>
   <p>
@@ -61,7 +64,5 @@
     </div>
   </div>
 </div>
-<button mat-button (click)="previousPage()">back</button>
-<button mat-button (click)="nextPage()">next</button>
 <mat-progress-bar mode="determinate" [value]="state.progress"></mat-progress-bar>
 <pre>{{state | json}}</pre>
