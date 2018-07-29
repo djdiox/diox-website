@@ -7,37 +7,30 @@
  * @type {string}
  */
 const iconBaseFolder = 'assets/images/icons/';
-const iconObjects = [];
-const getIconPath = (icon) => {
-  const path = `${iconBaseFolder}${icon}`;
-  iconObjects.push({
-    name: icon.toLowerCase().replace('.svg', '').replace('.png', ''),
-    path: path
-  });
-  return path;
-};
-/**
- * All Icons that are available through the app
- */
-export enum Icons {
-  ANGULAR = getIconPath('angular.svg'),
-  DOCKER = getIconPath('docker.svg'),
-  EARTH = getIconPath('earth.svg'),
-  FACEBOOK = getIconPath('facebook.svg'),
-  FIREBASE = getIconPath('firebase.svg'),
-  GEARS = getIconPath('gears.svg'),
-  GITHUB = getIconPath('github.svg'),
-  HAMBURGER = getIconPath('hamburger.svg'),
-  INSTAGRAM = getIconPath('instagram.svg'),
-  MIXCLOUD = getIconPath('mixcloud.svg'),
-  OCTOCAT = getIconPath('Octocat.png'),
-  PHTOTOSHOP = getIconPath('photoshop.svg'),
-  SETTINGS = getIconPath('settings.svg'),
-  SOUNDCLOUD = getIconPath('soundcloud.svg'),
-  SPINNER = getIconPath('spin.gif'),
-  TWITTER = getIconPath('twitter.svg'),
-  UBUNTU = getIconPath('ubuntu.svg'),
-  SCHOOL = getIconPath('school.svg'),
-}
 
-export const IconObjects = iconObjects;
+/**
+ * all related icons
+ * @type {Map<string, string>}
+ */
+const icons = new Map<string, string>();
+icons.set('angular', `${iconBaseFolder}angular.svg`);
+icons.set('docker', `${iconBaseFolder}docker.svg`);
+icons.set('earth', `${iconBaseFolder}earth.svg`);
+icons.set('facebook', `${iconBaseFolder}facebook.svg`);
+icons.set('firebase', `${iconBaseFolder}firebase.svg`);
+icons.set('gears', `${iconBaseFolder}gears.svg`);
+icons.set('github', `${iconBaseFolder}github.svg`);
+icons.set('hamburger', `${iconBaseFolder}hamburger.svg`);
+icons.set('instagram', `${iconBaseFolder}instagram.svg`);
+icons.set('mixcloud', `${iconBaseFolder}mixcloud.svg`);
+icons.set('octocat', `${iconBaseFolder}octocat.png`);
+icons.set('photoshop', `${iconBaseFolder}photoshop.svg`);
+icons.set('settings', `${iconBaseFolder}settings.svg`);
+icons.set('soundcloud', `${iconBaseFolder}soundcloud.svg`);
+icons.set('spinner', `${iconBaseFolder}spinner.gif`);
+icons.set('twitter', `${iconBaseFolder}twitter.svg`);
+icons.set('ubuntu', `${iconBaseFolder}ubuntu.svg`);
+icons.set('school', `${iconBaseFolder}school.svg`);
+icons.set('photoshop', `${iconBaseFolder}photoshop.svg`);
+
+export const Icons = icons;

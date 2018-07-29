@@ -2,9 +2,6 @@ import {Component, HostListener, OnInit} from '@angular/core';
 import {NavigationEnd, NavigationError, NavigationStart, Router} from '@angular/router';
 import {AngularFireAuth} from 'angularfire2/auth';
 import {auth} from 'firebase';
-import {MatIconRegistry} from '@angular/material';
-import {DomSanitizer} from '@angular/platform-browser';
-import {IconObjects} from './enums/icons';
 
 @Component({
   selector: 'app-root',
@@ -38,10 +35,7 @@ export class AppComponent implements OnInit {
    * @param sanitizer
    */
   constructor(private router: Router,
-              private iconRegistry: MatIconRegistry,
-              private sanitizer: DomSanitizer,
               public afAuth: AngularFireAuth) {
-    IconObjects.forEach(icon => iconRegistry.addSvgIcon(icon.name, sanitizer.bypassSecurityTrustResourceUrl(icon.path)));
   }
 
 

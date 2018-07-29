@@ -1,14 +1,14 @@
 @import "../styles/palette";
 
 .module-wrapper {
-  height: 100vh;
+  //height: 100vh;
   // background: $color-kickoff-blue;
-  background-image: url("../assets/images/embedded/background.png");
+  height: 100%;
   color: white;
   padding: 2em;
   transition: all ease 1s;
   .container {
-    height: 78%;
+    //height: 78%;
     border-radius: 0.3em;
     padding: 3.7em;
     background: $dark-transparent;

@@ -23,13 +23,32 @@ export class InteractiveCvComponent implements OnInit {
   ];
 
   /**
-   * Current State of this page, includes all changing variables
+   * Current State of this page, includes all changing or static variables
    */
   public state = {
     view: 'start',
     index: 0,
     progress: 0,
-    breadcrumbs: ['start']
+    breadcrumbs: ['start'],
+    static: {
+      schools: [
+        {
+          name: 'Silcherschule Kornwestheim',
+          duration: '2000 - 2006',
+          tooltip: 'first start into educational world'
+        },
+        {
+          name: 'Realschule Remseck',
+          duration: '2006 - 2012',
+          tooltip: 'basic skills and mostly soft skills'
+        },
+        {
+          name: 'ITS-Schule Stuttgart',
+          duration: '2012 - 2015',
+          tooltip: 'software and business skills'
+        }
+      ]
+    }
   };
 
 
@@ -37,6 +56,11 @@ export class InteractiveCvComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  private setState(newState: any) {
+    this.state = _.assign(this.state, newState);
+    console.log(this.state);
   }
 
   public nextPage() {
@@ -55,11 +79,11 @@ export class InteractiveCvComponent implements OnInit {
     ) {
       return;
     }
-    this.state = {
+    this.setState({
       breadcrumbs: _.take(this.views, index + 1),
       view: view,
       index: index,
       progress: (this.state.index + 1) / this.views.length * 100
-    };
+    });
   }
 }
