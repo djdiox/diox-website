@@ -1,14 +1,24 @@
 <h1>Interactive CV!</h1>
 <ul class="breadcrumbs">
-  <li (click)="switchTo('start')" [class.active]="currentView === 'start'">Start</li>
+  <li *ngFor="let breadcrumb of breadcrumbs;let idx = index"
+      (click)="switchTo(idx)"
+      [class.active]="currentView === breadcrumb">
+    {{breadcrumb}}
+  </li>
 </ul>
 <div class="component start" *ngIf="currentView === 'start'">
+  <h2>More than just a pdf.</h2>
   <p>
-    Welcome to the interactive of myself.<br>
+    Welcome to the interactive CV of myself.<br>
     I am Markus Wagner and I am glad to have you hear on my page!<br>
     The idea behind this to make this a little more fun!
   </p>
-
-  <button mat-button>Let's Go!</button>
-
+  <button mat-button (click)="switchTo(1)">Let's Go!</button>
+</div>
+<div class="component school" *ngIf="currentView === 'school'">
+  <h2>Knowledge is key</h2>
+  <p>
+    I noticed already in the middle school (2006-2012) that electronic devices and software is my and our future!<br>
+    The love of creating something new has always been a part of me.
+  </p>
 </div>

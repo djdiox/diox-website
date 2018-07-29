@@ -2,6 +2,8 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {ChatComponent} from './chat.component';
 import {DialogFlowService} from '../../services/dialog-flow.service';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 describe('ChatComponent', () => {
   let component: ChatComponent;
@@ -12,6 +14,10 @@ describe('ChatComponent', () => {
       declarations: [ChatComponent],
       providers: [
         DialogFlowService
+      ],
+      imports: [
+        FormsModule,
+        HttpClientModule
       ]
     })
       .compileComponents();

@@ -5,6 +5,7 @@ import {AboutComponent} from './pages/about/about.component';
 import {SetsComponent} from './pages/sets/sets.component';
 import {PicturesComponent} from './pages/pictures/pictures.component';
 import {WorkComponent} from './pages/work/work.component';
+import {InteractiveCvComponent} from './pages/interactive-cv/interactive-cv.component';
 
 /**
  * Created by markuswagner on 20.07.18.
@@ -38,6 +39,10 @@ export const appRoutes: Routes = [
     path: 'blog',
     component: BlogComponent
   },
+  {
+    path: 'cv',
+    component: InteractiveCvComponent
+  }
   /*{
    path: '**',
    component: PageNotFoundComponent

@@ -12,9 +12,12 @@ export class AppComponent implements OnInit {
   private lastKey: number;
   public showNav = true;
 
+  /**
+   * Gets called everytime the user presses a Button on the page
+   * @param event {KeyboardEvent} The Event that has been passed from Angular
+   */
   @HostListener('window:keyup', ['$event'])
   protected keyEvent(event: KeyboardEvent) {
-    console.log(event);
     if (this.afAuth.auth.currentUser !== null) {
       return;
     }
@@ -24,6 +27,19 @@ export class AppComponent implements OnInit {
     }
   }
 
+  /**
+   * Initialize controller
+   * @param router
+   * @param afAuth
+   */
+  constructor(private router: Router,
+              public afAuth: AngularFireAuth) {
+  }
+
+
+  /**
+   * Initiate the Module (App)
+   */
   ngOnInit() {
     this.router.events.subscribe((route) => {
       if (event instanceof NavigationStart) {
@@ -40,14 +56,5 @@ export class AppComponent implements OnInit {
         console.log(event.error);
       }
     });
-  }
-
-  navToggled(showNav) {
-    this.showNav = showNav;
-  }
-
-  constructor(private router: Router,
-              public afAuth: AngularFireAuth) {
-
   }
 }
