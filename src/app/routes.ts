@@ -8,7 +8,9 @@ import {WorkComponent} from './pages/work/work.component';
 import {InteractiveCvComponent} from './pages/interactive-cv/interactive-cv.component';
 
 /**
- * Created by markuswagner on 20.07.18.
+ * An Array of all the routes in our app
+ * For a clean overview in a new file
+ * @type Array
  */
 export const appRoutes: Routes = [
   {
@@ -48,3 +50,7 @@ export const appRoutes: Routes = [
    component: PageNotFoundComponent
    }*/
 ];
+
+/**
+ * Created by Markus Wagner on 20.07.18.
+ */
