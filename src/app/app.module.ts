@@ -19,7 +19,11 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 import {GalleryModule} from '@ngx-gallery/core';
 import {InlineSVGModule} from 'ng-inline-svg';
 import {
-  MatButtonModule, MatCardModule, MatChipsModule, MatIconModule, MatListModule,
+  MatButtonModule,
+  MatCardModule,
+  MatChipsModule,
+  MatIconModule,
+  MatListModule,
   MatProgressBarModule,
   MatTooltipModule
 } from '@angular/material';

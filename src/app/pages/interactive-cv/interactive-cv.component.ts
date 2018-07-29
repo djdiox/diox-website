@@ -9,14 +9,14 @@ import * as _ from 'lodash';
 export class InteractiveCvComponent implements OnInit {
 
   /**
-   * Current State of this page, includes all changing or static variables
+   * Current State of this page, includes all changing or data variables
    */
   public state = {
     view: 'start',
     index: 0,
     progress: 0,
     breadcrumbs: ['start'],
-    static: {
+    data: {
       views: [
         'start',
         'school',
@@ -45,6 +45,36 @@ export class InteractiveCvComponent implements OnInit {
           duration: '2012 - 2015',
           tooltip: 'software and business skills'
         }
+      ],
+      experiences: [
+        {
+          position: 'right',
+          startDate: '2012-09',
+          endDate: '2015-07',
+          headline: 'k+k information services GmbH',
+          content: 'Quality management'
+        },
+        {
+          position: 'left',
+          startDate: '2015-07',
+          endDate: '2015-11',
+          headline: 'Mediverbund AG',
+          content: 'Software for doctors'
+        },
+        {
+          position: 'right',
+          startDate: '2015-11',
+          endDate: '2016-05',
+          headline: 'Fritz & Dietrich GbR',
+          content: 'Agency for fairs & mobile software'
+        },
+        {
+          position: 'left',
+          startDate: '2016-05',
+          endDate: `${new Date().getFullYear()}-${('0' + (new Date().getMonth() + 1)).slice(-2)} (today)`,
+          headline: 'netvico GmbH',
+          content: 'Digital Signage & Management Software'
+        },
       ]
     }
   };
@@ -56,21 +86,35 @@ export class InteractiveCvComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * Sets the current state, but keeps old variables
+   * @param newState The new state that overwrites content
+   */
   private setState(newState: any) {
     this.state = _.assign(this.state, newState);
     console.log(this.state);
   }
 
+  /**
+   * Shows the next page
+   */
   public nextPage() {
     this.switchTo(this.state.index + 1);
   }
 
+  /**
+   * Shows the previous page
+   */
   public previousPage() {
     this.switchTo(this.state.index - 1);
   }
 
+  /**
+   * switches the page the a index
+   * @param index the index for switching
+   */
   public switchTo(index: number) {
-    const view = this.state.static.views[index];
+    const view = this.state.data.views[index];
     if (
       this.state.view === view ||
       typeof view === 'undefined'
@@ -78,10 +122,10 @@ export class InteractiveCvComponent implements OnInit {
       return;
     }
     this.setState({
-      breadcrumbs: _.take(this.state.static.views, index + 1),
+      breadcrumbs: _.take(this.state.data.views, index + 1),
       view: view,
       index: index,
-      progress: (this.state.index + 1) / this.state.static.views.length * 100
+      progress: (index) / (this.state.data.views.length - 1) * 100
     });
   }
 }

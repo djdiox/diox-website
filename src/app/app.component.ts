@@ -50,6 +50,7 @@ export class AppComponent implements OnInit {
 
       if (event instanceof NavigationEnd) {
         // Hide loading indicator
+        console.log('end');
       }
 
       if (event instanceof NavigationError) {
