@@ -75,7 +75,49 @@ export class InteractiveCvComponent implements OnInit {
           headline: 'netvico GmbH',
           content: 'Digital signage & management software'
         },
-      ]
+      ],
+      technology: {
+        tools: [
+          'Angular.JS',
+          'Angular 2+',
+          'Firebase',
+          'Node.JS',
+          'GraphQL',
+          'webpack',
+          'NativeScript',
+          'yarn',
+          'MongoDB',
+          'MySQL',
+          'PostgresSQL',
+          'GitLab',
+          'Docker',
+          'Ubuntu',
+          'Webstorm',
+          'VS Code',
+          'MacOSX',
+          'Windows',
+          'Visual Studio',
+          'Unity',
+          'Office'
+        ]
+      },
+      programming: {
+        languages: [
+          'C#',
+          'JavaScript (ES6)',
+          'Typescript',
+          'HTML5',
+          'CSS 3.0',
+          'SCSS',
+          'PWA',
+          'PHP',
+          'bash',
+          'SQL',
+          'NoSQL',
+          'Visual Basic',
+          'VBA',
+        ]
+      }
     }
   };
 

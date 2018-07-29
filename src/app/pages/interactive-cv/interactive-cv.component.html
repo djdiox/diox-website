@@ -11,6 +11,7 @@
 </mat-chip-list>
 <button mat-button (click)="previousPage()">back</button>
 <button mat-button (click)="nextPage()">next</button>
+<mat-progress-bar mode="determinate" [value]="state.progress"></mat-progress-bar>
 <div class="component start" *ngIf="state.view === 'start'">
   <h2>More than just a pdf.</h2>
   <p>
@@ -64,5 +65,56 @@
     </div>
   </div>
 </div>
+<div class="component technology" *ngIf="state.view === 'technology'">
+  <h2>Technology as support</h2>
+  <p>
+    Knowledge of programming is as important as the knowledge of available tools.<br>
+    Open Source Frameworks made programming really great<br>
+    Here an overview of Sofware which i have or had in use<br>
+  </p>
+  <h3>tools</h3>
+  <mat-chip-list>
+    <mat-chip *ngFor="let tool of state.data.technology.tools">
+      {{tool}}
+    </mat-chip>
+  </mat-chip-list>
+</div>
+<div class="component programming" *ngIf="state.view === 'programming'">
+  <h2>programming</h2>
+  <p>
+    There is a use case for any language!<br>
+    I learned a lot of different languages, that is one reason for it!<br>
+    Splitting applications in order to create microservices, has a lot of positive aspects!<br>
+    I try always to achieve a MultiOS Level for my apps!<br>
+    For a best solution, the toolkit must be big! I'm always open for new things!
+  </p>
+  <h3>languages</h3>
+  <mat-chip-list>
+    <mat-chip *ngFor="let lang of state.data.programming.languages">
+      {{lang}}
+    </mat-chip>
+  </mat-chip-list>
+  <h3>technics</h3>
+  <p>
+    e.g. SCUM etc. (to be continued)
+  </p>
+</div>
+<div class="component goals" *ngIf="state.view === 'goals'">
+  <h2>goals / future</h2>
+  <p>
+    In near future i want to progress more in architecture and business development<br>
+    Since the learning in coding never ends, i also want to archieve a greater understanding of all the technology!<br>
+    The ultimate goal would be to work at a TOP 5 Company :).
+  </p>
+</div>
+<div class="component end" *ngIf="state.view === 'end'">
+  <h2>Thanks for taking this journey through my Profile!</h2>
+  <p>
+    Through the breadcrumbs it is possible to go back to every single page!<br>
+    Enjoy the rest of the page as well!
+  </p>
+</div>
 <mat-progress-bar mode="determinate" [value]="state.progress"></mat-progress-bar>
+<button mat-button (click)="previousPage()">back</button>
+<button mat-button (click)="nextPage()">next</button>
 <pre>{{state | json}}</pre>
