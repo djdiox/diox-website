@@ -57,4 +57,12 @@ export class AppComponent implements OnInit {
       }
     });
   }
+
+  /**
+   * Eventhook for setting the emitted value from the nav-bar
+   * @param {boolean} $event the boolean
+   */
+  navToggled($event: boolean) {
+    this.showNav = $event;
+  }
 }

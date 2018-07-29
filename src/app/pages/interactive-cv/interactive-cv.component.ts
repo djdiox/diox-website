@@ -28,6 +28,14 @@ export class InteractiveCvComponent implements OnInit {
   ngOnInit() {
   }
 
+  public nextPage() {
+    this.switchTo(this.views.indexOf(this.currentView) + 1);
+  }
+
+  public previousPage() {
+    this.switchTo(this.views.indexOf(this.currentView) - 1);
+  }
+
   public switchTo(index: number) {
     const view = this.views[index];
     if (this.currentView === view) {
