@@ -96,6 +96,26 @@ export class InteractiveCvComponent implements OnInit {
   }
 
   /**
+   * Adds the view to current breadcrumbs, or returns them
+   * @param view{string} the view that has been set
+   * @param breadcrumbs{[string]} the current breadcrumbs
+   * @returns {[string]} the new current breadcrumbs
+   */
+  private getBreadcrumbs(view: string, breadcrumbs: string[]) {
+    return breadcrumbs.indexOf(view) !== -1 ? breadcrumbs : [...breadcrumbs, view];
+  }
+
+  /**
+   * Calculates the progress for the progress bar (in percent)
+   * @param index{number} The index of the next page
+   * @param viewCount{number} the current view count
+   * @returns {number} the current percentage of the cv
+   */
+  private calculateProgress(index: number, viewCount: number) {
+    return index / viewCount * 100;
+  }
+
+  /**
    * Shows the next page
    */
   public nextPage() {
@@ -121,15 +141,11 @@ export class InteractiveCvComponent implements OnInit {
     ) {
       return;
     }
-    const nextState = {
-      breadcrumbs: this.state.breadcrumbs,
+    this.setState({
+      breadcrumbs: this.getBreadcrumbs(view, this.state.breadcrumbs),
       view: view,
       index: index,
-      progress: (index) / (this.state.data.views.length - 1) * 100
-    };
-    if (this.state.breadcrumbs.indexOf(view) === -1) {
-      nextState.breadcrumbs = [...this.state.breadcrumbs, view];
-    }
-    this.setState(nextState);
+      progress: this.calculateProgress(index, this.state.data.views.length - 1)
+    });
   }
 }
