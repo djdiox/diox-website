@@ -1,0 +1,14 @@
+<h1>Interactive CV!</h1>
+<ul class="breadcrumbs">
+  <li (click)="switchTo('start')" [class.active]="currentView === 'start'">Start</li>
+</ul>
+<div class="component start" *ngIf="currentView === 'start'">
+  <p>
+    Welcome to the interactive of myself.<br>
+    I am Markus Wagner and I am glad to have you hear on my page!<br>
+    The idea behind this to make this a little more fun!
+  </p>
+
+  <button mat-button>Let's Go!</button>
+
+</div>
