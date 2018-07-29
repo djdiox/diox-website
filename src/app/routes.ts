@@ -1,6 +1,10 @@
 import {HomeComponent} from './pages/home/home.component';
 import {BlogComponent} from './pages/blog/blog.component';
 import {Routes} from '@angular/router';
+import {AboutComponent} from './pages/about/about.component';
+import {SetsComponent} from './pages/sets/sets.component';
+import {PicturesComponent} from './pages/pictures/pictures.component';
+import {WorkComponent} from './pages/work/work.component';
 
 /**
  * Created by markuswagner on 20.07.18.
@@ -16,19 +20,19 @@ export const appRoutes: Routes = [
   },
   {
     path: 'about',
-    component: HomeComponent
+    component: AboutComponent
   },
   {
     path: 'sets',
-    component: HomeComponent
+    component: SetsComponent
   },
   {
     path: 'pictures',
-    component: HomeComponent
+    component: PicturesComponent
   },
   {
     path: 'work',
-    component: HomeComponent
+    component: WorkComponent
   },
   {
     path: 'blog',

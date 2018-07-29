@@ -3,27 +3,7 @@
 <div class="app" [ngClass]="{'no-navigation': !showNav}">
   <div id="home" class="module-wrapper">
     <div class="container">
-      <app-home></app-home>
-    </div>
-  </div>
-  <div id="about" class="module-wrapper">
-    <div class="container">
-      <app-about></app-about>
-    </div>
-  </div>
-  <div id="pictures" class="module-wrapper">
-    <div class="container">
-      <app-pictures></app-pictures>
-    </div>
-  </div>
-  <div id="work" class="module-wrapper">
-    <div class="container">
-      <app-work></app-work>
-    </div>
-  </div>
-  <div id="sets" class="module-wrapper">
-    <div class="container">
-      <app-sets></app-sets>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

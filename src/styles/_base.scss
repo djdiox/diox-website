@@ -1,6 +1,10 @@
 
 //Global imports for the Application
 // Importorder = King
+//external imports
+@import '~@ngx-gallery/core/styles/gallery';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 @import "palette";
 // @import "fonts"; Can not import fonts twice
 @import "text";
