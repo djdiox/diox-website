@@ -96,8 +96,13 @@
   </mat-chip-list>
   <h3>technics</h3>
   <p>
-    e.g. SCUM etc. (to be continued)
+    These technics and other help to plan and and support the development process.
   </p>
+  <mat-chip-list>
+    <mat-chip *ngFor="let technic of state.data.programming.technics">
+      {{technic}}
+    </mat-chip>
+  </mat-chip-list>
 </div>
 <div class="component goals" *ngIf="state.view === 'goals'">
   <h2>goals / future</h2>

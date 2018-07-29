@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import * as _ from 'lodash';
+import {InteractiveCvService, Page} from '../../services/interactive-cv.service';
+import {DEFAULT_STATE} from '../../presets/cv-default-state';
 
 @Component({
   selector: 'app-interactive-cv',
@@ -11,121 +13,18 @@ export class InteractiveCvComponent implements OnInit {
   /**
    * Current State of this page, includes all changing or data variables
    */
-  public state = {
-    view: 'start',
-    index: 0,
-    progress: 0,
-    breadcrumbs: ['start'],
-    data: {
-      views: [
-        'start',
-        'school',
-        'experience',
-        'technology',
-        'programming',
-        'goals',
-        'end'
-      ],
-      schools: [
-        {
-          name: 'Silcherschule Kornwestheim',
-          type: 'elementary school',
-          duration: '2000 - 2006',
-          tooltip: 'first start into educational world'
-        },
-        {
-          name: 'Realschule Remseck',
-          type: 'middle school',
-          duration: '2006 - 2012',
-          tooltip: 'basic skills and mostly soft skills'
-        },
-        {
-          name: 'ITS-Schule Stuttgart',
-          type: 'apprenticeship school',
-          duration: '2012 - 2015',
-          tooltip: 'software and business skills'
-        }
-      ],
-      experiences: [
-        {
-          position: 'right',
-          startDate: '2012-09',
-          endDate: '2015-07',
-          headline: 'k+k information services GmbH',
-          content: 'Quality management software'
-        },
-        {
-          position: 'left',
-          startDate: '2015-07',
-          endDate: '2015-11',
-          headline: 'Mediverbund AG',
-          content: 'Software for doctors'
-        },
-        {
-          position: 'right',
-          startDate: '2015-11',
-          endDate: '2016-05',
-          headline: 'Fritz & Dietrich GbR',
-          content: 'Agency for fairs & mobile software'
-        },
-        {
-          position: 'left',
-          startDate: '2016-05',
-          endDate: `${new Date().getFullYear()}-${('0' + (new Date().getMonth() + 1)).slice(-2)} (today)`,
-          headline: 'netvico GmbH',
-          content: 'Digital signage & management software'
-        },
-      ],
-      technology: {
-        tools: [
-          'Angular.JS',
-          'Angular 2+',
-          'Firebase',
-          'Node.JS',
-          'GraphQL',
-          'webpack',
-          'NativeScript',
-          'yarn',
-          'MongoDB',
-          'MySQL',
-          'PostgresSQL',
-          'GitLab',
-          'Docker',
-          'Ubuntu',
-          'Webstorm',
-          'VS Code',
-          'MacOSX',
-          'Windows',
-          'Visual Studio',
-          'Unity',
-          'Office'
-        ]
-      },
-      programming: {
-        languages: [
-          'C#',
-          'JavaScript (ES6)',
-          'Typescript',
-          'HTML5',
-          'CSS 3.0',
-          'SCSS',
-          'PWA',
-          'PHP',
-          'bash',
-          'SQL',
-          'NoSQL',
-          'Visual Basic',
-          'VBA',
-        ]
-      }
-    }
-  };
+  public state = DEFAULT_STATE;
 
-
-  constructor() {
+  constructor(private interActiveCvService: InteractiveCvService) {
   }
 
   ngOnInit() {
+    // this.interActiveCvService
+    //   .currentPage
+    //   .subscribe((page: Page) => {
+    //     this.setState(DEFAULT_STATE);
+    //     this.setState(page);
+    //   });
   }
 
   /**
@@ -134,7 +33,6 @@ export class InteractiveCvComponent implements OnInit {
    */
   private setState(newState: any) {
     this.state = _.assign(this.state, newState);
-    console.log(this.state);
   }
 
   /**
@@ -183,11 +81,13 @@ export class InteractiveCvComponent implements OnInit {
     ) {
       return;
     }
-    this.setState({
+    const page: Page = {
       breadcrumbs: this.getBreadcrumbs(view, this.state.breadcrumbs),
       view: view,
       index: index,
       progress: this.calculateProgress(index, this.state.data.views.length - 1)
-    });
+    };
+    this.interActiveCvService.setPage(page);
+    this.setState(page);
   }
 }

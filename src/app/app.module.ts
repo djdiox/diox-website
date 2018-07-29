@@ -5,11 +5,9 @@ import {RouterModule} from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
-
 // Angular Requirements
 import {environment} from '../environments/environment';
 import {appRoutes} from './routes';
-
 // External Imports
 import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
 import {AngularFireModule} from 'angularfire2';
@@ -27,14 +25,12 @@ import {
   MatProgressBarModule,
   MatTooltipModule
 } from '@angular/material';
-
 // Components
 import {NavigationComponent} from './components/navigation/navigation.component';
 import {TabBarComponent} from './components/tab-bar/tab-bar.component';
 import {ModalComponent} from './components/modal/modal.component';
 import {ChatComponent} from './components/chat/chat.component';
 import {FooterComponent} from './components/footer/footer.component';
-
 // Pages
 import {AppComponent} from './app.component';
 import {HomeComponent} from './pages/home/home.component';
@@ -44,6 +40,7 @@ import {SetsComponent} from './pages/sets/sets.component';
 import {WorkComponent} from './pages/work/work.component';
 import {BlogComponent} from './pages/blog/blog.component';
 import {InteractiveCvComponent} from './pages/interactive-cv/interactive-cv.component';
+import {CvStartComponent} from './pages/interactive-cv/cv-start/cv-start.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +56,8 @@ import {InteractiveCvComponent} from './pages/interactive-cv/interactive-cv.comp
     TabBarComponent,
     ModalComponent,
     ChatComponent,
-    InteractiveCvComponent
+    InteractiveCvComponent,
+    CvStartComponent
   ],
   imports: [
     BrowserModule,
