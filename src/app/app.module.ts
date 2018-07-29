@@ -19,7 +19,7 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 import {GalleryModule} from '@ngx-gallery/core';
 import {InlineSVGModule} from 'ng-inline-svg';
 import {
-  MatButtonModule, MatChipsModule, MatIconModule, MatListModule,
+  MatButtonModule, MatCardModule, MatChipsModule, MatIconModule, MatListModule,
   MatProgressBarModule,
   MatTooltipModule
 } from '@angular/material';
@@ -83,7 +83,8 @@ import {InteractiveCvComponent} from './pages/interactive-cv/interactive-cv.comp
     MatProgressBarModule,
     MatChipsModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

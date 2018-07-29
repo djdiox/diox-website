@@ -2,7 +2,7 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {InteractiveCvComponent} from './interactive-cv.component';
 import {
-  MatButtonModule, MatChipsModule, MatIconModule, MatListModule, MatProgressBarModule,
+  MatButtonModule, MatCardModule, MatChipsModule, MatIconModule, MatListModule, MatProgressBarModule,
   MatTooltipModule
 } from '@angular/material';
 
@@ -19,7 +19,8 @@ describe('InteractiveCvComponent', () => {
         MatProgressBarModule,
         MatChipsModule,
         MatListModule,
-        MatIconModule
+        MatIconModule,
+        MatCardModule
       ]
     })
       .compileComponents();
