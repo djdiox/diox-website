@@ -1,6 +1,7 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {InteractiveCvComponent} from './interactive-cv.component';
+import {MatButtonModule, MatChipList, MatChipsModule, MatProgressBarModule, MatTooltipModule} from '@angular/material';
 
 describe('InteractiveCvComponent', () => {
   let component: InteractiveCvComponent;
@@ -8,7 +9,13 @@ describe('InteractiveCvComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [InteractiveCvComponent]
+      declarations: [InteractiveCvComponent],
+      imports: [
+        MatButtonModule,
+        MatTooltipModule,
+        MatProgressBarModule,
+        MatChipsModule
+      ]
     })
       .compileComponents();
   }));

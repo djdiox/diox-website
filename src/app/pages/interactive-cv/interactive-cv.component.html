@@ -1,12 +1,14 @@
 <h1>Interactive CV!</h1>
-<ul class="breadcrumbs">
-  <li *ngFor="let breadcrumb of breadcrumbs;let idx = index"
-      (click)="switchTo(idx)"
-      [class.active]="currentView === breadcrumb">
+<mat-chip-list>
+  <mat-chip
+    *ngFor="let breadcrumb of state.breadcrumbs;let idx = index"
+    (click)="switchTo(idx)"
+    matTooltip="Show the page"
+    [class.active]="state.view === breadcrumb">
     {{breadcrumb}}
-  </li>
-</ul>
-<div class="component start" *ngIf="currentView === 'start'">
+  </mat-chip>
+</mat-chip-list>
+<div class="component start" *ngIf="state.view === 'start'">
   <h2>More than just a pdf.</h2>
   <p>
     Welcome to the interactive CV of myself.<br>
@@ -15,12 +17,19 @@
   </p>
   <button mat-button (click)="switchTo(1)">Let's Go!</button>
 </div>
-<div class="component school" *ngIf="currentView === 'school'">
+<div class="component school" *ngIf="state.view === 'school'">
   <h2>Knowledge is key</h2>
   <p>
-    I noticed already in the middle school (2006-2012) that electronic devices and software is my and our future!<br>
-    The love of creating something new has always been a part of me.
+    I noticed already in the middle school (2006-2012) that electronic devices and software is mine and our future!<br>
+    The love of creating something new has always been a part of me.<br>
   </p>
-  <button mat-button>back</button>
-  <button mat-button>next</button>
+  <ul>
+    <li matTooltip="elementary school">2000 - 2006 Silcherschule Kornwestheim</li>
+    <li matTooltip="middle school">2006 - 2012 Realschule Remseck</li>
+    <li matTooltip="alongside apprenticeship">2012 - 2015 ITS-School Stuttgart</li>
+  </ul>
 </div>
+<button mat-button (click)="previousPage()">back</button>
+<button mat-button (click)="nextPage()">next</button>
+<mat-progress-bar mode="determinate" [value]="state.progress"></mat-progress-bar>
+<pre>{{state | json}}</pre>
