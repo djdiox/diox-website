@@ -18,7 +18,12 @@ import {AngularFireStorageModule} from 'angularfire2/storage';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {GalleryModule} from '@ngx-gallery/core';
 import {InlineSVGModule} from 'ng-inline-svg';
-import {MatButtonModule, MatChipList, MatChipsModule, MatProgressBarModule, MatTooltipModule} from '@angular/material';
+import {
+  MatButtonModule, MatChipsModule, MatIconModule, MatListModule,
+  MatProgressBarModule,
+  MatTooltipModule
+} from '@angular/material';
+
 // Components
 import {NavigationComponent} from './components/navigation/navigation.component';
 import {TabBarComponent} from './components/tab-bar/tab-bar.component';
@@ -76,7 +81,9 @@ import {InteractiveCvComponent} from './pages/interactive-cv/interactive-cv.comp
     MatButtonModule,
     MatTooltipModule,
     MatProgressBarModule,
-    MatChipsModule
+    MatChipsModule,
+    MatListModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
