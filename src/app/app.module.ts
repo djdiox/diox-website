@@ -41,6 +41,11 @@ import {WorkComponent} from './pages/work/work.component';
 import {BlogComponent} from './pages/blog/blog.component';
 import {InteractiveCvComponent} from './pages/interactive-cv/interactive-cv.component';
 import {CvStartComponent} from './pages/interactive-cv/cv-start/cv-start.component';
+import {CvSchoolComponent} from './pages/interactive-cv/cv-school/cv-school.component';
+import {CvExperienceComponent} from './pages/interactive-cv/cv-experience/cv-experience.component';
+import {CvTechnologyComponent} from './pages/interactive-cv/cv-technology/cv-technology.component';
+import {CvProgrammingComponent} from './pages/interactive-cv/cv-programming/cv-programming.component';
+import {CvGoalsComponent} from './pages/interactive-cv/cv-goals/cv-goals.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +62,12 @@ import {CvStartComponent} from './pages/interactive-cv/cv-start/cv-start.compone
     ModalComponent,
     ChatComponent,
     InteractiveCvComponent,
-    CvStartComponent
+    CvStartComponent,
+    CvSchoolComponent,
+    CvExperienceComponent,
+    CvTechnologyComponent,
+    CvProgrammingComponent,
+    CvGoalsComponent
   ],
   imports: [
     BrowserModule,

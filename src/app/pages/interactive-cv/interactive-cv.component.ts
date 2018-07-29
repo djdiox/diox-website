@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import * as _ from 'lodash';
 import {InteractiveCvService, Page} from '../../services/interactive-cv.service';
-import {DEFAULT_STATE} from '../../presets/cv-default-state';
+import {DEFAULT_STATE} from './_presets/cv-default-state';
 
 @Component({
   selector: 'app-interactive-cv',
