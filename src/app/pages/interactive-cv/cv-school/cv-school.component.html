@@ -1,3 +1,24 @@
+<h2>Knowledge is key</h2>
 <p>
-  cv-school works!
+  I noticed already in the middle school (2006-2012) that electronic devices and software is mine and our future!<br>
+  The love of creating something new has always been a part of me.<br>
 </p>
+<h3>Educational career</h3>
+<mat-card>
+  <mat-list>
+    <mat-list-item *ngFor="let school of state.data.schools" [matTooltip]="school.tooltip">
+      <mat-icon matListIcon>school</mat-icon>
+      <h3 matLine>{{school.name}}</h3>
+      <p matLine>
+        <span>{{school.type}}</span><br>
+        <span>{{school.duration}}</span>
+      </p>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
+<h3>Practical experience is the best</h3>
+<p>
+  Soon i will find out in that time that practical experience is the most important one!<br>
+  On the next page there will be more informations about it.
+</p>
+<button mat-button (click)="nextPage()">More yet to come :)</button>

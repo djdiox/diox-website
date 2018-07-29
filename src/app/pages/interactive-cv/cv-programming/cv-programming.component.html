@@ -1,3 +1,23 @@
+<h2>programming</h2>
 <p>
-  cv-programming works!
+  There is a use case for any language!<br>
+  I learned a lot of different languages, that is one reason for it!<br>
+  Splitting applications in order to create microservices, has a lot of positive aspects!<br>
+  I try always to achieve a MultiOS Level for my apps!<br>
+  For a best solution, the toolkit must be big! I'm always open for new things!
 </p>
+<h3>languages</h3>
+<mat-chip-list>
+  <mat-chip *ngFor="let lang of state.data.programming.languages">
+    {{lang}}
+  </mat-chip>
+</mat-chip-list>
+<h3>technics</h3>
+<p>
+  These technics and other help to plan and and support the development process.
+</p>
+<mat-chip-list>
+  <mat-chip *ngFor="let technic of state.data.programming.technics">
+    {{technic}}
+  </mat-chip>
+</mat-chip-list>

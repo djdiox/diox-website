@@ -1,3 +1,11 @@
-<p>
-  cv-experience works!
-</p>
+<div class="timeline">
+  <div class="container"
+       *ngFor="let experience of state.data.experiences;let idx = $index"
+       [ngClass]="experience.position">
+    <div class="content">
+      <h2>{{experience.startDate}} - {{experience.endDate}}</h2>
+      <h3>{{experience.headline}}</h3>
+      <p>{{experience.content}}</p>
+    </div>
+  </div>
+</div>
