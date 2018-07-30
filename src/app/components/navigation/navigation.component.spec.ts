@@ -1,9 +1,7 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { NavigationComponent } from './navigation.component';
-import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
+import {NavigationComponent} from './navigation.component';
 import {InlineSVGModule} from 'ng-inline-svg';
-import {HttpClient} from '@angular/common/http';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 
 describe('NavigationComponent', () => {
@@ -14,7 +12,6 @@ describe('NavigationComponent', () => {
     TestBed.configureTestingModule({
       declarations: [NavigationComponent],
       imports: [
-        ScrollToModule.forRoot(),
         HttpClientTestingModule,
         InlineSVGModule.forRoot(),
       ]
