@@ -5,6 +5,8 @@
     *ngFor="let breadcrumb of state.breadcrumbs;let idx = index"
     (click)="switchTo(idx)"
     matTooltip="Show the page"
+    color="primary"
+    [selected]="state.view === breadcrumb"
     [class.active]="state.view === breadcrumb">
     {{breadcrumb}}
   </mat-chip>
@@ -23,7 +25,7 @@
   <app-cv-goals *ngIf="state.view === 'goals'"></app-cv-goals>
   <app-cv-end *ngIf="state.view === 'end'"></app-cv-end>
 </div>
-<mat-progress-bar mode="determinate" [value]="state.progress"></mat-progress-bar>
+<!--<mat-progress-bar mode="determinate" [value]="state.progress"></mat-progress-bar>-->
 <button mat-button (click)="previousPage()">back</button>
 <button mat-button (click)="nextPage()">next</button>
 <pre>{{state | json}}</pre>
