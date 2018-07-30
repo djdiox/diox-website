@@ -1,10 +1,10 @@
 <i class="hamburger icon" [ngClass]="{'active': !showNav}" [inlineSVG]="'/assets/images/icons/hamburger.svg'"
    (click)="toggleNav()"></i>
 <ul class="nav" role="navigation" [ngClass]="{'hidden': !showNav}">
-  <li routerLink="/home" routerLinkActive="active" [ngx-scroll-to]="'#home'">home</li>
-  <li routerLink="/about" routerLinkActive="active" [ngx-scroll-to]="'#about'">about</li>
-  <li routerLink="/pictures" routerLinkActive="active" [ngx-scroll-to]="'#pictures'">pictures</li>
+  <li routerLink="/home" routerLinkActive="active">home</li>
+  <li routerLink="/about" routerLinkActive="active">about</li>
+  <li routerLink="/pictures" routerLinkActive="active">pictures</li>
   <!--<li routerLink="/works" routerLinkActive="active" [ngx-scroll-to]="'#work'">work</li>-->
-  <li routerLink="/cv" routerLinkActive="active" [ngx-scroll-to]="'#work'">cv</li>
-  <li routerLink="/sets" routerLinkActive="active" [ngx-scroll-to]="'#sets'">djings</li>
+  <li routerLink="/cv" routerLinkActive="active">cv</li>
+  <li routerLink="/sets" routerLinkActive="active">djings</li>
 </ul>

@@ -1,6 +1,6 @@
 {
   "name": "diox-website",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -24,7 +24,6 @@
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
     "@ngx-gallery/core": "^3.0.2",
-    "@nicky-lenaers/ngx-scroll-to": "^1.0.0",
     "angularfire2": "^5.0.0-rc.11",
     "core-js": "^2.5.4",
     "firebase": "^5.3.0",

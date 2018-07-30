@@ -9,7 +9,6 @@ import {FormsModule} from '@angular/forms';
 import {environment} from '../environments/environment';
 import {appRoutes} from './routes';
 // External Imports
-import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {AngularFireStorageModule} from 'angularfire2/storage';
@@ -85,7 +84,6 @@ import {CvEndComponent} from './pages/interactive-cv/cv-end/cv-end.component';
         anchorScrolling: 'enabled',
       } // <-- debugging purposes only
     ),
-    ScrollToModule.forRoot(),
     GalleryModule.forRoot(),
     InlineSVGModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
