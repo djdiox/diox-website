@@ -37,10 +37,10 @@
             <a data-type="chapter-link" href="index.html"><span class="fa fa-home"></span>Getting started</a>
             <ul class="links">
                     <li class="link">
-                        <a 
-                            
-                             href="overview.html" 
-                             href="overview.html" 
+                        <a
+
+                             href="overview.html"
+                             href="overview.html"
                             data-type="chapter-link">
                             <span class="fa fa-fw fa-th"></span>Overview
                         </a>
@@ -278,10 +278,10 @@
             <a data-type="chapter-link" href="index.html"><span class="fa fa-home"></span>Getting started</a>
             <ul class="links">
                     <li class="link">
-                        <a 
-                            
-                             href="overview.html" 
-                             href="overview.html" 
+                        <a
+
+                             href="overview.html"
+                             href="overview.html"
                             data-type="chapter-link">
                             <span class="fa fa-fw fa-th"></span>Overview
                         </a>
@@ -622,6 +622,12 @@
                             </td>
                         </tr>
 
+                <tr>
+                  <td class="col-md-4">
+                    <div class="io-description"><p>Class Initialization</p>
+                    </div>
+                  </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -631,7 +637,7 @@
 
 
     <section>
-    
+
         <h3 id="methods">
             Methods
         </h3>
@@ -657,13 +663,16 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/pages/home/home.component.ts:15</a></div>
+                              <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/pages/home/home.component.ts:22</a>
+                              </div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                      <div class="io-description"><p>Angular Component Initialization Method</p>
+                      </div>
 
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -680,20 +689,29 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, OnInit} from &#x27;@angular/core&#x27;;
 
 @Component({
   selector: &#x27;app-home&#x27;,
   templateUrl: &#x27;./home.component.html&#x27;,
   styleUrls: [&#x27;./home.component.scss&#x27;]
 })
+/**
+ * Controller for the Home Page
+ */
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  /**
+   * Class Initialization
+   */
+  constructor() {
   }
 
+  /**
+   * Angular Component Initialization Method
+   */
+  ngOnInit() {
+  }
 }
 </code></pre>
     </div>
@@ -732,7 +750,7 @@ export class HomeComponent implements OnInit {
         </div>
     </div>
 
-    
+
 </div>
 
 <script src="../js/libs/vis.min.js"></script>

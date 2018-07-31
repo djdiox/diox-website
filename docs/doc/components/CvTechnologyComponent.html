@@ -37,10 +37,10 @@
             <a data-type="chapter-link" href="index.html"><span class="fa fa-home"></span>Getting started</a>
             <ul class="links">
                     <li class="link">
-                        <a 
-                            
-                             href="overview.html" 
-                             href="overview.html" 
+                        <a
+
+                             href="overview.html"
+                             href="overview.html"
                             data-type="chapter-link">
                             <span class="fa fa-fw fa-th"></span>Overview
                         </a>
@@ -278,10 +278,10 @@
             <a data-type="chapter-link" href="index.html"><span class="fa fa-home"></span>Getting started</a>
             <ul class="links">
                     <li class="link">
-                        <a 
-                            
-                             href="overview.html" 
-                             href="overview.html" 
+                        <a
+
+                             href="overview.html"
+                             href="overview.html"
                             data-type="chapter-link">
                             <span class="fa fa-fw fa-th"></span>Overview
                         </a>
@@ -633,10 +633,17 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/pages/interactive-cv/cv-technology/cv-technology.component.ts:14</a></div>
+                              <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/pages/interactive-cv/cv-technology/cv-technology.component.ts:18</a>
+                              </div>
                             </td>
                         </tr>
 
+                <tr>
+                  <td class="col-md-4">
+                    <div class="io-description"><p>Class Initialization</p>
+                    </div>
+                  </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -646,7 +653,7 @@
 
 
     <section>
-    
+
         <h3 id="methods">
             Methods
         </h3>
@@ -672,13 +679,16 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/pages/interactive-cv/cv-technology/cv-technology.component.ts:18</a></div>
+                              <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/pages/interactive-cv/cv-technology/cv-technology.component.ts:29</a>
+                              </div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                      <div class="io-description"><p>Angular Component Initialization Method</p>
+                      </div>
 
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -691,7 +701,7 @@
 </section>
 
     <section>
-    
+
         <h3 id="inputs">
             Properties
         </h3>
@@ -722,10 +732,17 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/pages/interactive-cv/cv-technology/cv-technology.component.ts:14</a></div>
+                              <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/pages/interactive-cv/cv-technology/cv-technology.component.ts:18</a>
+                              </div>
                             </td>
                         </tr>
 
+                <tr>
+                  <td class="col-md-4">
+                    <div class="io-description"><p>Current State of the CV</p>
+                    </div>
+                  </td>
+                </tr>
 
             </tbody>
         </table>
@@ -743,12 +760,26 @@ import {DEFAULT_STATE} from &#x27;../_presets/cv-default-state&#x27;;
   templateUrl: &#x27;./cv-technology.component.html&#x27;,
   styleUrls: [&#x27;./cv-technology.component.scss&#x27;]
 })
+/**
+ * Controller for the CV (Technology) Page
+ */
 export class CvTechnologyComponent implements OnInit {
 
+  /**
+   * Current State of the CV
+   * @type Object
+   */
   public state &#x3D; DEFAULT_STATE;
+
+  /**
+   * Class Initialization
+   */
   constructor() {
   }
 
+  /**
+   * Angular Component Initialization Method
+   */
   ngOnInit() {
   }
 
@@ -790,7 +821,7 @@ export class CvTechnologyComponent implements OnInit {
         </div>
     </div>
 
-    
+
 </div>
 
 <script src="../js/libs/vis.min.js"></script>

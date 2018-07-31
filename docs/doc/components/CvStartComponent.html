@@ -37,10 +37,10 @@
             <a data-type="chapter-link" href="index.html"><span class="fa fa-home"></span>Getting started</a>
             <ul class="links">
                     <li class="link">
-                        <a 
-                            
-                             href="overview.html" 
-                             href="overview.html" 
+                        <a
+
+                             href="overview.html"
+                             href="overview.html"
                             data-type="chapter-link">
                             <span class="fa fa-fw fa-th"></span>Overview
                         </a>
@@ -278,10 +278,10 @@
             <a data-type="chapter-link" href="index.html"><span class="fa fa-home"></span>Getting started</a>
             <ul class="links">
                     <li class="link">
-                        <a 
-                            
-                             href="overview.html" 
-                             href="overview.html" 
+                        <a
+
+                             href="overview.html"
+                             href="overview.html"
                             data-type="chapter-link">
                             <span class="fa fa-fw fa-th"></span>Overview
                         </a>
@@ -622,6 +622,12 @@
                             </td>
                         </tr>
 
+                <tr>
+                  <td class="col-md-4">
+                    <div class="io-description"><p>Class Initialization</p>
+                    </div>
+                  </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -631,7 +637,7 @@
 
 
     <section>
-    
+
         <h3 id="methods">
             Methods
         </h3>
@@ -657,13 +663,16 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/pages/interactive-cv/cv-start/cv-start.component.ts:16</a></div>
+                              <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/pages/interactive-cv/cv-start/cv-start.component.ts:22</a>
+                              </div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                      <div class="io-description"><p>Angular Component Initialization Method</p>
+                      </div>
 
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -687,11 +696,20 @@
   templateUrl: &#x27;./cv-start.component.html&#x27;,
   styleUrls: [&#x27;./cv-start.component.scss&#x27;]
 })
+/**
+ * Controller for the CV (Start) Page
+ */
 export class CvStartComponent implements OnInit {
 
+  /**
+   * Class Initialization
+   */
   constructor() {
   }
 
+  /**
+   * Angular Component Initialization Method
+   */
   ngOnInit() {
   }
 
@@ -728,7 +746,7 @@ export class CvStartComponent implements OnInit {
         </div>
     </div>
 
-    
+
 </div>
 
 <script src="../js/libs/vis.min.js"></script>
