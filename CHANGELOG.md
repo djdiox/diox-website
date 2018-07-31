@@ -36,6 +36,7 @@
 - Added Compodoc
 
 # Coming up
+- Complete Documentation
 - Unit Tests
 - End to End Tests
 - Chatbot
