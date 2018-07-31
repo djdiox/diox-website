@@ -11,7 +11,7 @@ Hosting of the code powered by [GitLab](https://gitlab.com/djdiox/diox-website) 
 
 ## Build / Patch
 
-Running `yarn version patch / minor / major` will create the semver version in the package.json and the tag in git
+Running `yarn version --new-version patch / minor / major` will create the semver version in the package.json and the tag in git
 
 Execute `yarn build` for a normal build into dist folder.
 
