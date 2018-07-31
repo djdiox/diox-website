@@ -1,13 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Observable, Subject} from 'rxjs';
-
-
-export interface Page {
-  view: string;
-  index: number;
-  progress: number;
-  breadcrumbs: string[];
-}
+import {Page} from '../classes/page';
 
 @Injectable({
   providedIn: 'root'
@@ -31,7 +24,7 @@ export class InteractiveCvService {
 
   /**
    * Page Observable
-   * @returns {Observable<Page>}
+   * @returns {Observable<Page>} An Observable that will call everytime the page changes
    */
   public get currentPage(): Observable<Page> {
     return this._currentPage.asObservable();
