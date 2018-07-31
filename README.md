@@ -1,5 +1,8 @@
 # Diox Website
 
+![Build Status](https://gitlab.com/djdiox/diox-website/badges/master/build.svg)
+![Coverage](https://gitlab.com/djdiox/diox-website/badges/master/coverage.svg)
+
 Currently the page ist hosted on [GitHub](https://djdiox.github.io/diox-website). 
 It will be soon available on a Web Server with an domain.
 
