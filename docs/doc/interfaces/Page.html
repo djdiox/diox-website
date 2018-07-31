@@ -705,18 +705,35 @@ export interface Page {
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
+/**
+ * A Pages services for sharing the current page
+ */
 export class InteractiveCvService {
 
+  /**
+   * Visible Page
+   */
   private _currentPage: Subject&lt;Page&gt;;
 
+  /**
+   * Creates a new Instance of the service
+   */
   constructor() {
     this._currentPage &#x3D; new Subject&lt;Page&gt;();
   }
 
+  /**
+   * Page Observable
+   * @returns {Observable&lt;Page&gt;}
+   */
   public get currentPage(): Observable&lt;Page&gt; {
     return this._currentPage.asObservable();
   }
 
+  /**
+   * Sets the current Page on the Observable
+   * @param page next page that should displayed
+   */
   public setPage(page: Page) {
     this._currentPage.next(page);
   }

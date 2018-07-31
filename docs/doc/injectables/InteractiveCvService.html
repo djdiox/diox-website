@@ -586,10 +586,16 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/services/interactive-cv.service.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/services/interactive-cv.service.ts:23</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Creates a new Instance of the service</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -623,13 +629,15 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/services/interactive-cv.service.ts:27</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/services/interactive-cv.service.ts:44</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Sets the current Page on the Observable</p>
+</div>
 
                             <div class="io-description">
                                     <b>Parameters :</b>
@@ -639,6 +647,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -653,6 +662,10 @@
                                                     </td>
                                                     
 
+                                                        <td>
+                                                                <code><p>next page that should displayed</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -705,10 +718,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/services/interactive-cv.service.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/services/interactive-cv.service.ts:23</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Visible Page</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -734,9 +753,22 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/services/interactive-cv.service.ts:23</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/services/interactive-cv.service.ts:36</a></div>
                                 </td>
                             </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Page Observable</p>
+</div>
+
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="../interfaces/Page.html" target="_self" >Observable&lt;Page&gt;</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
 
             </tbody>
         </table>
@@ -759,18 +791,35 @@ export interface Page {
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
+/**
+ * A Pages services for sharing the current page
+ */
 export class InteractiveCvService {
 
+  /**
+   * Visible Page
+   */
   private _currentPage: Subject&lt;Page&gt;;
 
+  /**
+   * Creates a new Instance of the service
+   */
   constructor() {
     this._currentPage &#x3D; new Subject&lt;Page&gt;();
   }
 
+  /**
+   * Page Observable
+   * @returns {Observable&lt;Page&gt;}
+   */
   public get currentPage(): Observable&lt;Page&gt; {
     return this._currentPage.asObservable();
   }
 
+  /**
+   * Sets the current Page on the Observable
+   * @param page next page that should displayed
+   */
   public setPage(page: Page) {
     this._currentPage.next(page);
   }
