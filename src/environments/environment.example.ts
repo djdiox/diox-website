@@ -1,3 +1,8 @@
+/**
+ * The current environment variables, that will change from app to app
+ * (deployment to deployment)
+ * @type Object
+ */
 export const environment = {
   production: false,
   dialogFlowToken: '',

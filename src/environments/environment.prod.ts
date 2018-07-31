@@ -1,3 +1,8 @@
+/**
+ * The current environment variables for productive, that will change from app to app
+ * (deployment to deployment)
+ * @type Object
+ */
 export const environment = {
   production: false,
   dialogFlowToken: '',
