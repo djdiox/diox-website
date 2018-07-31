@@ -32,6 +32,8 @@
 ## Version 0.0.6
 - Added Interactive CV (first version)
 - Tweak SCSS
+
+## Version 0.0.7
 - Added Material Design
 - Added Compodoc
 
