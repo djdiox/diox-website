@@ -35,6 +35,7 @@ export class ModalOptions {
 })
 export class ModalService {
 
+
   private _currentModalOptions: Subject<ModalOptions>;
   private _lastShownModal: ModalOptions;
 

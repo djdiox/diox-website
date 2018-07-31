@@ -3,6 +3,8 @@
 Currently the page ist hosted on [GitHub](https://djdiox.github.io/diox-website). 
 It will be soon available on a Web Server with an domain.
 
+Documentation for this app is found [here](https://djdiox.github.io/diox-website/doc/)
+
 ## Hosting
 
 Hosting of the code powered by [GitLab](https://gitlab.com/djdiox/diox-website) and for pages on [GitHub](https://github.com/djdiox/diox-website)
@@ -31,6 +33,11 @@ As a developer you need following tools are necessary to develop this project:
 4. Running `yarn start` wil start up development server on [http://localhost:4200](http://localhost:4200)
 
 *Hint:* If you want to access the project on a mobile device in your network run `ng serve --host=0.0.0.0`
+
+## Documentation
+
+The Documentation is powered by compodoc! 
+Just hit `yarn generate:documentation` and it will create the folder base on Code, Comments etc.
 
 ## Changelog
 

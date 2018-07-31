@@ -29,11 +29,18 @@
 ## Version 0.0.5
 - Added Possibility to change view for mobile, on hide nav
 
+## Version 0.0.6
+- Added Interactive CV
+- Tweak SCSS
+- Added Material Design
+
 # Coming up
+- Unit Tests
+- End to End Tests
 - Chatbot
 - Blog
-- Material Design integration
 - Mobile first
 - Backend instead of firebase
 - Live Updates from Twitter, Facebook & Instagram
 - Comment Section
+- Added Compodoc to docs/doc dir

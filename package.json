@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:docs": "ng build --prod --base-href=/diox-website/ --output-path=docs/",
+    "generate:documentation": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --output docs/doc",
     "test": "ng test --source-map=false",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -38,6 +39,7 @@
     "@angular/cli": "~6.0.8",
     "@angular/compiler-cli": "^6.1.0",
     "@angular/language-service": "^6.1.0",
+    "@compodoc/compodoc": "^1.1.3",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~10.5.3",
