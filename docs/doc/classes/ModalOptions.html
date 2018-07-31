@@ -737,10 +737,16 @@ Default Visible: false</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/services/modal.service.ts:30</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/services/modal.service.ts:60</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Displayed Text on No Button</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -773,10 +779,16 @@ Default Visible: false</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/services/modal.service.ts:29</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/services/modal.service.ts:55</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Displayed Text on Yes Button</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -808,10 +820,16 @@ Default Visible: false</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/services/modal.service.ts:26</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/services/modal.service.ts:36</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Visible Content Element</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -844,10 +862,16 @@ Default Visible: false</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/services/modal.service.ts:27</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/services/modal.service.ts:45</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Should it have buttons?</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -879,10 +903,16 @@ Default Visible: false</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/services/modal.service.ts:23</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/services/modal.service.ts:26</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A Name to find the Modal</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -913,10 +943,16 @@ Default Visible: false</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/services/modal.service.ts:28</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/services/modal.service.ts:51</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Result if Interactive</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -948,10 +984,16 @@ Default Visible: false</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/services/modal.service.ts:24</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/services/modal.service.ts:31</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Visibile Header Element</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -983,10 +1025,16 @@ Default Visible: false</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/services/modal.service.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/services/modal.service.ts:40</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Is it being displayed?</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -1024,43 +1072,97 @@ export class ModalOptions {
     this.visible &#x3D; visible;
   }
 
+  /**
+   * A Name to find the Modal
+   */
   public name: string;
+
+  /**
+   * Visibile Header Element
+   */
   public title: string;
-  public visible: boolean;
+
+  /**
+   * Visible Content Element
+   */
   public content: string;
+  /**
+   * Is it being displayed?
+   */
+  public visible: boolean;
+
+  /**
+   * Should it have buttons?
+   */
   public interactive?: boolean;
+
+  /**
+   * Result if Interactive
+   * @type {boolean}
+   */
   public result &#x3D; false;
+  /**
+   * Displayed Text on Yes Button
+   */
   public buttonYesText?: string;
+
+  /**
+   * Displayed Text on No Button
+   */
   public buttonNoText?: string;
 }
 
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
+/**
+ * Provies Appwide Access to Modals
+ */
 export class ModalService {
 
-
+  /**
+   * Subject of the current Modal Options
+   */
   private _currentModalOptions: Subject&lt;ModalOptions&gt;;
-  private _lastShownModal: ModalOptions;
+
+  /**
+   * The last shown modal on the view
+   */
+  private options: ModalOptions;
 
   constructor() {
     this._currentModalOptions &#x3D; new Subject&lt;ModalOptions&gt;();
   }
 
+  /**
+   * Returns an Observable for the currentModalOptions
+   * @returns {Observable&lt;ModalOptions&gt;} Event to hook on
+   * @constructor A fine Modal
+   */
   public get CurrentModalOptions(): Observable&lt;ModalOptions&gt; {
     return this._currentModalOptions.asObservable();
   }
 
+  /**
+   * Shows the default modal on view by giving some parameters
+   * @param name A unique name
+   * @param title a title
+   * @param content the content
+   */
   public showDefaultModal(name: string, title: string, content: string) {
     const modalOptions &#x3D; new ModalOptions(name, title, content, true);
-    this._lastShownModal &#x3D; modalOptions;
+    this.options &#x3D; modalOptions;
     this._currentModalOptions.next(modalOptions);
   }
 
+  /**
+   * Hides the last modal
+   * @param result
+   */
   public hideCurrentModal(result &#x3D; false) {
-    this._lastShownModal.visible &#x3D; false;
-    this._lastShownModal.result &#x3D; result;
-    this._currentModalOptions.next(this._lastShownModal);
+    this.options.visible &#x3D; false;
+    this.options.result &#x3D; result;
+    this._currentModalOptions.next(this.options);
   }
 }
 </code></pre>

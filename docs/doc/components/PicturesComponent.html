@@ -632,7 +632,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/pages/pictures/pictures.component.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/pages/pictures/pictures.component.ts:21</a></div>
                             </td>
                         </tr>
 
@@ -671,7 +671,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/pages/pictures/pictures.component.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/pages/pictures/pictures.component.ts:26</a></div>
                             </td>
                         </tr>
 
@@ -719,12 +719,27 @@
 
                         </td>
                     </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    new ImageItem({src: &#x27;assets/images/embedded/photo_1.jpg&#x27;, thumb: &#x27;assets/images/embedded/photo_1.jpg&#x27;}),
+    new ImageItem({src: &#x27;assets/images/embedded/photo_1.jpg&#x27;, thumb: &#x27;assets/images/embedded/photo_1.jpg&#x27;})
+    // ... more items
+  ]</code>
+                        </td>
+                    </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/pages/pictures/pictures.component.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/pages/pictures/pictures.component.ts:17</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A List of all displayed Gallery Items</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -744,17 +759,19 @@ import {GalleryItem, ImageItem} from &#x27;@ngx-gallery/core&#x27;;
 })
 export class PicturesComponent implements OnInit {
 
-  images: GalleryItem[];
+  /**
+   * A List of all displayed Gallery Items
+   */
+  images: GalleryItem[] &#x3D; [
+    new ImageItem({src: &#x27;assets/images/embedded/photo_1.jpg&#x27;, thumb: &#x27;assets/images/embedded/photo_1.jpg&#x27;}),
+    new ImageItem({src: &#x27;assets/images/embedded/photo_1.jpg&#x27;, thumb: &#x27;assets/images/embedded/photo_1.jpg&#x27;})
+    // ... more items
+  ];
 
   constructor() {
   }
 
   ngOnInit() {
-    this.images &#x3D; [
-      new ImageItem({src: &#x27;assets/images/embedded/photo_1.jpg&#x27;, thumb: &#x27;assets/images/embedded/photo_1.jpg&#x27;}),
-      new ImageItem({src: &#x27;assets/images/embedded/photo_1.jpg&#x27;, thumb: &#x27;assets/images/embedded/photo_1.jpg&#x27;})
-      // ... more items
-    ];
   }
 
 }

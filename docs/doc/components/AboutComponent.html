@@ -633,7 +633,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/pages/about/about.component.ts:31</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/pages/about/about.component.ts:39</a></div>
                             </td>
                         </tr>
 
@@ -672,7 +672,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/pages/about/about.component.ts:34</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/pages/about/about.component.ts:43</a></div>
                             </td>
                         </tr>
 
@@ -749,10 +749,17 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/pages/about/about.component.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/pages/about/about.component.ts:18</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Collected Icons
+TODO: Refactor this</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -771,6 +778,11 @@
 })
 export class AboutComponent implements OnInit {
 
+  /**
+   * Collected Icons
+   * TODO: Refactor this
+   * @type Array&lt;object&lt;
+   */
   public softwareIcons &#x3D; [
     {
       path: &#x27;assets/images/icons/angular.svg&#x27;,
@@ -793,6 +805,7 @@ export class AboutComponent implements OnInit {
       name: &#x27;Photoshop&#x27;
     },
   ];
+
   constructor() { }
 
   ngOnInit() {

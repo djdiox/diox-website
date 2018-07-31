@@ -658,7 +658,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/app.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/app.component.ts:35</a></div>
                             </td>
                         </tr>
 
@@ -741,7 +741,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/app.component.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/app.component.ts:27</a></div>
                             </td>
                         </tr>
 
@@ -784,7 +784,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/app.component.ts:68</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/app.component.ts:75</a></div>
                             </td>
                         </tr>
 
@@ -860,7 +860,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/app.component.ts:45</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/app.component.ts:52</a></div>
                             </td>
                         </tr>
 
@@ -913,7 +913,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/app.component.ts:38</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/app.component.ts:45</a></div>
                             </td>
                         </tr>
 
@@ -948,10 +948,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/app.component.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/app.component.ts:15</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The last Key which was pressed</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -982,10 +988,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/app.component.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/app.component.ts:20</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Is Currently the nav shown?</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -1006,7 +1018,14 @@ import {auth} from &#x27;firebase&#x27;;
   styleUrls: [&#x27;./app.component.scss&#x27;]
 })
 export class AppComponent implements OnInit {
+  /**
+   * The last Key which was pressed
+   */
   private lastKey: number;
+  /**
+   * Is Currently the nav shown?
+   * @type {boolean}
+   */
   public showNav &#x3D; true;
 
   /**
