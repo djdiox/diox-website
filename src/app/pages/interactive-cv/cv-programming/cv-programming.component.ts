@@ -1,3 +1,6 @@
+/**
+ * Controller for the CV (Programmng) Page
+ */
 import {Component, OnInit} from '@angular/core';
 import {DEFAULT_STATE} from '../_presets/cv-default-state';
 

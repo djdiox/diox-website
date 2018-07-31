@@ -20,42 +20,96 @@ export class ModalOptions {
     this.visible = visible;
   }
 
+  /**
+   * A Name to find the Modal
+   */
   public name: string;
+
+  /**
+   * Visibile Header Element
+   */
   public title: string;
-  public visible: boolean;
+
+  /**
+   * Visible Content Element
+   */
   public content: string;
+  /**
+   * Is it being displayed?
+   */
+  public visible: boolean;
+
+  /**
+   * Should it have buttons?
+   */
   public interactive?: boolean;
+
+  /**
+   * Result if Interactive
+   * @type {boolean}
+   */
   public result = false;
+  /**
+   * Displayed Text on Yes Button
+   */
   public buttonYesText?: string;
+
+  /**
+   * Displayed Text on No Button
+   */
   public buttonNoText?: string;
 }
 
 @Injectable({
   providedIn: 'root'
 })
+/**
+ * Provies Appwide Access to Modals
+ */
 export class ModalService {
 
-
+  /**
+   * Subject of the current Modal Options
+   */
   private _currentModalOptions: Subject<ModalOptions>;
-  private _lastShownModal: ModalOptions;
+
+  /**
+   * The last shown modal on the view
+   */
+  private options: ModalOptions;
 
   constructor() {
     this._currentModalOptions = new Subject<ModalOptions>();
   }
 
+  /**
+   * Returns an Observable for the currentModalOptions
+   * @returns {Observable<ModalOptions>} Event to hook on
+   * @constructor A fine Modal
+   */
   public get CurrentModalOptions(): Observable<ModalOptions> {
     return this._currentModalOptions.asObservable();
   }
 
+  /**
+   * Shows the default modal on view by giving some parameters
+   * @param name A unique name
+   * @param title a title
+   * @param content the content
+   */
   public showDefaultModal(name: string, title: string, content: string) {
     const modalOptions = new ModalOptions(name, title, content, true);
-    this._lastShownModal = modalOptions;
+    this.options = modalOptions;
     this._currentModalOptions.next(modalOptions);
   }
 
+  /**
+   * Hides the last modal
+   * @param result
+   */
   public hideCurrentModal(result = false) {
-    this._lastShownModal.visible = false;
-    this._lastShownModal.result = result;
-    this._currentModalOptions.next(this._lastShownModal);
+    this.options.visible = false;
+    this.options.result = result;
+    this._currentModalOptions.next(this.options);
   }
 }

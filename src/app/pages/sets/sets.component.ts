@@ -1,3 +1,6 @@
+/**
+ * Controller for the Sets Page
+ */
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,6 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SetsComponent implements OnInit {
 
+  /**
+   * Current Selected Tab
+   * @type {string}
+   */
   public selected = 'biography';
 
   constructor() { }

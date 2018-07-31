@@ -1,3 +1,6 @@
+/**
+ * Controller for the Home Page
+ */
 import { Component, OnInit } from '@angular/core';
 
 @Component({

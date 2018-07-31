@@ -1,3 +1,6 @@
+/**
+ * Controller for the Work Page
+ */
 import { Component, OnInit } from '@angular/core';
 
 @Component({

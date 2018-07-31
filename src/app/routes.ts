@@ -12,6 +12,11 @@ import {InteractiveCvComponent} from './pages/interactive-cv/interactive-cv.comp
  * For a clean overview in a new file
  * @type Array
  */
+
+/**
+ * Current App Routes in the App
+ * @type Array
+ */
 export const appRoutes: Routes = [
   {
     path: '',

@@ -1,3 +1,7 @@
+/**
+ * Controller for the Blog Page
+ * (Placeholder)
+ */
 import {Component, OnInit} from '@angular/core';
 
 @Component({

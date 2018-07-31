@@ -1,3 +1,6 @@
+/**
+ * Controller for the CV (Goals) Page
+ */
 import {Component, OnInit} from '@angular/core';
 
 @Component({

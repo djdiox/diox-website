@@ -1,3 +1,6 @@
+/**
+ * Controller for the CV (Start) Page
+ */
 import {Component, OnInit} from '@angular/core';
 
 @Component({

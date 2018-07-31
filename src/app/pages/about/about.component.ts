@@ -1,3 +1,6 @@
+/**
+ * Controller for the About Page
+ */
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,6 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  /**
+   * Collected Icons
+   * TODO: Refactor this
+   * @type Array<object<
+   */
   public softwareIcons = [
     {
       path: 'assets/images/icons/angular.svg',
@@ -29,6 +37,7 @@ export class AboutComponent implements OnInit {
       name: 'Photoshop'
     },
   ];
+
   constructor() { }
 
   ngOnInit() {

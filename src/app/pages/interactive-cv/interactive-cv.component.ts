@@ -1,3 +1,6 @@
+/**
+ * Controller for the Interactive CV
+ */
 import {Component, OnInit} from '@angular/core';
 import * as _ from 'lodash';
 import {InteractiveCvService, Page} from '../../services/interactive-cv.service';

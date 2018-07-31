@@ -9,7 +9,14 @@ import {auth} from 'firebase';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  /**
+   * The last Key which was pressed
+   */
   private lastKey: number;
+  /**
+   * Is Currently the nav shown?
+   * @type {boolean}
+   */
   public showNav = true;
 
   /**
