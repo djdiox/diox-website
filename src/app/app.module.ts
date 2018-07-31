@@ -46,6 +46,7 @@ import {CvTechnologyComponent} from './pages/interactive-cv/cv-technology/cv-tec
 import {CvProgrammingComponent} from './pages/interactive-cv/cv-programming/cv-programming.component';
 import {CvGoalsComponent} from './pages/interactive-cv/cv-goals/cv-goals.component';
 import {CvEndComponent} from './pages/interactive-cv/cv-end/cv-end.component';
+import {DialogFlowService} from './services/dialog-flow.service';
 
 @NgModule({
   declarations: [
@@ -98,7 +99,9 @@ import {CvEndComponent} from './pages/interactive-cv/cv-end/cv-end.component';
     MatIconModule,
     MatCardModule
   ],
-  providers: [],
+  providers: [
+    DialogFlowService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
