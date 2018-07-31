@@ -1,6 +1,7 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {CvProgrammingComponent} from './cv-programming.component';
+import {MatChipsModule} from '@angular/material';
 
 describe('CvProgrammingComponent', () => {
   let component: CvProgrammingComponent;
@@ -8,7 +9,12 @@ describe('CvProgrammingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [CvProgrammingComponent]
+      declarations: [
+        CvProgrammingComponent
+      ],
+      imports: [
+        MatChipsModule
+      ]
     })
       .compileComponents();
   }));

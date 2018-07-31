@@ -1,6 +1,8 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {CvSchoolComponent} from './cv-school.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {MatButtonModule, MatIconModule} from '@angular/material';
 
 describe('CvSchoolComponent', () => {
   let component: CvSchoolComponent;
@@ -8,7 +10,16 @@ describe('CvSchoolComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [CvSchoolComponent]
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+      ],
+      declarations: [
+        CvSchoolComponent
+      ],
+      imports: [
+        MatIconModule,
+        MatButtonModule
+      ]
     })
       .compileComponents();
   }));
