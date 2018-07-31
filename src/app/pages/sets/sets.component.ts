@@ -1,7 +1,7 @@
 /**
  * Controller for the Sets Page
  */
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-sets',
@@ -16,12 +16,22 @@ export class SetsComponent implements OnInit {
    */
   public selected = 'biography';
 
+  /**
+   * Instance created
+   */
   constructor() { }
 
+  /**
+   * Angular Initialization Method
+   */
   ngOnInit() {
   }
 
-  public tabChanged($event) {
+  /**
+   * Called when the user clicks on the tab
+   * @param $event {string} user input
+   */
+  public tabChanged($event: string) {
     this.selected = $event;
   }
 

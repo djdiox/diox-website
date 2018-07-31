@@ -20,9 +20,15 @@ export class PicturesComponent implements OnInit {
     // ... more items
   ];
 
+  /**
+   * Instance Created
+   */
   constructor() {
   }
 
+  /**
+   * Angular Initialization Method
+   */
   ngOnInit() {
   }
 

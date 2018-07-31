@@ -1,6 +1,3 @@
-/**
- * Controller for the CV (End) Page
- */
 import {Component, OnInit} from '@angular/core';
 
 @Component({
@@ -8,11 +5,20 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './cv-end.component.html',
   styleUrls: ['./cv-end.component.scss']
 })
+/**
+ * Controller for the CV (End) Page
+ */
 export class CvEndComponent implements OnInit {
 
+  /**
+   * Instance Created
+   */
   constructor() {
   }
 
+  /**
+   * Angular Initialization Method
+   */
   ngOnInit() {
   }
 

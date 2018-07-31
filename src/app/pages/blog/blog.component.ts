@@ -1,7 +1,3 @@
-/**
- * Controller for the Blog Page
- * (Placeholder)
- */
 import {Component, OnInit} from '@angular/core';
 
 @Component({
@@ -9,12 +5,21 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss']
 })
+/**
+ * Controller for the Blog Page
+ * (Currently Placeholder)
+ */
 export class BlogComponent implements OnInit {
 
+  /**
+   * Class Initialization
+   */
   constructor() {
   }
 
+  /**
+   * Angular Component Initialization Method
+   */
   ngOnInit() {
   }
-
 }

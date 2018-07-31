@@ -1,13 +1,13 @@
-/**
- * Controller for the About Page
- */
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
+/**
+ * Controller for the About Page
+ */
 export class AboutComponent implements OnInit {
 
   /**
@@ -38,9 +38,14 @@ export class AboutComponent implements OnInit {
     },
   ];
 
+  /**
+   * Class Initialization
+   */
   constructor() { }
 
+  /**
+   * Angular Component Initialization Method
+   */
   ngOnInit() {
   }
-
 }

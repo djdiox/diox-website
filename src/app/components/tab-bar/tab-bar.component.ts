@@ -5,6 +5,9 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   templateUrl: './tab-bar.component.html',
   styleUrls: ['./tab-bar.component.scss']
 })
+/**
+ * A Nav-bar that has been flipped 90 degrees
+ */
 export class TabBarComponent implements OnInit {
 
   /**
@@ -25,13 +28,16 @@ export class TabBarComponent implements OnInit {
    */
   @Input() public current: string = null;
 
+  /**
+   * Class Initialization
+   */
   constructor() {
   }
 
+  /**
+   * Angular Component Initialization Method
+   */
   ngOnInit() {
-    /*if (!this.current) {
-      this.current = this.tabs[0];
-     }*/
   }
 
   /**

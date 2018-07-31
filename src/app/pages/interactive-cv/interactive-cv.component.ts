@@ -1,6 +1,3 @@
-/**
- * Controller for the Interactive CV
- */
 import {Component, OnInit} from '@angular/core';
 import * as _ from 'lodash';
 import {InteractiveCvService, Page} from '../../services/interactive-cv.service';
@@ -11,6 +8,9 @@ import {DEFAULT_STATE} from './_presets/cv-default-state';
   templateUrl: './interactive-cv.component.html',
   styleUrls: ['./interactive-cv.component.scss']
 })
+/**
+ * Controller for the Interactive CV
+ */
 export class InteractiveCvComponent implements OnInit {
 
   /**
@@ -18,9 +18,16 @@ export class InteractiveCvComponent implements OnInit {
    */
   public state = DEFAULT_STATE;
 
+  /**
+   * Class Initialization
+   * @param interActiveCvService
+   */
   constructor(private interActiveCvService: InteractiveCvService) {
   }
 
+  /**
+   * Angular Component Initialization Method
+   */
   ngOnInit() {
     // this.interActiveCvService
     //   .currentPage

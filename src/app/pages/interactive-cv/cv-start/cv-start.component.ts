@@ -1,6 +1,3 @@
-/**
- * Controller for the CV (Start) Page
- */
 import {Component, OnInit} from '@angular/core';
 
 @Component({
@@ -8,11 +5,20 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './cv-start.component.html',
   styleUrls: ['./cv-start.component.scss']
 })
+/**
+ * Controller for the CV (Start) Page
+ */
 export class CvStartComponent implements OnInit {
 
+  /**
+   * Class Initialization
+   */
   constructor() {
   }
 
+  /**
+   * Angular Component Initialization Method
+   */
   ngOnInit() {
   }
 

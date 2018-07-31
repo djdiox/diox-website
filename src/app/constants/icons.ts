@@ -33,4 +33,8 @@ icons.set('ubuntu', `${iconBaseFolder}ubuntu.svg`);
 icons.set('school', `${iconBaseFolder}school.svg`);
 icons.set('photoshop', `${iconBaseFolder}photoshop.svg`);
 
+/**
+ * Current Icons of the App
+ * @type {Map<string, string>}
+ */
 export const Icons = icons;
