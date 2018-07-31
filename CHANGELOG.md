@@ -29,8 +29,8 @@
 ## Version 0.0.5
 - Added Possibility to change view for mobile, on hide nav
 
-## Version 0.0.6 (Coming Up)
-- Added Interactive CV
+## Version 0.0.6
+- Added Interactive CV (first version)
 - Tweak SCSS
 - Added Material Design
 - Added Compodoc

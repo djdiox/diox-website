@@ -37,7 +37,12 @@ As a developer you need following tools are necessary to develop this project:
 ## Documentation
 
 The Documentation is powered by compodoc! 
-Just hit `yarn generate:documentation` and it will create the folder base on Code, Comments etc.
+
+Just hit `yarn generate:documentation` and it will create the folder based on Code, Comments etc.
+
+It will also show the documentation level (currently low, will be up in some time). 
+
+Unit Test Coverage will follow as well.
 
 ## Changelog
 
