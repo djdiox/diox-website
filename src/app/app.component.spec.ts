@@ -3,6 +3,7 @@ import {AppComponent} from './app.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {Router} from '@angular/router';
 import {AngularFireAuth} from 'angularfire2/auth';
+import {RouterTestingModule} from '@angular/router/testing';
 
 const routerMock = {};
 
@@ -22,6 +23,9 @@ describe('AppComponent', () => {
           provide: AngularFireAuth,
           useValue: angularFireAuthMock
         }
+      ],
+      imports: [
+        RouterTestingModule
       ],
       schemas: [
         CUSTOM_ELEMENTS_SCHEMA
