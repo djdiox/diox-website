@@ -2,12 +2,14 @@
 
 i.hamburger {
   z-index: 100;
-  width: 50px;
-  height: 50px;
+  //width: 50px;
+  //height: 50px;
   position: fixed;
   right: 3.5em;
   top: 3em;
   svg {
+    width: 2em;
+    height: 2em;
     path {
       -webkit-transition: fill 1s; /* Safari */
       transition: fill 1s;
@@ -38,14 +40,15 @@ ul.nav {
     pointer-events: none;
   }
   li {
-    height: 1.5em;
+    height: 0.7em;
     width: 80%;
     list-style: none;
     @extend %default-button;
-    line-height: 1.5em;
+    line-height: 0.7em;
     padding: 1em;
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
+    font-family: RalewayBold, sans-serif;
+    -webkit-transform-origin: left top 0;
+    transform-origin: left top 0;
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     transition: background-color, opacity, color 1.5s;

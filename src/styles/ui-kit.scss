@@ -1,7 +1,7 @@
 @import './palette';
 
 %active-state {
-  background-color: $color-secondary;
+  //background-color: $color-secondary;
   border: 1px solid $bright;
   color: $bright;
   outline: none;
@@ -12,6 +12,6 @@
   cursor: pointer;
   color: $dark;
   border: 1px solid $dark;
-  background-color: $blue;
+  background-color: $green;
   text-align: center;
 }

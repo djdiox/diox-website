@@ -97,9 +97,9 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/cdk@^6.4.1":
-  version "6.4.1"
-  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-6.4.1.tgz#f03e4f628c019410b310a8a5238a655e2e134e82"
+"@angular/cdk@^6.4.0":
+  version "6.4.2"
+  resolved "http://51.4.204.61:8081/repository/netvico-npm-group/@angular/cdk/-/cdk-6.4.2.tgz#e623cdbbe6258980b0fa93beafce0ea7c4e2c17b"
   dependencies:
     tslib "^1.7.1"
 
