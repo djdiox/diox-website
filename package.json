@@ -8,6 +8,7 @@
     "build:docs": "ng build --base-href=/diox-website/ --output-path=docs/",
     "build:docs:prod": "ng build --prod  --base-href=/diox-website/ --output-path=docs/",
     "generate:documentation": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --output docs/doc --theme material",
+    "generate:coverage": "ng test --watch=false --code-coverage",
     "test": "ng test --source-map=false",
     "lint": "ng lint",
     "e2e": "ng e2e"
