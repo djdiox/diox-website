@@ -20,35 +20,43 @@ import {InteractiveCvComponent} from './pages/interactive-cv/interactive-cv.comp
 export const appRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    data: { state: 'home' }
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    data: { state: 'home' }
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
+    data: { state: 'about' }
   },
   {
     path: 'sets',
-    component: SetsComponent
+    component: SetsComponent,
+    data: { state: 'sets' }
   },
   {
     path: 'pictures',
-    component: PicturesComponent
+    component: PicturesComponent,
+    data: { state: 'pictures' }
   },
   {
     path: 'work',
-    component: WorkComponent
+    component: WorkComponent,
+    data: { state: 'work' }
   },
   {
     path: 'blog',
-    component: BlogComponent
+    component: BlogComponent,
+    data: { state: 'blog' }
   },
   {
     path: 'cv',
-    component: InteractiveCvComponent
+    component: InteractiveCvComponent,
+    data: { state: 'cv' }
   }
   /*{
    path: '**',

@@ -2,13 +2,26 @@ import {Component, HostListener, OnInit} from '@angular/core';
 import {NavigationEnd, NavigationError, NavigationStart, Router} from '@angular/router';
 import {AngularFireAuth} from 'angularfire2/auth';
 import {auth} from 'firebase';
+import {routerTransition} from '../animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [routerTransition] // register the animation
 })
 export class AppComponent implements OnInit {
+
+  /**
+   * Initialize controller
+   * @param router
+   * @param afAuth
+   * @param iconRegistry
+   * @param sanitizer
+   */
+  constructor(private router: Router,
+              public afAuth: AngularFireAuth) {
+  }
   /**
    * The last Key which was pressed
    */
@@ -18,6 +31,7 @@ export class AppComponent implements OnInit {
    * @type {boolean}
    */
   public showNav = true;
+
 
   /**
    * Gets called everytime the user presses a Button on the page
@@ -35,16 +49,12 @@ export class AppComponent implements OnInit {
   }
 
   /**
-   * Initialize controller
-   * @param router
-   * @param afAuth
-   * @param iconRegistry
-   * @param sanitizer
+   * Gets the state of the current router outlet
+   * @param outlet {Object} a RouterOutlet of the app
    */
-  constructor(private router: Router,
-              public afAuth: AngularFireAuth) {
+  public getState(outlet) {
+    return outlet.activatedRouteData.state;
   }
-
 
   /**
    * Initiate the Module (App)
