@@ -1,5 +1,8 @@
 import {trigger, animate, style, group, query, transition} from '@angular/animations';
 
+/**
+ * The angular animation for the router transitions in this app.
+ */
 export const routerTransition = trigger('routerTransition', [
   transition('* <=> *', [
     /* order */

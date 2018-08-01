@@ -79,8 +79,8 @@ export class AppComponent implements OnInit {
   }
 
   /**
-   * Eventhook for setting the emitted value from the nav-bar
-   * @param {boolean} $event the boolean
+   * Event hook for setting the emitted value from the nav-bar
+   * @param {boolean} $event Is Current nav-bar shown?
    */
   navToggled($event: boolean) {
     this.showNav = $event;
