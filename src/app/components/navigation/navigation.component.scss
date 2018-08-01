@@ -43,7 +43,8 @@ ul.nav {
     height: 0.7em;
     width: 80%;
     list-style: none;
-    @extend %default-button;
+    //
+    @extend %button-style;
     line-height: 0.7em;
     padding: 1em;
     //font-family: RalewayBold, sans-serif;

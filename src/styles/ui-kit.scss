@@ -2,14 +2,18 @@
 
 %active-state {
   //background-color: $color-secondary;
-  border: 1px solid $bright;
+  //border: 1px solid $bright;
   color: $bright;
   outline: none;
   opacity: 1;
 }
 
-%default-button {
+%button-style {
+  outline: none;
+  text-align: center;
   cursor: pointer;
+}
+%default-button {
   color: $dark;
   border: 1px solid $dark;
   background-color: $green;
