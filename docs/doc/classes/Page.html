@@ -498,15 +498,20 @@
 </nav>
                </div>
                <!-- START CONTENT -->
-               <div class="content component">
+               <div class="content class">
                    <div class="content-data">
 
 
 
 
+
+
+
+
+
 <ol class="breadcrumb">
-  <li>Components</li>
-  <li>TabBarComponent</li>
+  <li>Classes</li>
+  <li>Page</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -516,125 +521,62 @@
         <li >
             <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
         </li>
-        <li >
-            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
-        </li>
-        <li >
-            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
-        </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info"><p class="comment">
-    <h3>File</h3>
-</p>
-<p class="comment">
-    <code>src/app/components/tab-bar/tab-bar.component.ts</code>
-</p>
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/classes/page.ts</code>
+        </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>A typical page in the app</p>
 
-
-    <p class="comment">
-        <h3>Implements</h3>
-    </p>
-    <p class="comment">
-                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
-    </p>
-
-
-<section>
-    <h3>Metadata</h3>
-    <table class="table table-sm table-hover">
-        <tbody>
+            </p>
 
 
 
 
-
-
-
-
-
-
-
-            <tr>
-                <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-tab-bar</code></td>
-            </tr>
-
-            <tr>
-                <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>tab-bar.component.scss</code></td>
-            </tr>
-
-
-
-            <tr>
-                <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./tab-bar.component.html</code></td>
-            </tr>
-
-
-        </tbody>
-    </table>
-</section>
-
-    <section>
+            <section>
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
-
                 <tr>
                     <td class="col-md-4">
-                        <h6><b>Methods</b></h6>
+                        <h6><b>Properties</b></h6>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#ngOnInit">ngOnInit</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#breadcrumbs">breadcrumbs</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#select">select</a>
+                                <a href="#index">index</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#progress">progress</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#view">view</a>
                             </li>
                         </ul>
                     </td>
                 </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Inputs</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#current">current</a>
-                            </li>
-                            <li>
-                                <a href="#tabs">tabs</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Outputs</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#selected">selected</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
+
 
 
 
@@ -642,339 +584,211 @@
     </table>
 </section>
 
-    <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor()</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/tab-bar/tab-bar.component.ts:29</a></div>
-                            </td>
-                        </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                            <div class="io-description"><p>Class Initialization</p>
-</div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
-
-    <section>
-    <h3 id="inputs">Inputs</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-2">
-                        <a name="current"></a>
-                        <code>current</code>
-                    </td>
-                    <td class="col-md-10">
-                        <div><p>The Value of the selected tab</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                            </p>
-                        <p>
-                            <em>Default value: </em><code>null</code>
-                        </p>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/tab-bar/tab-bar.component.ts:29</a></div>
-                            </td>
-                        </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-2">
-                        <a name="tabs"></a>
-                        <code>tabs</code>
-                    </td>
-                    <td class="col-md-10">
-                        <div><p>Tabs that gonna be displayed</p>
-</div>
-                            <p>
-                            <em>Type:</em>    <code>string[]</code>
-
-                            </p>
-                        <p>
-                            <em>Default value: </em><code>[]</code>
-                        </p>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/components/tab-bar/tab-bar.component.ts:17</a></div>
-                            </td>
-                        </tr>
-            </tbody>
-        </table>
-</section>
-    <section>
-    <h3 id="outputs">Outputs</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-2">
-                        <a name="selected"></a>
-                        <code>selected</code>
-                    </td>
-                    <td class="col-md-10">
-                        <div><p>Emitter, when the value is selected</p>
-</div>
-                        <em><code>$event</code> type:</em>    <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
-
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/components/tab-bar/tab-bar.component.ts:23</a></div>
-                            </td>
-                        </tr>
-            </tbody>
-        </table>
-</section>
-
-
-    <section>
+            <section>
     
-        <h3 id="methods">
-            Methods
+        <h3 id="inputs">
+            Properties
         </h3>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="ngOnInit"></a>
+                        <a name="breadcrumbs"></a>
                         <span class="name">
                             <b>
-                            ngOnInit
+                                <span class="modifier">Public</span>
+                            breadcrumbs
                             </b>
-                            <a href="#ngOnInit"><span class="fa fa-link"></span></a>
+                            <a href="#breadcrumbs"><span class="fa fa-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-<code>ngOnInit()</code>
+                        <span class="modifier-icon fa fa-reset"></span><code>breadcrumbs:     <code>string[]</code>
+</code>
                     </td>
                 </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
 
-
+                        </td>
+                    </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/components/tab-bar/tab-bar.component.ts:40</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/classes/page.ts:22</a></div>
                             </td>
                         </tr>
 
-
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Angular Component Initialization Method</p>
+                        <div class="io-description"><p>The displayed breadcrumbs</p>
 </div>
-
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
                     </td>
                 </tr>
+
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="select"></a>
+                        <a name="index"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            select
+                            index
                             </b>
-                            <a href="#select"><span class="fa fa-link"></span></a>
+                            <a href="#index"><span class="fa fa-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                            <span class="modifier-icon fa fa-reset"></span>
-                        <code>select(current: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                        <span class="modifier-icon fa fa-reset"></span><code>index:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
                     </td>
                 </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
-
+                        </td>
+                    </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/components/tab-bar/tab-bar.component.ts:47</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/classes/page.ts:12</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Index of the current view (for pagination)</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="progress"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            progress
+                            </b>
+                            <a href="#progress"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon fa fa-reset"></span><code>progress:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/classes/page.ts:17</a></div>
+                            </td>
+                        </tr>
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Selected the tab and emits a value</p>
+                        <div class="io-description"><p>The progress of the currentPage</p>
 </div>
-
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>current</td>
-                                                        <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            no
-                                                    </td>
-                                                    
-
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
                     </td>
                 </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="view"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            view
+                            </b>
+                            <a href="#view"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon fa fa-reset"></span><code>view:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/classes/page.ts:8</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Name of the view</p>
+</div>
+                    </td>
+                </tr>
+
             </tbody>
         </table>
 </section>
 
 
-</div>
+
+
+
+
+
+    </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, EventEmitter, Input, OnInit, Output} from &#x27;@angular/core&#x27;;
-
-@Component({
-  selector: &#x27;app-tab-bar&#x27;,
-  templateUrl: &#x27;./tab-bar.component.html&#x27;,
-  styleUrls: [&#x27;./tab-bar.component.scss&#x27;]
-})
-/**
- * A Nav-bar that has been flipped 90 degrees
- */
-export class TabBarComponent implements OnInit {
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export class Page {
+  /**
+   * Name of the view
+   */
+  public view: string;
+  /**
+   * Index of the current view (for pagination)
+   */
+  public index: number;
 
   /**
-   * Tabs that gonna be displayed
-   * @type {Array} the array of strings for the tabs
+   * The progress of the currentPage
    */
-  @Input() public tabs: string[] &#x3D; [];
+  public progress: number;
 
   /**
-   * Emitter, when the value is selected
-   * @type {EventEmitter&lt;string&gt;}
+   * The displayed breadcrumbs
    */
-  @Output() selected &#x3D; new EventEmitter&lt;string&gt;();
-
-  /**
-   * The Value of the selected tab
-   * @type {any}
-   */
-  @Input() public current: string &#x3D; null;
-
-  /**
-   * Class Initialization
-   */
-  constructor() {
-  }
-
-  /**
-   * Angular Component Initialization Method
-   */
-  ngOnInit() {
-  }
-
-  /**
-   * Selected the tab and emits a value
-   * @param {string} current
-   */
-  public select(current: string) {
-    this.current &#x3D; current;
-    this.selected.next(current);
-  }
+  public breadcrumbs: string[];
 }
 </code></pre>
     </div>
-
-    <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;tab-bar&quot;&gt;
-  &lt;div class&#x3D;&quot;tab&quot;
-       *ngFor&#x3D;&quot;let tab of tabs&quot;
-       [ngClass]&#x3D;&quot;{&#x27;active&#x27;: tab &#x3D;&#x3D;&#x3D; current}&quot;
-       (click)&#x3D;&quot;select(tab)&quot;&gt;
-    {{tab}}
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-    </div>
-
-    <div class="tab-pane fade " id="c-tree">
-        <div id="tree-container"></div>
-        <div class="tree-legend">
-            <div class="title">
-                <b>Legend</b>
-            </div>
-            <div>
-                <div class="color htmlelement"></div><span>Html element</span>
-            </div>
-            <div>
-                <div class="color component"></div><span>Component</span>
-            </div>
-            <div>
-                <div class="color directive"></div><span>Html element with directive</span>
-            </div>
-        </div>
-    </div>
-
-    
 </div>
-
-<script src="../js/libs/vis.min.js"></script>
-<script src="../js/libs/htmlparser.js"></script>
-<script src="../js/libs/deep-iterator.js"></script>
-<script>
-        var COMPONENT_TEMPLATE = '<div><div class="tab-bar">  <div class="tab"       *ngFor="let tab of tabs"       [ngClass]="{\'active\': tab === current}"       (click)="select(tab)">    {{tab}}  </div></div></div>'
-    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BlogComponent', 'selector': 'app-blog'},{'name': 'ChatComponent', 'selector': 'app-chat'},{'name': 'CvEndComponent', 'selector': 'app-cv-end'},{'name': 'CvExperienceComponent', 'selector': 'app-cv-experience'},{'name': 'CvGoalsComponent', 'selector': 'app-cv-goals'},{'name': 'CvProgrammingComponent', 'selector': 'app-cv-programming'},{'name': 'CvSchoolComponent', 'selector': 'app-cv-school'},{'name': 'CvStartComponent', 'selector': 'app-cv-start'},{'name': 'CvTechnologyComponent', 'selector': 'app-cv-technology'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'InteractiveCvComponent', 'selector': 'app-interactive-cv'},{'name': 'ModalComponent', 'selector': 'app-modal'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'PicturesComponent', 'selector': 'app-pictures'},{'name': 'SetsComponent', 'selector': 'app-sets'},{'name': 'TabBarComponent', 'selector': 'app-tab-bar'},{'name': 'WorkComponent', 'selector': 'app-work'}];
-    var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'TabBarComponent'};
-</script>
-<script src="../js/tree.js"></script>
-
-
-
-
-
 
 
 
@@ -1006,8 +820,8 @@ export class TabBarComponent implements OnInit {
 
         <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'TabBarComponent.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'Page.html';
         </script>
 
        <script src="../js/search/search.js"></script>
