@@ -1,3 +1,4 @@
+import {ToolType} from './tool-type';
 /**
  * Created by markuswagner on 29.07.18.
  */
@@ -68,30 +69,140 @@ export const DEFAULT_STATE = {
       },
     ],
     technology: {
+      frameworks: [],
       tools: [
-        'Angular.JS',
-        'Angular 2+',
-        'Firebase',
-        'Node.JS',
-        'GraphQL',
-        'webpack',
-        'NativeScript',
-        'yarn',
-        'MongoDB',
-        'MySQL',
-        'PostgresSQL',
-        'GitLab',
-        'Docker',
-        'Ubuntu',
-        'Webstorm',
-        'VS Code',
-        'Jira',
-        'Trello',
-        'MacOSX',
-        'Windows',
-        'Visual Studio',
-        'Unity',
-        'Office'
+        {
+          name: 'Angular.JS',
+          website: 'https://angularjs.org/',
+          type: ToolType.framework,
+          description: 'The old version of the famous MVVM Framework'
+        },
+        {
+          name: 'Angular 2+',
+          website: 'https://angular.io/',
+          type: ToolType.framework,
+          description: 'Newer version of the angular framework'
+        },
+        {
+          name: 'Node.JS',
+          website: 'https://nodejs.org/en/',
+          type: ToolType.framework,
+          description: 'Swiss army tool for developers'
+        },
+        {
+          name: 'Laravel',
+          website: 'https://laravel.com/',
+          type: ToolType.framework,
+          description: 'Best PHP framework'
+        },
+        {
+          name: 'NativeScript',
+          website: 'https://www.nativescript.org/',
+          type: ToolType.framework,
+          description: 'Run Angular / vue.js on mobile devices'
+        },
+        {
+          name: 'Unity',
+          website: 'https://unity3d.com/de',
+          type: ToolType.framework,
+          description: 'Gaming framework'
+        },
+        {
+          name: 'GraphQL',
+          website: 'https://graphql.org/learn/',
+          type: ToolType.development,
+          description: 'Query language for backend'
+        },
+        {
+          name: 'Firebase',
+          website: 'https://firebase.google.com/',
+          type: ToolType.database,
+          description: 'Reactive database by google'
+        },
+        {
+          name: 'webpack',
+          website: 'https://webpack.js.org/',
+          type: ToolType.development,
+          description: 'process javascript for web'
+        },
+        {
+          name: 'yarn',
+          website: 'http://yarn.org/',
+          type: ToolType.development,
+          description: 'alternative package manager for node.js'
+        },
+        {
+          name: 'GitLab',
+          website: 'https://about.gitlab.com/',
+          type: ToolType.development,
+          description: 'Git repository provider with CI/CD etc.'
+        },
+        {
+          name: 'GitHub',
+          website: 'https://github.com/',
+          type: ToolType.development,
+          description: 'Git repository provider'
+        },
+        {
+          name: 'Docker',
+          website: 'https://www.docker.com/',
+          type: ToolType.development,
+          description: 'VM for simple deployment etc.'
+        },
+        {
+          name: 'Webstorm',
+          website: 'https://www.jetbrains.com/webstorm/',
+          type: ToolType.IDE,
+          description: 'Jetbrains Web IDE'
+        },
+        {
+          name: 'VS Code',
+          website: 'https://code.visualstudio.com/',
+          type: ToolType.IDE,
+          description: 'Lightweight IDE for many languages'
+        },
+        {
+          name: 'Visual Studio',
+          website: 'https://visualstudio.microsoft.com/de/',
+          type: ToolType.IDE,
+          description: 'Windows development environment'
+        },
+        {
+          name: 'Jira',
+          website: 'https://www.atlassian.com/software/jira',
+          type: ToolType.management,
+          description: 'Advanced SCRUM / Kan Ban etc. Webapp'
+        },
+        {
+          name: 'Trello',
+          website: 'https://trello.com/',
+          type: ToolType.management,
+          description: 'Process Management Webapp'
+        },
+        {
+          name: 'MacOSX',
+          website: 'https://www.apple.com/lae/macos/high-sierra/',
+          type: ToolType.OS,
+          description: 'Beautiful running OS'
+        },
+        {
+          name: 'Windows',
+          website: 'https://www.microsoft.com/en-us/windows',
+          type: ToolType.OS,
+          description: 'Microsoft all-time classic'
+        },
+        {
+          name: 'Ubuntu',
+          website: 'https://www.ubuntu.com/',
+          type: ToolType.OS,
+          description: '(Or other Linux distributions) for servers'
+        },
+        {
+          name: 'Office',
+          website: 'https://www.office.com/',
+          type: ToolType.office,
+          description: 'Office 365 for good office experience'
+        }
       ]
     },
     programming: {
@@ -111,7 +222,7 @@ export const DEFAULT_STATE = {
         'VBA',
       ],
       technics: [
-        'Agile Development',
+        'Agile development',
         'SCRUM',
         'Kan Ban',
         'Waterfall',

@@ -47,6 +47,7 @@ import {CvProgrammingComponent} from './pages/interactive-cv/cv-programming/cv-p
 import {CvGoalsComponent} from './pages/interactive-cv/cv-goals/cv-goals.component';
 import {CvEndComponent} from './pages/interactive-cv/cv-end/cv-end.component';
 import {DialogFlowService} from './services/dialog-flow.service';
+import {FilterToolsPipe} from './filter-tools.pipe';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import {DialogFlowService} from './services/dialog-flow.service';
     CvTechnologyComponent,
     CvProgrammingComponent,
     CvGoalsComponent,
-    CvEndComponent
+    CvEndComponent,
+    FilterToolsPipe
   ],
   imports: [
     BrowserModule,

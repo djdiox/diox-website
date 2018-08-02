@@ -3,11 +3,11 @@
 @import "./styles/_base.scss";
 @import "./styles/fonts";
 html {
-  height: 100%;
-  width: 100%;
+  overflow: auto;
   body {
     min-height: 100%;
-    width: 100%;
+    overflow: auto;
+    padding-bottom: 4em;
     background: url("./assets/images/embedded/background.png") no-repeat;
     background-size: cover;
     margin: 0;

@@ -16,7 +16,8 @@ export class PicturesComponent implements OnInit {
    */
   images: GalleryItem[] = [
     new ImageItem({src: 'assets/images/embedded/photo_1.jpg', thumb: 'assets/images/embedded/photo_1.jpg'}),
-    new ImageItem({src: 'assets/images/embedded/photo_1.jpg', thumb: 'assets/images/embedded/photo_1.jpg'})
+    new ImageItem({src: 'assets/images/embedded/photo_2.jpg', thumb: 'assets/images/embedded/photo_2.jpg'}),
+    new ImageItem({src: 'assets/images/embedded/photo_3.jpg', thumb: 'assets/images/embedded/photo_3.jpg'}),
     // ... more items
   ];
 

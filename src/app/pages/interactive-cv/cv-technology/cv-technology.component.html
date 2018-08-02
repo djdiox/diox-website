@@ -4,9 +4,17 @@
   Open Source Frameworks made programming really great<br>
   Here an overview of Sofware which i have or had in use<br>
 </p>
-<h3>tools</h3>
-<mat-chip-list>
-  <mat-chip *ngFor="let tool of state.data.technology.tools">
-    {{tool}}
-  </mat-chip>
-</mat-chip-list>
+
+<input matInput placeholder="Search..." [(ngModel)]="searchText" (change)="searchTools(searchText)">
+<div class="tools-wrapper">
+  <div class="tool-container" *ngFor="let toolType of toolTypes">
+    <h3>{{toolType.name}}</h3>
+    <mat-chip-list>
+      <mat-chip *ngFor="let tool of toolType.tools"
+                (click)="openUrl(tool.website)"
+                [matTooltip]="tool.description + '\n' + 'click to open: ' + tool.website">
+        {{tool.name}}
+      </mat-chip>
+    </mat-chip-list>
+  </div>
+</div>

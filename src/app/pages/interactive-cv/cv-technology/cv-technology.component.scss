@@ -1,0 +1,16 @@
+.tools-wrapper {
+  clear: both;
+  height: 32em;
+  .tool-container {
+    float: left;
+    width: 13em;
+    min-height: 5em;
+  }
+  mat-chip {
+    cursor: pointer;
+  }
+}
+
+::ng-deep .mat-tooltip {
+  white-space: pre-line !important;
+}
