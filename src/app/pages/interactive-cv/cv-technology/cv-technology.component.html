@@ -7,10 +7,10 @@
 
 <input matInput placeholder="Search..." [(ngModel)]="searchText" (change)="searchTools(searchText)">
 <div class="tools-wrapper">
-  <div class="tool-container" *ngFor="let toolType of toolTypes">
-    <h3>{{toolType.name}}</h3>
+  <div class="tool-container" *ngFor="let section of currenTools">
+    <h3>{{section.name}}</h3>
     <mat-chip-list>
-      <mat-chip *ngFor="let tool of toolType.tools"
+      <mat-chip *ngFor="let tool of section.tools"
                 (click)="openUrl(tool.website)"
                 [matTooltip]="tool.description + '\n' + 'click to open: ' + tool.website">
         {{tool.name}}

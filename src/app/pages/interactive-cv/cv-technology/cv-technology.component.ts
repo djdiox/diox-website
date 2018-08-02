@@ -20,10 +20,16 @@ export class CvTechnologyComponent implements OnInit {
   public state = {...DEFAULT_STATE};
 
   /**
+   * All tools available fo the CV
+   * @type {Array}
+   */
+  public allTools = this.createTools();
+
+  /**
    * Represents all types of tools in the cv
    * @type {string[]}
    */
-  public toolTypes = this.createTools();
+  public currenTools = Object.assign([], this.allTools);
 
   /**
    * A search for the technologies
@@ -73,10 +79,9 @@ export class CvTechnologyComponent implements OnInit {
    * @param search
    */
   public searchTools(search: string) {
-    if (search === '') {
-      return this.createTools();
-    }
-    this.toolTypes = this.toolTypes.map(toolType => {
+    //TODO refactor this
+    this.allTools = this.createTools();
+    this.currenTools = this.allTools.map(toolType => {
       toolType.tools = toolType.tools.filter(tool => JSON.stringify(tool).indexOf(search.toLowerCase()) !== -1);
       return toolType;
     })
