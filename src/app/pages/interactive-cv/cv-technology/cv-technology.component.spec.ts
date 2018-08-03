@@ -2,7 +2,9 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {CvTechnologyComponent} from './cv-technology.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {MatChipsModule, MatIconModule, MatListModule} from '@angular/material';
+import {MatChipsModule, MatIconModule, MatInputModule, MatListModule} from '@angular/material';
+import {FormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('CvTechnologyComponent', () => {
   let component: CvTechnologyComponent;
@@ -19,7 +21,10 @@ describe('CvTechnologyComponent', () => {
       imports: [
         MatChipsModule,
         MatListModule,
-        MatIconModule
+        MatIconModule,
+        MatInputModule,
+        BrowserAnimationsModule,
+        FormsModule
       ]
     })
       .compileComponents();

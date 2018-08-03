@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "yarn build:docs && yarn generate:documentation && yarn generate:coverage",
     "build:docs": "ng build --base-href=/diox-website/ --output-path=docs/",
     "build:docs:prod": "ng build --prod  --base-href=/diox-website/ --output-path=docs/",
     "generate:documentation": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --output docs/doc --theme material",
