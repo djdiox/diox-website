@@ -4,8 +4,9 @@
   Open Source Frameworks made programming really great<br>
   Here an overview of Sofware which i have or had in use<br>
 </p>
-
-<input matInput placeholder="Search..." [(ngModel)]="searchText" (change)="searchTools(searchText)">
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="Search..." [(ngModel)]="searchText" (keyup)="searchTools(searchText)">
+</mat-form-field>
 <div class="tools-wrapper">
   <div class="tool-container" *ngFor="let section of currenTools">
     <h3>{{section.name}}</h3>

@@ -19,7 +19,7 @@ import {
   MatButtonModule,
   MatCardModule,
   MatChipsModule,
-  MatIconModule,
+  MatIconModule, MatInputModule,
   MatListModule,
   MatProgressBarModule,
   MatTooltipModule
@@ -99,7 +99,8 @@ import {FilterToolsPipe} from './filter-tools.pipe';
     MatChipsModule,
     MatListModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule
   ],
   providers: [
     DialogFlowService

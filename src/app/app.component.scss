@@ -3,11 +3,14 @@
 .module-wrapper {
   //height: 100vh;
   // background: $color-kickoff-blue;
+
   height: 100%;
   color: white;
   padding: 2em;
   transition: all ease 1s;
   .container {
+    background: url("../assets/images/embedded/module-background.png") no-repeat;
+    background-size: cover;
     //height: 78%;
     height: 80vh;
     padding: 3.7em;

@@ -29,7 +29,7 @@ export class CvTechnologyComponent implements OnInit {
    * Represents all types of tools in the cv
    * @type {string[]}
    */
-  public currenTools = Object.assign([], this.allTools);
+  public currenTools = this.createTools();
 
   /**
    * A search for the technologies
@@ -61,7 +61,7 @@ export class CvTechnologyComponent implements OnInit {
    * @param type the tipe that filters the array
    * @returns {any[]} The array of tools
    */
-  private filterTools(type: ToolType) {
+  private filterTools(type: string) {
     return this.state.data.technology.tools
       .filter(tool => tool.type === type);
   }
@@ -79,14 +79,10 @@ export class CvTechnologyComponent implements OnInit {
    * @param search
    */
   public searchTools(search: string) {
-    //TODO refactor this
-    this.allTools = this.createTools();
-    this.currenTools = this.allTools.map(toolType => {
-      toolType.tools = toolType.tools.filter(tool => JSON.stringify(tool).indexOf(search.toLowerCase()) !== -1);
-      return toolType;
-    })
-      .filter(current => current.tools.length !== 0);
-    // this.createTools();
-    console.log(this.toolTypes);
+    this.currenTools = this.allTools.reduce((finalValue, current) => {
+      current = JSON.parse(JSON.stringify(current));
+      current.tools = current.tools.filter((tool) => JSON.stringify(tool).toLowerCase().indexOf(search.toLowerCase()) !== -1);
+      return current.tools.length !== 0 ? [...finalValue, current] : finalValue;
+    }, []);
   }
 }
