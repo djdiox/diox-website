@@ -48,6 +48,9 @@ export class CvTechnologyComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * Creates the tools of the type
+   */
   private createTools() {
     return Types.reduce((initial, type) => [...initial, {
         name: type,
@@ -70,7 +73,7 @@ export class CvTechnologyComponent implements OnInit {
    * Opens a given website by parameters
    * @param website a fully qualified URL String
    */
-  openUrl(website: string) {
+  public openUrl(website: string) {
     window.open(website);
   }
 
